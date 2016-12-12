@@ -12,7 +12,6 @@
 
     #main-menu ul.menu li a, #main-menu ul.menu li li a {
         padding: 0 8px;
-        font-size: 1.2em;
     }
 
     #block-superfish-1 ul #menu-1797-1 {
@@ -49,6 +48,10 @@
         margin-top: -13px;
     }
 
+    .postscript-wrapper {
+        margin-right: 10px;
+    }
+
 }
 
 /* desktop browsers */
@@ -64,7 +67,7 @@
 
     #main-menu ul.menu li a, #main-menu ul.menu li li a, #main-menu ul.menu li li a.active  {
         padding: 0 7px;
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     #main-menu ul.menu li ul {
@@ -296,7 +299,7 @@
     }
 
     /* hide large dfp ads */
-    .region-content-bottom .block-dfp {
+    .region-content-bottom .block-dfp, .region-main-menu-second-level .block-dfp {
         display: none;
         visibility: hidden;
     }
@@ -443,7 +446,7 @@
     }
 
     /* hide large dfp ads */
-    .region-content-bottom .block-dfp {
+    .region-content-bottom .block-dfp, .region-main-menu-second-level .block-dfp {
         display: none;
         visibility: hidden;
     }
@@ -591,7 +594,7 @@
     }
 
     /* hide large dfp ads */
-    .region-content-bottom .block-dfp {
+    .region-content-bottom .block-dfp, .region-main-menu-second-level .block-dfp, .region-slideshow .block-dfp {
         display: none;
         visibility: hidden;
     }
