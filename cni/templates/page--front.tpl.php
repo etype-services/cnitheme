@@ -14,7 +14,9 @@
 
                     <?php if ($logo): ?>
                         <div class="site-logo">
-                        <a href="<?php print check_url($front_page); ?>"><img src="<?php print $logo ?>" alt="<?php print $site_name; ?>"/></a>
+                        <a href="<?php print check_url($front_page); ?>"><img
+                                    src="<?php print $logo ?>"
+                                    alt="<?php print $site_name; ?>"/></a>
                         </div><?php print render($page['header']) ?>
                     <?php endif; ?>
 
@@ -26,25 +28,25 @@
     </div>
 </div>
 
-        <?php if ($page['main_menu']): ?>
-            <div class="main-menu-wrapper clearfix">
-                <div class="main-menu-wrapper-inner">
-                    <nav id="main-menu">
-                        <?php print render($page['main_menu']); ?>
-                    </nav>
-                </div>
-            </div>
-        <?php endif; ?>
+<?php if ($page['main_menu']): ?>
+    <div class="main-menu-wrapper clearfix">
+        <div class="main-menu-wrapper-inner">
+            <nav id="main-menu">
+                <?php print render($page['main_menu']); ?>
+            </nav>
+        </div>
+    </div>
+<?php endif; ?>
 
-        <?php if ($page['main_menu_second_level']): ?>
-            <div class="main-menu-second-level-wrapper clearfix">
-                <div class="main-menu-second-level-wrapper-inner">
-                    <nav id="main-menu-second-level">
-                        <?php print render($page['main_menu_second_level']); ?>
-                    </nav>
-                </div>
-            </div>
-        <?php endif; ?>
+<?php if ($page['main_menu_second_level']): ?>
+    <div class="main-menu-second-level-wrapper clearfix">
+        <div class="main-menu-second-level-wrapper-inner">
+            <nav id="main-menu-second-level">
+                <?php print render($page['main_menu_second_level']); ?>
+            </nav>
+        </div>
+    </div>
+<?php endif; ?>
 
 <div id="page">
     <div class="page-inner <?php echo $grid_size ?>">
@@ -127,7 +129,7 @@
                 </section>
             </div>
         </div>
-        
+
         <?php print render($page['content_bottom']); ?>
 
         <?php if ($page['postscript_1'] || $page['postscript_2'] || $page['postscript_3'] || $page['postscript_4']): ?>
@@ -142,6 +144,9 @@
                     </div>
                 </div>
             </div>
+        <?php endif; ?>
+        <?php if ($page['footer']): ?>
+            <?php print render($page['footer']); ?>
         <?php endif; ?>
 
     </div>

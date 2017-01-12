@@ -10,7 +10,8 @@ body {
 }
 
 a {
-    font-weight: normal; color: #333;
+    font-weight: normal;
+    color: #333;
 }
 
 a:hover {
@@ -176,6 +177,11 @@ h3.site-slogan {
     font-size: 0.7em;
 }
 
+/* override module defaults */
+.views-slideshow-pager-fields > div{
+    padding-left: 0;
+}
+
 /* IMAGE FIELD CAPTION
 --------------------------------------------------------------------------*/
 .view blockquote.image-field-caption, .node-teaser blockquote.image-field-caption {
@@ -315,7 +321,7 @@ article .field-image {
 }
 
 .postscript-wrapper {
-    padding: 20px 0 0;
+    padding: 1em 1em 0;
     margin: 0;
     background: url(../images/postscript-bg.png);
     border-top: 3px solid #252525;
@@ -336,7 +342,7 @@ article .field-image {
 
 .postscript-wrapper h3 {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0.4em;
 }
 
 .postscript-wrapper h3 span {
@@ -345,7 +351,7 @@ article .field-image {
     color: #999999;
 }
 
-/* override default styles for user menu in footer */
+/* override default styles for user menu in postscript */
 #postscript .block-menu-block ul.menu li {
     padding-left: 0 !important;
     list-style-type: none !important;
@@ -369,23 +375,18 @@ article .field-image {
     margin-left: 1.7em;
 }
 
-/* title in first column of footer */
+/* title in first column of postscript */
 .region-postscript-1 h3.title {
     margin-left: 0;
 }
 
-/* hide Show Menu link in footer */
+/* hide Show Menu link in postscript */
 .region-postscript-2 #block-menu-block-2 .menu li.first {
     display: none;
     visibility: hidden;
 }
 
-/* space out menus */
-#postscript .block {
-    margin-bottom: 1.5em;
-}
-
-/* menus in footer */
+/* menus in postscript */
 #postscript .block-menu-block ul.menu li {
     float: left;
     padding-top: 0;
@@ -401,9 +402,19 @@ article .field-image {
     list-style-position: inside;
 }
 
+/* font */
+#postscript p, #postscript a {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+}
+
 /* FOOTER
 --------------------------------------------------------------------------*/
-
+.region-footer {
+    margin-top: 1em;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+}
 
 /* LISTS
 --------------------------------------------------------------------------*/
@@ -537,7 +548,7 @@ article .field-image {
 #main-menu ul.menu {
     display: block;
     height: 100%;
-    min-height:33px;
+    min-height: 33px;
     max-height: 85px;
     margin: 0;
     font-family: 'Lato', sans-serif;
@@ -886,6 +897,11 @@ article .field-image {
 
 #search-block-form input:focus {
     box-shadow: 0 0 0 0 #22d7cc;
+}
+
+#search-form .archive_message {
+    padding-top: 21px;
+    font-style: italic;
 }
 
 /* SOCIAL
@@ -1247,7 +1263,7 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     margin: 0 auto 20px;
 }
 
-.preface-wrapper .block-dfp .content, .sidebar .block-dfp .content  {
+.preface-wrapper .block-dfp .content, .sidebar .block-dfp .content {
     padding: 0;
 }
 
@@ -1336,6 +1352,20 @@ article.node-webform .node-content-wrapper h1.title {
 }
 
 .preface-wrapper #block-views-ticker-block .content {
-    margin-top :0;
+    margin-top: 0;
     padding: 0;
+}
+
+/* GALLERIA override gallleria classic theme */
+.galleria-container {
+    background: #ffffff;
+}
+
+.galleria-thumb-nav-left,
+.galleria-thumb-nav-right,
+.galleria-info-link,
+.galleria-info-close,
+.galleria-image-nav-left,
+.galleria-image-nav-right {
+    background-image: url(../images/classic-map-cni.png);
 }
