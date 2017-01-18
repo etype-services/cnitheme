@@ -1356,28 +1356,52 @@ article.node-webform .node-content-wrapper h1.title {
     padding: 0;
 }
 
-/* GALLERIA override gallleria classic theme */
+/* GALLERIA -- override galleria classic theme */
+.galleria-theme-classic {
+    background-color: #ffffff;
+}
 
-/* different heights for different content types */
-.node-type-photos .galleria-info {
-    top: 450px;
+.galleria-theme-classic .galleria-stage {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.galleria-theme-classic .galleria-thumb-nav-left, .galleria-theme-classic .galleria-thumb-nav-right, .galleria-theme-classic .galleria-info-link, .galleria-theme-classic .galleria-info-close, .galleria-theme-classic .galleria-image-nav-left, .galleria-theme-classic .galleria-image-nav-right {
+    background-image: url(../../../../all/themes/cni/images/classic-map-cni.png);
+}
+
+.galleria-theme-classic .galleria-info {
+    top: 31px;
     left: 0;
 }
 
-.galleria-container, .galleria-info-text, .galleria-info-title {
-    background-color: #ffffff;
-    color: #000000;
+.galleria-theme-classic .galleria-info-text {
+    display: block;
+    opacity: 0.5;
 }
 
-.galleria-thumb-nav-left,
-.galleria-thumb-nav-right,
-.galleria-info-close,
-.galleria-image-nav-left,
-.galleria-image-nav-right {
-    background-image: url(../images/classic-map-cni.png);
+.galleria-theme-classic .galleria-info-title {
+    margin-bottom: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
 }
 
-.galleria-info-link {
+.galleria-theme-classic .galleria-info-link {
     display: none;
     visibility: hidden;
 }
+
+.galleria-theme-classic.notouch .galleria-thumb-nav-left:hover, .galleria-theme-classic.notouch .galleria-thumb-nav-right:hover {
+    background-color: #fff;
+}
+
+.galleria-theme-classic .galleria-thumbnails .galleria-image {
+    width: 50px;
+    height: 50px;
+}
+
+.galleria-theme-classic .galleria-thumb-nav-right, .galleria-theme-classic .galleria-thumb-nav-keft {
+    top: 4px;
+}
+

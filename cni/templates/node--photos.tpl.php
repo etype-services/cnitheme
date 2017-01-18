@@ -24,17 +24,9 @@
             </div>
         <?php endif; ?>
 
-        <?php if (isset($content['field_image'])): ?>
-            <div class="field-image">
-                <?php print render($content['field_image']); ?>
-            </div>
-        <?php endif; ?>
-
-
-        <div class="content"<?php print $content_attributes; ?>>
+        <div class="content"<?php print $content_attributes; ?>
             <?php
             // We hide the comments and links now so that we can render them later.
-            hide($content['field_image']);
             hide($content['field_video']);
             hide($content['comments']);
             hide($content['links']);

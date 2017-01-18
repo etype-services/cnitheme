@@ -95,4 +95,73 @@ function cni_preprocess_html(&$vars) {
         $vars['classes_array'][] = drupal_clean_css_identifier($alias);
     }
 
+    /* add favicons */
+    $icon_path = $base_path . $conf_path .'/files/favicons/';
+
+    $theme_color = array(
+        '#type' => 'html_tag',
+        '#tag' => 'meta',
+        '#attributes' => array(
+            'name' => 'theme-color',
+            'content' => '#ffffff',
+        )
+    );
+    drupal_add_html_head($theme_color, 'theme_color');
+
+    $mask_icon = array(
+        '#type' => 'html_tag',
+        '#tag' => 'link',
+        '#attributes' => array(
+            'rel' => 'mask-icon',
+            'href' => $icon_path . 'safari-pinned-tab.svg',
+            'color' => '#5bbad5',
+        )
+    );
+    drupal_add_html_head($mask_icon, 'mask_icon');
+
+    $manifest = array(
+        '#type' => 'html_tag',
+        '#tag' => 'link',
+        '#attributes' => array(
+            'rel' => 'manifest',
+            'href' => $icon_path . 'manifest.json',
+        )
+    );
+    drupal_add_html_head($manifest, 'manifest');
+
+    $icon16 = array(
+        '#type' => 'html_tag',
+        '#tag' => 'link',
+        '#attributes' => array(
+            'rel' => 'icon',
+            'type' => 'image/png',
+            'sizes' => '16x16',
+            'href' => $icon_path . 'favicon-16x16.png',
+        )
+    );
+    drupal_add_html_head($icon16, 'icon16');
+
+    $icon32 = array(
+        '#type' => 'html_tag',
+        '#tag' => 'link',
+        '#attributes' => array(
+            'rel' => 'icon',
+            'type' => 'image/png',
+            'sizes' => '32x32',
+            'href' => $icon_path . 'favicon-32x32.png',
+        )
+    );
+    drupal_add_html_head($icon32, 'icon32');
+
+    $appletouchicon = array(
+        '#type' => 'html_tag',
+        '#tag' => 'link',
+        '#attributes' => array(
+            'rel' => 'apple-touch-icon',
+            'sizes' => '180x180',
+            'href' => $icon_path . 'apple-touch-icon.png',
+        )
+    );
+    drupal_add_html_head($appletouchicon, 'apple-touch-icon');
+
 }
