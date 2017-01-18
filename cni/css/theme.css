@@ -534,6 +534,32 @@ article .field-image {
     background: 0;
 }
 
+/* for sites with user menu below main menu in .region-main-menu */
+#main-menu #block-system-user-menu {
+    background-color: #ffffff;
+    width: 100%;
+    height: 27px;
+    border-bottom: 1px solid black;
+}
+
+#main-menu #block-system-user-menu .content {
+    margin: 0 auto;
+}
+
+#main-menu #block-system-user-menu ul.menu li {
+    height: 27px;
+}
+
+#main-menu #block-system-user-menu ul.menu li a {
+    font-size: 0.8em;
+}
+
+#main-menu #block-system-user-menu ul.menu li a {
+    color: #333333;
+    height: 27px;
+    line-height: 27px;
+}
+
 /* MAIN MENU
 --------------------------------------------------------------------------*/
 
