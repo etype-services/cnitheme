@@ -62,15 +62,15 @@ function cni_preprocess_page(&$variables) {
     $node = $variables['node'];
     $ad = field_get_items('node', $node, 'field_ad_image');
     if (!empty($ad[0]['uri'])) {
+      echo 'test';
       $arr = array();
       $arr['img_src'] = file_create_url($ad[0]['uri']);
       $url = field_get_items('node', $variables['node'], 'field_ad_url');
       $arr['img_url'] = $url[0]['safe_value'];
       $variables['sponsor_ad'] = theme_render_template('templates/field--field-ad-image--article.tpl.php', $arr);
+      print_r($variables['sponsor_ad']);
     }
   }
-
-  print_r($variables['sponsor_ad']);
 
 }
 
