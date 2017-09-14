@@ -802,7 +802,14 @@ article .field-image {
 
 .node .taxonomy .field-type-taxonomy-term-reference {
     margin: 5px 0;
-    background: #f9f9f9;
+}
+
+.node .taxonomy .field-type-taxonomy-term-reference .field-items {
+    display: flex;
+}
+
+.node .taxonomy .field-type-taxonomy-term-reference .field-items .field-item {
+    margin-right: 1em;
 }
 
 .node .taxonomy a {
