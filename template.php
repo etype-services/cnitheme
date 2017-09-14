@@ -70,6 +70,8 @@ function cni_preprocess_page(&$variables) {
     }
   }
 
+  print_r($variables['sponsor_ad']);
+
 }
 
 function cni_preprocess_node(&$variables) {
