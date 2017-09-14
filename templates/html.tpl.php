@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="<?php print $language->language; ?>"
       dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?>>
-
 <head>
-    <?php print $head; ?>
+  <?php print $head; ?>
     <title><?php print $head_title; ?></title>
-    <?php print $styles; ?>
-    <?php print $scripts; ?>
+  <?php print $styles; ?>
+  <?php print $scripts; ?>
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet'
+    <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet'
           type='text/css'>
     <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
 <div id="fb-root"></div>
 <script>(function (d, s, id) {
@@ -34,5 +32,4 @@
 <?php print $page; ?>
 <?php print $page_bottom; ?>
 </body>
-
 </html>
