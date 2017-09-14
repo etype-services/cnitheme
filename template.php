@@ -62,7 +62,6 @@ function cni_preprocess_page(&$variables) {
     $node = $variables['node'];
     $ad = field_get_items('node', $node, 'field_ad_image');
     if (!empty($ad[0]['uri'])) {
-      echo 'test';
       $arr = array();
       $arr['img_src'] = file_create_url($ad[0]['uri']);
       $url = field_get_items('node', $variables['node'], 'field_ad_url');
