@@ -1,5 +1,8 @@
-<article id="node-<?php print $node->nid; ?>"
-         class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+
+    <?php if (isset($sponsor_ad)) { ?>
+        <?php print $sponsor_ad; ?>
+    <?php } ?>
 
     <div class="node-content-wrapper">
 

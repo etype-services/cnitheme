@@ -59,8 +59,6 @@
                     <div class="main">
                         <div class="main-inner grid_8">
 
-                          <?php print($page['sponsor_ad']); ?>
-
                           <?php if ($page['slideshow']): ?>
                               <div class="slideshow-wrapper clearfix">
                                   <div class="slideshow-wrapper-inner">
