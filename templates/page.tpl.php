@@ -59,7 +59,7 @@
                     <div class="main">
                         <div class="main-inner grid_8">
 
-                          <?php print_r($variables); ?>
+                          <?php print_r($page['variables']); ?>
 
                           <?php if ($page['slideshow']): ?>
                               <div class="slideshow-wrapper clearfix">
