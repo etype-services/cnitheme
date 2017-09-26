@@ -114,7 +114,7 @@ li.views-fluid-grid-item {
   margin-bottom: 20px;
 }
 /* center ads */
-.block-simpleads > div > div > div {
+.block-simpleads > div > div > div > div > div {
   display: flex;
   justify-content: space-around;
 }
@@ -166,4 +166,11 @@ li.views-fluid-grid-item {
   font-size: 0.9em;
   border-top: 1px solid #dddddd;
   padding-top: 0.6em;
+}
+/* responsive rules */
+@media only screen and (max-width: 767px) {
+  .region-main-menu-second-level .block-simpleads > div > div > div > div > div
+  {
+    flex-wrap: nowrap;
+  }
 }
