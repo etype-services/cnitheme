@@ -118,8 +118,8 @@ li.views-fluid-grid-item {
 .region-content-bottom .block-simpleads {
   margin-bottom: 20px;
 }
-.region-sidebar-first.block-simpleads .block-inner,
-.region-sidebar-second.block-simpleads .block-inner {
+.region-sidebar-first .block-simpleads .block-inner,
+.region-sidebar-second .block-simpleads .block-inner {
   margin: 0 0 20px;
 }
 /* center ads */
