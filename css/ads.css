@@ -137,7 +137,8 @@ li.views-fluid-grid-item {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.region-sidebar-first .block-simpleads > div > div > div > div > div {
+.region-sidebar-first .block-simpleads > div > div > div > div > div,
+.region-sidebar-second .block-simpleads > div > div > div > div > div {
   flex-wrap: wrap;
 }
 /* OWN LOCAL */
