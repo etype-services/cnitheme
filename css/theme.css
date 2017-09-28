@@ -978,6 +978,8 @@ article .field-image {
     text-transform: uppercase;
     background: 0;
     font-weight: normal;
+    line-height: 18px;
+    text-shadow: none;
 }
 
 #search-block-form .form-text {
