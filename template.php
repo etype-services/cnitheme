@@ -74,7 +74,7 @@ function cni_preprocess_node(&$variables) {
   $level = $node->premium_level['level_name'];
   if (isset($level)) {
     $check = user_is_logged_in();
-    if ($level == 'free' && $check != '1') {
+    if (($level != 'free' || $level == '') && $check != '1') {
       $site_name = variable_get('site_name');
       if (substr($site_name, 0) !== 'The') {
         $site_name = 'the ' . $site_name;
