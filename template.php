@@ -75,8 +75,6 @@ function cni_preprocess_node(&$variables) {
     /* add message to "free" stories on pages */
     if (module_exists('premium')) {
       $level = $node->premium_level['level_name'];
-      echo "LeveL: " . $level;
-      $variables['free_message']  = "LeveL: " . $level;
       if (isset($level)) {
         $check = user_is_logged_in();
         if (($level !== 'free' || $level !== '') && $check != '1') {
@@ -85,7 +83,7 @@ function cni_preprocess_node(&$variables) {
             $site_name = 'the ' . $site_name;
           }
           $e_edition = theme_get_setting('e_edition');;
-          $variables['free_message']  .= "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
+          $variables['free_message'] = "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
         }
       }
     }
