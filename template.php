@@ -73,16 +73,19 @@ function cni_preprocess_node(&$variables) {
     drupal_add_js('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56e774978692f861', 'external');
 
     /* add message to "free" stories on pages */
-    $level = $node->premium_level['level_name'];
-    if (isset($level)) {
-      $check = user_is_logged_in();
-      if (($level !== 'free' || $level !== '') && $check != '1') {
-        $site_name = variable_get('site_name');
-        if (substr($site_name, 0) !== 'The') {
-          $site_name = 'the ' . $site_name;
+    if (module_exists('premium_content')) {
+      $level = $node->premium_level['level_name'];
+      $variables['free_message']  = $level;
+      if (isset($level)) {
+        $check = user_is_logged_in();
+        if (($level !== 'free' || $level !== '') && $check != '1') {
+          $site_name = variable_get('site_name');
+          if (substr($site_name, 0) !== 'The') {
+            $site_name = 'the ' . $site_name;
+          }
+          $e_edition = theme_get_setting('e_edition');;
+          $variables['free_message']  .= "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
         }
-        $e_edition = theme_get_setting('e_edition');;
-        $variables['free_message']  = "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
       }
     }
 
