@@ -73,7 +73,9 @@ function cni_preprocess_node(&$variables) {
     drupal_add_js('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56e774978692f861', 'external');
 
     /* add message to "free" stories on pages */
-    if (module_exists('etype_premium_content')) {
+    $list = module_list();
+    var_dump($list);
+    if (module_exists('premium_content')) {
       $level = $node->premium_level['level_name'];
       echo "LeveL: " . $level;
       $variables['free_message']  = "LeveL: " . $level;
