@@ -65,23 +65,27 @@ function cni_preprocess_node(&$variables) {
     $variables['classes_array'] = array_merge($variables['classes_array'], $node->classes_array);
   }
 
-  /* add addthis script to pages, ie, not teasers */
-  if (node_is_page($node) !== FALSE) {
-    drupal_add_js('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56e774978692f861', 'external');
-  }
+  /* add things to pages, ie, not teasers */
 
-  /* add message to "free" stories */
-  $level = $node->premium_level['level_name'];
-  if (isset($level)) {
-    $check = user_is_logged_in();
-    if (($level != 'free' || $level == '') && $check != '1') {
-      $site_name = variable_get('site_name');
-      if (substr($site_name, 0) !== 'The') {
-        $site_name = 'the ' . $site_name;
+  if (node_is_page($node) !== FALSE) {
+
+    /* add this script */
+    drupal_add_js('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56e774978692f861', 'external');
+
+    /* add message to "free" stories on pages */
+    $level = $node->premium_level['level_name'];
+    if (isset($level)) {
+      $check = user_is_logged_in();
+      if (($level !== 'free' || $level !== '') && $check != '1') {
+        $site_name = variable_get('site_name');
+        if (substr($site_name, 0) !== 'The') {
+          $site_name = 'the ' . $site_name;
+        }
+        $e_edition = theme_get_setting('e_edition');;
+        $variables['free_message']  = "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
       }
-      $e_edition = theme_get_setting('e_edition');;
-      $variables['free_message']  = "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
     }
+
   }
 
   /* Sponsor Ad */
