@@ -330,6 +330,10 @@ function cni_preprocess_html(&$variables) {
     drupal_add_html_head($appletouchicon, 'apple-touch-icon');
   }
 
+  /* any advertising script */
+  $adscript = theme_get_setting('adscript');
+  $variables['adscript'] = $adscript;
+
 }
 
 function get_grid_info() {
