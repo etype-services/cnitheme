@@ -1283,6 +1283,12 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     font-family: 'Lato', sans-serif;
 }
 
+/* for contact form on mobile, if this needs to be more specific */
+input[type="text"] {
+    max-width: 100%;
+}
+
+
 /* PAGE
 --------------------------------------------------------------------------*/
 .not-front.page-node #block-system-main .content .node {
