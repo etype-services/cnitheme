@@ -467,6 +467,11 @@
         width: 80px;
     }
 
+    /* tag links */
+    .node .taxonomy .field-type-taxonomy-term-reference .field-items {
+        display: block;
+    }
+
 }
 
 /* less granular switch for big and small */
