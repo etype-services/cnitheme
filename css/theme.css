@@ -801,6 +801,7 @@ article .field-image {
 
 .node .taxonomy .field-type-taxonomy-term-reference {
     margin: 5px 0;
+    line-height: 1em;
 }
 
 .node .taxonomy .field-type-taxonomy-term-reference .field-items {
