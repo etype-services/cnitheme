@@ -132,12 +132,10 @@ li.views-fluid-grid-item {
   padding: 1em;
 }
 .region-preface-1 .block-simpleads > div > div > div > div > div {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .region-preface-1 .block-simpleads > div > div > div > div > div {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -195,7 +193,7 @@ li.views-fluid-grid-item {
     width: 100%;
   }
   .region-main-menu-second-level .block-simpleads > div > div > div > div > div,
-  .region-main .block-simpleads > div > div > div > div > div {
+  .region-main-menu .block-simpleads > div > div > div > div > div {
     display: block;
   }
 
