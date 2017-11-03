@@ -334,7 +334,9 @@ function cni_preprocess_html(&$variables) {
   $adscript = theme_get_setting('adscript');
   $variables['adscript'] = $adscript;
 
-  /* Menu break variable */
+  /* Menu break variable -- this segment loads different css files depending
+  on the setting, and passes a variable that script.js uses to move menus
+  around */
   $tmp = theme_get_setting('menu_break_point');
   $menu_break_point = empty($tmp)? '767': $tmp;
   drupal_add_js(array('cni' => array('menu_break_point' => $menu_break_point)), array('type' => 'setting'));
