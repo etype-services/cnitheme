@@ -3,7 +3,7 @@
     attach: function (context) {
 
       function mobile_menu(w, searchForm) {
-        alert(Drupal.settings.cni.menu_break_point);
+        // alert(Drupal.settings.cni.menu_break_point);
         var wrapper = $('#mobile-menu-wrapper');
 
         if (w > 767) {
