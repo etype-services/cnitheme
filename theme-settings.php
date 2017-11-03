@@ -138,6 +138,17 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('logo_width'),
   );
 
+  /* Default Menu Break Point */
+  $tmp = theme_get_setting('menu_break_point');
+  $menu_break_point = empty($tmp)? '767': $tmp;
+  $form['advanced_settings']['misc_settings']['menu_break_point'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Logo Width'),
+    '#description' => t('Optional maximum allowed width for logo'),
+    '#size' => 10,
+    '#default_value' => $menu_break_point,
+  );
+
   $form['advanced_settings']['misc_settings']['adscript'] = array(
     '#type' => 'textarea',
     '#title' => t('Ad Script'),
