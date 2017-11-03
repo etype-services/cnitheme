@@ -517,7 +517,7 @@
     #mobile-menu-control {
         height: 36px;
         min-width: 36px;
-        background: #f3f1f1 url(sites/all/themes/cni/images/hamburger-menu.png) 3px no-repeat;
+        background: #f3f1f1 url(../images/hamburger-menu.png) 3px no-repeat;
         cursor: pointer;
     }
 
