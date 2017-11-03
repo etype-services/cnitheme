@@ -335,7 +335,8 @@ function cni_preprocess_html(&$variables) {
   $variables['adscript'] = $adscript;
 
   /* Menu break variable */
-  $menu_break_point = theme_get_setting('menu_break_point');
+  $tmp = theme_get_setting('menu_break_point');
+  $menu_break_point = empty($tmp)? '767': $tmp;
   drupal_add_js(array('cni' => array('menu_break_point' => $menu_break_point)), array('type' => 'setting'));
 
 }
