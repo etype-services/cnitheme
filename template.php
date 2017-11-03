@@ -341,7 +341,7 @@ function cni_preprocess_html(&$variables) {
   switch ($menu_break_point) {
     case '958':
       drupal_add_css(
-        drupal_get_path('theme', 'cni').'css/menu_break_958.css',
+        drupal_get_path('theme', 'cni') . '/css/menu_break_958.css',
         array(
           'type' => 'file',
           'media' => 'all',
@@ -355,7 +355,7 @@ function cni_preprocess_html(&$variables) {
 
     default:
       drupal_add_css(
-        drupal_get_path('theme', 'cni').'css/menu_break_767.css',
+        drupal_get_path('theme', 'cni') . '/css/menu_break_767.css',
         array(
           'type' => 'file',
           'media' => 'all',
