@@ -138,6 +138,13 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('logo_width'),
   );
 
+  $form['advanced_settings']['misc_settings']['adscript'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Ad Script'),
+    '#description' => t('Enter any advertising script to go in the footer.'),
+    '#default_value' => theme_get_setting('adscript'),
+  );
+
   // Grid Settings
   $form['advanced_settings']['grid_settings'] = array(
     '#type' => 'fieldset',

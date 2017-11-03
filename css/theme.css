@@ -321,7 +321,6 @@ article .field-image {
 #postscript a {
     color: #dddddd;
     font-weight: normal;
-    text-shadow: -1px -1px #000000;
 }
 
 .postscript-wrapper {
@@ -802,7 +801,15 @@ article .field-image {
 
 .node .taxonomy .field-type-taxonomy-term-reference {
     margin: 5px 0;
-    background: #f9f9f9;
+    line-height: 1em;
+}
+
+.node .taxonomy .field-type-taxonomy-term-reference .field-items {
+    display: flex;
+}
+
+.node .taxonomy .field-type-taxonomy-term-reference .field-items .field-item {
+    margin-right: 1em;
 }
 
 .node .taxonomy a {
@@ -971,6 +978,8 @@ article .field-image {
     text-transform: uppercase;
     background: 0;
     font-weight: normal;
+    line-height: 18px;
+    text-shadow: none;
 }
 
 #search-block-form .form-text {
@@ -1275,6 +1284,12 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     font-family: 'Lato', sans-serif;
 }
 
+/* for contact form on mobile, if this needs to be more specific */
+input[type="text"] {
+    max-width: 100%;
+}
+
+
 /* PAGE
 --------------------------------------------------------------------------*/
 .not-front.page-node #block-system-main .content .node {
@@ -1414,6 +1429,9 @@ ul.slides {
 
 .free-message {
     font-family: 'Lato',sans-serif;
+    font-size: 0.9em;
+    border-top: 1px solid #dddddd;
+    padding: 5px 0;
 }
 
 .free-message a {

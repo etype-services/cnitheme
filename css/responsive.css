@@ -19,7 +19,7 @@
         top: 33px;
     }
 
-    #main-menu ul.menu li a, #main-menu ul.menu li li a {
+    #main-menu ul.menu li a, #main-menu ul.menu li li a, #main-menu ul.menu li li a.active {
         padding: 0 8px;
     }
 
@@ -376,6 +376,11 @@
         margin-left: 0;
     }
 
+    /* tag links */
+    .node .taxonomy .field-type-taxonomy-term-reference .field-items {
+        display: block;
+    }
+
 }
 
 /* smaller phones */
@@ -465,6 +470,11 @@
     /* restrict width */
     #edit-search-block-form--2 {
         width: 80px;
+    }
+
+    /* tag links */
+    .node .taxonomy .field-type-taxonomy-term-reference .field-items {
+        display: block;
     }
 
 }

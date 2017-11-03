@@ -50,23 +50,9 @@ function cni_preprocess_page(&$variables) {
           $variables['page']['content']['system_main']['nodes'][$nid]['#node']->classes_array = array('last');
         }
         $i++;
-        /* So I don't get "Warning: Cannot use a scalar value as an array" */
+        /* Defeat "Warning: Cannot use a scalar value as an array" */
         unset($nodes, $nid);
       }
-    }
-  }
-
-  /* Sponsor Ad */
-  $variables['node_ad'] = '';
-  if (isset($variables['node'])) {
-    $node = $variables['node'];
-    $ad = field_get_items('node', $node, 'field_ad_image');
-    if (!empty($ad[0]['uri'])) {
-      $arr = array();
-      $arr['img_src'] = file_create_url($ad[0]['uri']);
-      $url = field_get_items('node', $variables['node'], 'field_ad_url');
-      $arr['img_url'] = $url[0]['safe_value'];
-      $variables['node_ad'] = theme_render_template('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', $arr);
     }
   }
 
@@ -79,22 +65,46 @@ function cni_preprocess_node(&$variables) {
     $variables['classes_array'] = array_merge($variables['classes_array'], $node->classes_array);
   }
 
-  /* add addthis script to pages, ie, not teasers */
+  /* add things to pages, ie, not teasers */
+
   if (node_is_page($node) !== FALSE) {
+
+    /* add this script */
     drupal_add_js('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56e774978692f861', 'external');
+
+    /* add message to "free" stories on pages */
+    if (module_exists('premium')) {
+      $level = $node->premium_level['level_name'];
+      if (isset($level)) {
+        $check = user_is_logged_in();
+        if ($level === 'free' && $check != '1') {
+          $site_name = variable_get('site_name');
+          if (substr($site_name, 0) !== 'The') {
+            $site_name = 'the ' . $site_name;
+          }
+          $e_edition = theme_get_setting('e_edition');;
+          $variables['free_message'] = "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
+        }
+      }
+    }
+
   }
 
-  /* add message to "free" stories */
-  $level = $node->premium_level['level_name'];
-  $check = user_is_logged_in();
-  if ($level == 'free' && $check != '1') {
-    $site_name = variable_get('site_name');
-    if (substr($site_name, 0) !== 'The') {
-      $site_name = 'the ' . $site_name;
+  /* Sponsor Ad */
+  $variables['sponsor_ad'] = '';
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+    $ad = field_get_items('node', $node, 'field_ad_image');
+    if (!empty($ad[0]['uri'])) {
+      $arr = array();
+      $arr['img_src'] = file_create_url($ad[0]['uri']);
+      $url = field_get_items('node', $variables['node'], 'field_ad_url');
+      $arr['img_url'] = $url[0]['safe_value'];
+      $variables['sponsor_ad'] = theme_render_template
+      ('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', $arr);
     }
-    $e_edition = theme_get_setting('e_edition');;
-    $variables['free_message']  = "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
   }
+
 }
 
 /* Breadcrumbs */
@@ -319,6 +329,10 @@ function cni_preprocess_html(&$variables) {
     );
     drupal_add_html_head($appletouchicon, 'apple-touch-icon');
   }
+
+  /* any advertising script */
+  $adscript = theme_get_setting('adscript');
+  $variables['adscript'] = $adscript;
 
 }
 
