@@ -334,6 +334,10 @@ function cni_preprocess_html(&$variables) {
   $adscript = theme_get_setting('adscript');
   $variables['adscript'] = $adscript;
 
+  /* Menu break variable */
+  $menu_break_point = theme_get_setting('menu_break_point');
+  drupal_add_js(array('cni' => array('testvar' => $menu_break_point)), array('type' => 'setting'));
+
 }
 
 function get_grid_info() {
