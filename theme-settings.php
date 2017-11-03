@@ -143,8 +143,8 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
   $menu_break_point = empty($tmp)? '767': $tmp;
   $form['advanced_settings']['misc_settings']['menu_break_point'] = array(
     '#type' => 'textfield',
-    '#title' => t('Logo Width'),
-    '#description' => t('Optional maximum allowed width for logo'),
+    '#title' => t('Menu Break Point'),
+    '#description' => t('Width at which menu changes to Mobile View.'),
     '#size' => 10,
     '#default_value' => $menu_break_point,
   );
