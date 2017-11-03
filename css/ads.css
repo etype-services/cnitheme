@@ -191,7 +191,7 @@ li.views-fluid-grid-item {
     margin-left: auto;
     margin-right: auto;
   }
-  .region-main-menu-second-level .block-simpleads, .region-main-menu .block-simpleads img {
+  .region-main-menu-second-level .block-simpleads img, .region-main-menu .block-simpleads img {
     width: 100%;
   }
   .region-main-menu-second-level .block-simpleads > div > div > div > div > div,
