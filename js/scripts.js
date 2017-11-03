@@ -3,10 +3,11 @@
     attach: function (context) {
 
       function mobile_menu(w, searchForm) {
-        console.log(Drupal.settings.cni.menu_break_point);
+        // console.log(Drupal.settings.cni.menu_break_point);
+        var breakpoint = (Drupal.settings.cni.menu_break_point);
         var wrapper = $('#mobile-menu-wrapper');
 
-        if (w > 767) {
+        if (w > breakpoint) {
           if (wrapper.length > 0) {
             wrapper.remove();
             searchForm.show();
