@@ -338,6 +338,34 @@ function cni_preprocess_html(&$variables) {
   $tmp = theme_get_setting('menu_break_point');
   $menu_break_point = empty($tmp)? '767': $tmp;
   drupal_add_js(array('cni' => array('menu_break_point' => $menu_break_point)), array('type' => 'setting'));
+  switch ($menu_break_point) {
+    case '958':
+      drupal_add_css(
+        drupal_get_path('theme', 'cni').'css/menu_break_958.css',
+        array(
+          'type' => 'file',
+          'media' => 'all',
+          'preprocess' => FALSE,
+          'every_page' => TRUE,
+          'weight' => 999,
+          'group' => CSS_THEME
+        )
+      );
+      break;
+
+    default:
+      drupal_add_css(
+        drupal_get_path('theme', 'cni').'css/menu_break_767.css',
+        array(
+          'type' => 'file',
+          'media' => 'all',
+          'preprocess' => FALSE,
+          'every_page' => TRUE,
+          'weight' => 999,
+          'group' => CSS_THEME
+        )
+      );
+  }
 
 }
 
