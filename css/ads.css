@@ -184,11 +184,21 @@ li.views-fluid-grid-item {
 }
 
 @media only screen and (max-width: 958px) {
+
+  /* three rules to make ads same width as content */
   .region-main-menu-second-level .block-simpleads, .region-main-menu .block-simpleads {
-    width: 768px;
+    width: 747px;
     margin-left: auto;
     margin-right: auto;
   }
+  .region-main-menu-second-level .block-simpleads, .region-main-menu .block-simpleads img {
+    width: 100%;
+  }
+  .region-main-menu-second-level .block-simpleads > div > div > div > div > div,
+  .region-main .block-simpleads > div > div > div > div > div {
+    display: block;
+  }
+
 }
 
 @media only screen and (max-width: 479px) {
