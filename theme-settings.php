@@ -142,10 +142,10 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
   $tmp = theme_get_setting('menu_break_point');
   $menu_break_point = empty($tmp)? '767': $tmp;
   $form['advanced_settings']['misc_settings']['menu_break_point'] = array(
-    '#type' => 'textfield',
+    '#type' => 'select',
     '#title' => t('Menu Break Point'),
     '#description' => t('Width at which menu changes to Mobile View. Default is 767. Any change to this will require changes to site css.'),
-    '#size' => 10,
+    '#options' => array('767' => '767', '958' => '958'),
     '#default_value' => $menu_break_point,
   );
 
