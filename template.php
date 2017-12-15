@@ -107,7 +107,6 @@ function cni_preprocess_node(&$variables) {
         $items[] = $arr;
       }
       $vars = array('items' => $items);
-      // dpm($vars);
       $variables['sponsor_ad'] = theme_render_template
       ('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', $vars);
     }
