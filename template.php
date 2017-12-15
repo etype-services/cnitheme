@@ -107,8 +107,9 @@ function cni_preprocess_node(&$variables) {
         $arr['img_url'] = $url[$k]['safe_value'];
         $items[] = $arr;
       }
+      $vars = array($items);
       $variables['sponsor_ad'] = theme_render_template
-      ('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', [$items]);
+      ('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', $vars);
     }
   }
 
