@@ -95,7 +95,6 @@ function cni_preprocess_node(&$variables) {
   if (isset($variables['node'])) {
     $node = $variables['node'];
     $ad = field_get_items('node', $node, 'field_ad_image');
-    dpm($ad);
     if (count($ad) > 0)
     {
       $url = field_get_items('node', $variables['node'], 'field_ad_url');
@@ -108,6 +107,7 @@ function cni_preprocess_node(&$variables) {
         $items[] = $arr;
       }
       $vars = array($items);
+      dpm($vars);
       $variables['sponsor_ad'] = theme_render_template
       ('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', $vars);
     }
