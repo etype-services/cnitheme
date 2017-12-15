@@ -103,7 +103,7 @@ function cni_preprocess_node(&$variables) {
       foreach ($ad as $k => $v)
       {
         $arr = array();
-        $arr['img_src'] = file_create_url($ad[$k]['uri']);
+        $arr['img_src'] = file_create_url($v['uri']);
         $arr['img_url'] = $url[$k]['safe_value'];
         $items[] = $arr;
       }
