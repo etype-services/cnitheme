@@ -102,13 +102,13 @@ function cni_preprocess_node(&$variables) {
       $items = [];
       foreach ($ad as $k => $v)
       {
-        $arr = array();
+        $arr = [];
         $arr['img_src'] = file_create_url($v['uri']);
         $arr['img_url'] = $url[$k]['safe_value'];
         $items[] = $arr;
       }
-      $variables['sponsor_ad'] .= theme_render_template
-      ('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', $items);
+      $variables['sponsor_ad'] = theme_render_template
+      ('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', [$items]);
     }
   }
 
