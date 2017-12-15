@@ -95,7 +95,7 @@ function cni_preprocess_node(&$variables) {
   if (isset($variables['node'])) {
     $node = $variables['node'];
     $ad = field_get_items('node', $node, 'field_ad_image');
-    dpm($ad);
+    var_dump($ad);
     if (count($ad) > 0)
     {
       $url = field_get_items('node', $variables['node'], 'field_ad_url');
