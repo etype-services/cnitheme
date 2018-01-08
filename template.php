@@ -406,7 +406,7 @@ function bootstrap_preprocess_views_view_row_rss_test_feed_1(&$vars) {
   $result = &$vars['view']->result;
   $id = &$vars['id'];
   $node = node_load( $result[$id-1]->nid );
-  $vars['title'] = check_plain($item->title);
+  $vars['title'] = trim(check_plain($item->title));
   $vars['link'] = check_url($item->link);
   $vars['description'] = check_plain($item->description);
   $vars['node'] = $node;
