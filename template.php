@@ -401,6 +401,7 @@ function get_grid_info() {
  * @param $vars
  */
 function cni_preprocess_views_view_row_rss(&$vars) {
+  var_dump($vars['view']);
   $item = $vars['row'];
   // Use the [id] of the returned results to determine the nid in [results]
   $result = $vars['view']->result;
