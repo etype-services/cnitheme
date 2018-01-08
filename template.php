@@ -378,6 +378,9 @@ function cni_preprocess_html(&$variables) {
 
 }
 
+/**
+ * @return array
+ */
 function get_grid_info() {
 
   $grid_info = array();
@@ -392,5 +395,20 @@ function get_grid_info() {
   }
 
   return $grid_info;
+}
 
+/**
+ * @param $vars
+ */
+function bootstrap_preprocess_views_view_row_rss_test_feed_1(&$vars) {
+  $item = &$vars['row'];
+  // Use the [id] of the returned results to determine the nid in [results]
+  $result = &$vars['view']->result;
+  $id = &$vars['id'];
+  $node = node_load( $result[$id-1]->nid );
+  $vars['title'] = check_plain($item->title);
+  $vars['link'] = check_url($item->link);
+  $vars['description'] = check_plain($item->description);
+  $vars['node'] = $node;
+  $vars['item_elements'] = empty($item->elements) ? '' : format_xml_elements($item->elements);
 }
