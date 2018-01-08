@@ -401,10 +401,10 @@ function get_grid_info() {
  * @param $vars
  */
 function cni_preprocess_views_view_row_rss_test_feed_1(&$vars) {
-  $item = &$vars['row'];
+  $item = $vars['row'];
   // Use the [id] of the returned results to determine the nid in [results]
-  $result = &$vars['view']->result;
-  $id = &$vars['id'];
+  $result = $vars['view']->result;
+  $id = $vars['id'];
   $node = node_load( $result[$id-1]->nid );
   $vars['title'] = trim(check_plain($item->title));
   $vars['link'] = check_url($item->link);
