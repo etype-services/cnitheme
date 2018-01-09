@@ -410,9 +410,5 @@ function cni_preprocess_views_view_row_rss(&$vars) {
   $vars['description'] = check_plain($item->description);
   $vars['node'] = $node;
   $vars['item_elements'] = empty($item->elements) ? '' : format_xml_elements($item->elements);
-  if (!empty($node->field_image['und'][0]['uri'])) {
-    $vars['img']  = '<img src="' . file_create_url($node->field_image['und'][0]['uri']) . '" />';
-  } else {
-    $vars['img'] = '';
-  }
+  empty($node->field_image['und'][0]['uri'])? $vars['img'] = '': $vars['img']  = '<img src="' . file_create_url($node->field_image['und'][0]['uri']) . '" />';
 }
