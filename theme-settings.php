@@ -75,6 +75,15 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('googleplus'),
   );
 
+  $form['advanced_settings']['misc_settings']['youtube'] = array(
+    '#type' => 'textfield',
+    '#title' => t('YouTube'),
+    '#description' => t('Enter full YouTube URL'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('youtube'),
+  );
+
+
   $form['advanced_settings']['misc_settings']['rssfeed'] = array(
     '#type' => 'textfield',
     '#title' => t('RSS Feed'),
