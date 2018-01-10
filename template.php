@@ -412,3 +412,34 @@ function cni_preprocess_views_view_row_rss(&$vars) {
   $vars['item_elements'] = empty($item->elements) ? '' : format_xml_elements($item->elements);
   empty($node->field_image['und'][0]['uri'])? $vars['img'] = '': $vars['img']  = file_create_url($node->field_image['und'][0]['uri']);
 }
+
+/**
+ * @param $vars
+ * @return void
+ */
+function cni_preprocess_field(&$vars)
+{
+  $markup = '';
+  if($vars['element']['#field_name'] == 'field_ad_image')
+  {
+    $node = node_load($vars['element']['#object']->nid);
+    $ad = field_get_items('node', $node, 'field_ad_image');
+    if (count($ad) > 0) {
+      $url = field_get_items('node', $node, 'field_ad_url');
+      $items = [];
+      foreach ($ad as $k => $v) {
+        $arr = [];
+        $arr['img_src'] = file_create_url($v['uri']);
+        $arr['img_url'] = $url[$k]['safe_value'];
+        $items[] = $arr;
+      }
+      $build = array('items' => $items);
+      $markup = theme_render_template
+      ('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $build);
+    }
+  }
+  // TODO -- fix this
+  print ($markup);
+  $vars['class_array'][] = 'field-hidden';
+  return;
+}
