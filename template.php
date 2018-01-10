@@ -412,11 +412,7 @@ function cni_preprocess_field(&$vars)
         $arr['img_url'] = $url[$k]['safe_value'];
         $items[] = $arr;
       }
-      $build = array('items' => $items);
-      $markup = theme_render_template('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', $build);
-      // TODO -- fix this
-      // print ($markup);
-      $vars['items'][0]['#markup'] = $markup;
+      $vars['field_ad_image_items'] = $items;
     }
   }
   return;
