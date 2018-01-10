@@ -403,7 +403,6 @@ function cni_preprocess_field(&$vars)
     // dpm($vars);
     $node = node_load($vars['element']['#object']->nid);
     $ad = field_get_items('node', $node, 'field_ad_image');
-    dpm($ad);
     if (count($ad) > 0) {
       $url = field_get_items('node', $node, 'field_ad_url');
       $items = [];
@@ -413,6 +412,7 @@ function cni_preprocess_field(&$vars)
         $arr['img_url'] = $url[$k]['safe_value'];
         $items[] = $arr;
       }
+      dpm ($items);
       $build = array('items' => $items);
       $markup = theme_render_template
       ('sites/all/themes/cni/field--field-ad-image--article.tpl.php', $build);
