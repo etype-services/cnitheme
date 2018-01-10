@@ -415,9 +415,10 @@ function cni_preprocess_field(&$vars)
       $build = array('items' => $items);
       $markup = theme_render_template
       ('sites/all/themes/cni/field--field-ad-image--article.tpl.php', $build);
+      // TODO -- fix this
+      // print ($markup);
+      $vars['items'][0]['#markup'] = $markup;
     }
   }
-  // TODO -- fix this
-  print ($markup);
   return;
 }
