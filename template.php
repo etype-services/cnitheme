@@ -401,6 +401,7 @@ function cni_preprocess_field(&$vars)
   if($vars['element']['#field_name'] == 'field_ad_image')
   {
     $node = node_load($vars['element']['#object']->nid);
+    echo $vars['element']['#object']->nid;
     $ad = field_get_items('node', $node, 'field_ad_image');
     if (count($ad) > 0) {
       $url = field_get_items('node', $node, 'field_ad_url');
