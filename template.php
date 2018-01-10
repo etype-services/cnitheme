@@ -412,7 +412,6 @@ function cni_preprocess_field(&$vars)
         $arr['img_url'] = $url[$k]['safe_value'];
         $items[] = $arr;
       }
-      dpm ($items);
       $build = array('items' => $items);
       $markup = theme_render_template
       ('sites/all/themes/cni/field--field-ad-image--article.tpl.php', $build);
@@ -420,6 +419,5 @@ function cni_preprocess_field(&$vars)
   }
   // TODO -- fix this
   print ($markup);
-  $vars['class_array'][] = 'field-hidden';
   return;
 }
