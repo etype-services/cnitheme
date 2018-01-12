@@ -398,12 +398,12 @@ function cni_preprocess_views_view_row_rss(&$vars) {
 function cni_preprocess_field(&$vars)
 {
   $markup = '';
-  if($vars['element']['#field_name'] == 'field_ad_image')
+  if($vars['element']['#field_name'] == '$field_sponsor_ad_image')
   {
     $node = node_load($vars['element']['#object']->nid);
-    $ad = field_get_items('node', $node, 'field_ad_image');
+    $ad = field_get_items('node', $node, '$field_sponsor_ad_image');
     if (count($ad) > 0) {
-      $url = field_get_items('node', $node, 'field_ad_url');
+      $url = field_get_items('node', $node, 'field_sponsor_ad_url');
       $items = [];
       foreach ($ad as $k => $v) {
         $arr = [];
@@ -411,7 +411,7 @@ function cni_preprocess_field(&$vars)
         $arr['img_url'] = $url[$k]['safe_value'];
         $items[] = $arr;
       }
-      $vars['field_ad_image_items'] = $items;
+      $vars['$field_sponsor_ad_image_items'] = $items;
     }
   }
   return;
