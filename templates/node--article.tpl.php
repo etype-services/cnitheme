@@ -39,7 +39,7 @@
             echo ' clearfix';
           } ?>">
               <span class="date"><?php print $date; ?></span>
-            <?php if ($name) print $name; ?>
+            <?php print $name; ?>
           </div>
       <?php endif; ?>
 
