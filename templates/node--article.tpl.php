@@ -80,10 +80,6 @@
 
 </article>
 
-<?php if (isset($sponsor_ad)) { ?>
-  <?php print $sponsor_ad; ?>
-<?php } ?>
-
 <?php if (isset ($free_message)): ?>
     <div class="free-message">
       <?php print $free_message; ?>

@@ -74,8 +74,8 @@ function cni_preprocess_node(&$variables) {
 
     /* add message to "free" stories on pages */
     if (module_exists('premium')) {
-      $level = $node->premium_level['level_name'];
-      if (isset($level)) {
+      if (isset($node->premium_level['level_name'])) {
+        $level = $node->premium_level['level_name'];
         $check = user_is_logged_in();
         if ($level === 'free' && $check != '1') {
           $site_name = variable_get('site_name');
@@ -88,28 +88,6 @@ function cni_preprocess_node(&$variables) {
       }
     }
 
-  }
-
-  /* Sponsor Ad */
-  $variables['sponsor_ad'] = '';
-  if (isset($variables['node'])) {
-    $node = $variables['node'];
-    $ad = field_get_items('node', $node, 'field_ad_image');
-    if (count($ad) > 0)
-    {
-      $url = field_get_items('node', $variables['node'], 'field_ad_url');
-      $items = [];
-      foreach ($ad as $k => $v)
-      {
-        $arr = [];
-        $arr['img_src'] = file_create_url($v['uri']);
-        $arr['img_url'] = $url[$k]['safe_value'];
-        $items[] = $arr;
-      }
-      $vars = array('items' => $items);
-      $variables['sponsor_ad'] = theme_render_template
-      ('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', $vars);
-    }
   }
 
 }
@@ -411,4 +389,30 @@ function cni_preprocess_views_view_row_rss(&$vars) {
   $vars['node'] = $node;
   $vars['item_elements'] = empty($item->elements) ? '' : format_xml_elements($item->elements);
   empty($node->field_image['und'][0]['uri'])? $vars['img'] = '': $vars['img']  = file_create_url($node->field_image['und'][0]['uri']);
+}
+
+/**
+ * @param $vars
+ * @return void
+ */
+function cni_preprocess_field(&$vars)
+{
+  $markup = '';
+  if($vars['element']['#field_name'] == 'field_sponsor_ad_image')
+  {
+    $node = node_load($vars['element']['#object']->nid);
+    $ad = field_get_items('node', $node, 'field_sponsor_ad_image');
+    if (count($ad) > 0) {
+      $url = field_get_items('node', $node, 'field_sponsor_ad_url');
+      $items = [];
+      foreach ($ad as $k => $v) {
+        $arr = [];
+        $arr['img_src'] = file_create_url($v['uri']);
+        $arr['img_url'] = $url[$k]['safe_value'];
+        $items[] = $arr;
+      }
+      $vars['field_sponsor_ad_image_items'] = $items;
+    }
+  }
+  return;
 }
