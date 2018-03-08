@@ -74,8 +74,8 @@ function cni_preprocess_node(&$variables) {
 
     /* add message to "free" stories on pages */
     if (module_exists('premium')) {
-      $level = $node->premium_level['level_name'];
-      if (isset($level)) {
+      if (isset($node->premium_level['level_name'])) {
+        $level = $node->premium_level['level_name'];
         $check = user_is_logged_in();
         if ($level === 'free' && $check != '1') {
           $site_name = variable_get('site_name');
