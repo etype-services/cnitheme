@@ -105,7 +105,7 @@ li.views-fluid-grid-item {
   box-shadow: none;
 }
 .region-main-menu .block-simpleads {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 /* banner below menu */
 .region-main-menu-second-level .block-simpleads {
@@ -132,12 +132,10 @@ li.views-fluid-grid-item {
   padding: 1em;
 }
 .region-preface-1 .block-simpleads > div > div > div > div > div {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .region-preface-1 .block-simpleads > div > div > div > div > div {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -169,10 +167,12 @@ li.views-fluid-grid-item {
   box-shadow: none !important;
 }
 /* Sponsored content ad on articles */
+.node-type-article .field-ad-image-wrapper {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9em;
+    border-top: 1px solid #dddddd;
+}
 .node-type-article .field-ad-image {
-  font-family: 'Lato', sans-serif;
-  font-size: 0.9em;
-  border-top: 1px solid #dddddd;
   padding-top: 0.6em;
 }
 /* responsive rules */
@@ -181,4 +181,50 @@ li.views-fluid-grid-item {
   {
     flex-wrap: wrap;
   }
+}
+
+@media only screen and (max-width: 958px) {
+
+  /* three rules to make ads same width as content */
+  .region-main-menu-second-level .block-simpleads, .region-main-menu .block-simpleads {
+    width: 747px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .region-main-menu-second-level .block-simpleads img, .region-main-menu .block-simpleads img {
+    width: 100%;
+  }
+  .region-main-menu-second-level .block-simpleads > div > div > div > div > div,
+  .region-main-menu .block-simpleads > div > div > div > div > div {
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width: 479px) {
+  .region-main-menu-second-level .block-simpleads, .region-main-menu .block-simpleads {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .region-main-menu-second-level .block-simpleads, .region-main-menu .block-simpleads {
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Sponsor ads on article nodes */
+.node-article .field-ad-image-wrapper {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9em;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 18px;
 }

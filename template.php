@@ -74,8 +74,8 @@ function cni_preprocess_node(&$variables) {
 
     /* add message to "free" stories on pages */
     if (module_exists('premium')) {
-      $level = $node->premium_level['level_name'];
-      if (isset($level)) {
+      if (isset($node->premium_level['level_name'])) {
+        $level = $node->premium_level['level_name'];
         $check = user_is_logged_in();
         if ($level === 'free' && $check != '1') {
           $site_name = variable_get('site_name');
@@ -88,21 +88,6 @@ function cni_preprocess_node(&$variables) {
       }
     }
 
-  }
-
-  /* Sponsor Ad */
-  $variables['sponsor_ad'] = '';
-  if (isset($variables['node'])) {
-    $node = $variables['node'];
-    $ad = field_get_items('node', $node, 'field_ad_image');
-    if (!empty($ad[0]['uri'])) {
-      $arr = array();
-      $arr['img_src'] = file_create_url($ad[0]['uri']);
-      $url = field_get_items('node', $variables['node'], 'field_ad_url');
-      $arr['img_url'] = $url[0]['safe_value'];
-      $variables['sponsor_ad'] = theme_render_template
-      ('sites/all/themes/cni/templates/field--field-ad-image--article.tpl.php', $arr);
-    }
   }
 
 }
@@ -334,8 +319,46 @@ function cni_preprocess_html(&$variables) {
   $adscript = theme_get_setting('adscript');
   $variables['adscript'] = $adscript;
 
+  /* Menu break variable -- this segment loads different css files depending
+  on the setting, and passes a variable that script.js uses to move menus
+  around */
+  $tmp = theme_get_setting('menu_break_point');
+  $menu_break_point = empty($tmp)? '767': $tmp;
+  drupal_add_js(array('cni' => array('menu_break_point' => $menu_break_point)), array('type' => 'setting'));
+  switch ($menu_break_point) {
+    case '958':
+      drupal_add_css(
+        drupal_get_path('theme', 'cni') . '/css/menu_break_958.css',
+        array(
+          'type' => 'file',
+          'media' => 'all',
+          'preprocess' => FALSE,
+          'every_page' => TRUE,
+          'weight' => 999,
+          'group' => CSS_THEME
+        )
+      );
+      break;
+
+    default:
+      drupal_add_css(
+        drupal_get_path('theme', 'cni') . '/css/menu_break_767.css',
+        array(
+          'type' => 'file',
+          'media' => 'all',
+          'preprocess' => FALSE,
+          'every_page' => TRUE,
+          'weight' => 999,
+          'group' => CSS_THEME
+        )
+      );
+  }
+
 }
 
+/**
+ * @return array
+ */
 function get_grid_info() {
 
   $grid_info = array();
@@ -350,5 +373,46 @@ function get_grid_info() {
   }
 
   return $grid_info;
+}
 
+/**
+ * @param $vars
+ */
+function cni_preprocess_views_view_row_rss(&$vars) {
+  $item = $vars['row'];
+  $result = $vars['view']->result;
+  $id = $vars['id'];
+  $node = node_load( $result[$id-1]->nid );
+  $vars['title'] = trim(check_plain($item->title));
+  $vars['link'] = check_url($item->link);
+  $vars['description'] = check_plain($item->description);
+  $vars['node'] = $node;
+  $vars['item_elements'] = empty($item->elements) ? '' : format_xml_elements($item->elements);
+  empty($node->field_image['und'][0]['uri'])? $vars['img'] = '': $vars['img']  = file_create_url($node->field_image['und'][0]['uri']);
+}
+
+/**
+ * @param $vars
+ * @return void
+ */
+function cni_preprocess_field(&$vars)
+{
+  $markup = '';
+  if($vars['element']['#field_name'] == 'field_sponsor_ad_image')
+  {
+    $node = node_load($vars['element']['#object']->nid);
+    $ad = field_get_items('node', $node, 'field_sponsor_ad_image');
+    if (count($ad) > 0) {
+      $url = field_get_items('node', $node, 'field_sponsor_ad_url');
+      $items = [];
+      foreach ($ad as $k => $v) {
+        $arr = [];
+        $arr['img_src'] = file_create_url($v['uri']);
+        $arr['img_url'] = $url[$k]['safe_value'];
+        $items[] = $arr;
+      }
+      $vars['field_sponsor_ad_image_items'] = $items;
+    }
+  }
+  return;
 }
