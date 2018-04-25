@@ -50,11 +50,12 @@ function cni_preprocess_page(&$variables) {
           $variables['page']['content']['system_main']['nodes'][$nid]['#node']->classes_array = array('last');
         }
         $i++;
-        /* So I don't get "Warning: Cannot use a scalar value as an array" */
+        /* Defeat "Warning: Cannot use a scalar value as an array" */
         unset($nodes, $nid);
       }
     }
   }
+
 }
 
 function cni_preprocess_node(&$variables) {
@@ -64,22 +65,31 @@ function cni_preprocess_node(&$variables) {
     $variables['classes_array'] = array_merge($variables['classes_array'], $node->classes_array);
   }
 
-  /* add addthis script to pages, ie, not teasers */
+  /* add things to pages, ie, not teasers */
+
   if (node_is_page($node) !== FALSE) {
+
+    /* add this script */
     drupal_add_js('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56e774978692f861', 'external');
+
+    /* add message to "free" stories on pages */
+    if (module_exists('premium')) {
+      if (isset($node->premium_level['level_name'])) {
+        $level = $node->premium_level['level_name'];
+        $check = user_is_logged_in();
+        if ($level === 'free' && $check != '1') {
+          $site_name = variable_get('site_name');
+          if (substr($site_name, 0) !== 'The') {
+            $site_name = 'the ' . $site_name;
+          }
+          $e_edition = theme_get_setting('e_edition');;
+          $variables['free_message'] = "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
+        }
+      }
+    }
+
   }
 
-  /* add message to "free" stories */
-  $level = $node->premium_level['level_name'];
-  $check = user_is_logged_in();
-  if ($level == 'free' && $check != '1') {
-    $site_name = variable_get('site_name');
-    if (substr($site_name, 0) !== 'The') {
-      $site_name = 'the ' . $site_name;
-    }
-    $e_edition = theme_get_setting('e_edition');;
-    $variables['free_message']  = "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
-  }
 }
 
 /* Breadcrumbs */
@@ -305,8 +315,50 @@ function cni_preprocess_html(&$variables) {
     drupal_add_html_head($appletouchicon, 'apple-touch-icon');
   }
 
+  /* any advertising script */
+  $adscript = theme_get_setting('adscript');
+  $variables['adscript'] = $adscript;
+
+  /* Menu break variable -- this segment loads different css files depending
+  on the setting, and passes a variable that script.js uses to move menus
+  around */
+  $tmp = theme_get_setting('menu_break_point');
+  $menu_break_point = empty($tmp)? '767': $tmp;
+  drupal_add_js(array('cni' => array('menu_break_point' => $menu_break_point)), array('type' => 'setting'));
+  switch ($menu_break_point) {
+    case '958':
+      drupal_add_css(
+        drupal_get_path('theme', 'cni') . '/css/menu_break_958.css',
+        array(
+          'type' => 'file',
+          'media' => 'all',
+          'preprocess' => FALSE,
+          'every_page' => TRUE,
+          'weight' => 999,
+          'group' => CSS_THEME
+        )
+      );
+      break;
+
+    default:
+      drupal_add_css(
+        drupal_get_path('theme', 'cni') . '/css/menu_break_767.css',
+        array(
+          'type' => 'file',
+          'media' => 'all',
+          'preprocess' => FALSE,
+          'every_page' => TRUE,
+          'weight' => 999,
+          'group' => CSS_THEME
+        )
+      );
+  }
+
 }
 
+/**
+ * @return array
+ */
 function get_grid_info() {
 
   $grid_info = array();
@@ -321,5 +373,46 @@ function get_grid_info() {
   }
 
   return $grid_info;
+}
 
+/**
+ * @param $vars
+ */
+function cni_preprocess_views_view_row_rss(&$vars) {
+  $item = $vars['row'];
+  $result = $vars['view']->result;
+  $id = $vars['id'];
+  $node = node_load( $result[$id-1]->nid );
+  $vars['title'] = trim(check_plain($item->title));
+  $vars['link'] = check_url($item->link);
+  $vars['description'] = check_plain($item->description);
+  $vars['node'] = $node;
+  $vars['item_elements'] = empty($item->elements) ? '' : format_xml_elements($item->elements);
+  empty($node->field_image['und'][0]['uri'])? $vars['img'] = '': $vars['img']  = file_create_url($node->field_image['und'][0]['uri']);
+}
+
+/**
+ * @param $vars
+ * @return void
+ */
+function cni_preprocess_field(&$vars)
+{
+  $markup = '';
+  if($vars['element']['#field_name'] == 'field_sponsor_ad_image')
+  {
+    $node = node_load($vars['element']['#object']->nid);
+    $ad = field_get_items('node', $node, 'field_sponsor_ad_image');
+    if (count($ad) > 0) {
+      $url = field_get_items('node', $node, 'field_sponsor_ad_url');
+      $items = [];
+      foreach ($ad as $k => $v) {
+        $arr = [];
+        $arr['img_src'] = file_create_url($v['uri']);
+        $arr['img_url'] = $url[$k]['safe_value'];
+        $items[] = $arr;
+      }
+      $vars['field_sponsor_ad_image_items'] = $items;
+    }
+  }
+  return;
 }

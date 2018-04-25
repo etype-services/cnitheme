@@ -1,5 +1,4 @@
-/* views-fluid-grid Classifieds
---------------------------------------------------------------------------*/
+/* views-fluid-grid Classifieds */
 div.views-fluid-grid {
   margin-bottom: 1em;
 }
@@ -60,8 +59,7 @@ li.views-fluid-grid-item {
   background-size: 60px 60px;
   padding-left: 71px;
 }
-/* DFP / GOOGLE ADS
---------------------------------------------------------------------------*/
+/* GOOGLE ADS */
 .block-dfp {
   margin-bottom: 20px;
 }
@@ -90,9 +88,16 @@ li.views-fluid-grid-item {
 .preface-wrapper .block-dfp .content, .sidebar .block-dfp .content {
   padding: 0;
 }
-/* SIMPLE ADS
---------------------------------------------------------------------------*/
-
+/* etype google DFP sidebar ads */
+#div-gpt-ad-1487352373268-1 {
+  margin: -20px;
+}
+/* etype google DFP bottom leaderboard */
+#div-gpt-ad-1487352373268-0 {
+  margin: 0 auto 20px;
+  width: 728px;
+}
+/* SIMPLE ADS */
 #main-content .block-simpleads .block-inner {
   padding: 0;
   margin: 0;
@@ -100,7 +105,7 @@ li.views-fluid-grid-item {
   box-shadow: none;
 }
 .region-main-menu .block-simpleads {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 /* banner below menu */
 .region-main-menu-second-level .block-simpleads {
@@ -113,8 +118,12 @@ li.views-fluid-grid-item {
 .region-content-bottom .block-simpleads {
   margin-bottom: 20px;
 }
+#main-content .region-sidebar-first .block-simpleads .block-inner,
+#main-content .region-sidebar-second .block-simpleads .block-inner {
+  margin: 0 0 20px;
+}
 /* center ads */
-.block-simpleads > div > div > div {
+.block-simpleads > div > div > div > div > div {
   display: flex;
   justify-content: space-around;
 }
@@ -123,12 +132,18 @@ li.views-fluid-grid-item {
   padding: 1em;
 }
 .region-preface-1 .block-simpleads > div > div > div > div > div {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-/* OWN LOCAL
---------------------------------------------------------------------------*/
+.region-preface-1 .block-simpleads > div > div > div > div > div {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.region-sidebar-first .block-simpleads > div > div > div > div > div,
+.region-sidebar-second .block-simpleads > div > div > div > div > div {
+  flex-wrap: wrap;
+}
+/* OWN LOCAL */
 #block-etype-own-local .block-inner {
   padding: 0;
   margin: 0;
@@ -142,15 +157,6 @@ li.views-fluid-grid-item {
 #CrowdynewsAd {
   margin: -20px;
 }
-/* css for etype google DFP sidebar ads */
-#div-gpt-ad-1487352373268-1 {
-  margin: -20px;
-}
-/* css for etype google DFP bottom leaderboard */
-#div-gpt-ad-1487352373268-0 {
-  margin: 0 auto 20px;
-  width: 728px;
-}
 /* mercolocal */
 .divEmbed {
   max-width: none !important;
@@ -159,4 +165,66 @@ li.views-fluid-grid-item {
   width: 100% !important;
   overflow: hidden !important;
   box-shadow: none !important;
+}
+/* Sponsored content ad on articles */
+.node-type-article .field-ad-image-wrapper {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9em;
+    border-top: 1px solid #dddddd;
+}
+.node-type-article .field-ad-image {
+  padding-top: 0.6em;
+}
+/* responsive rules */
+@media only screen and (max-width: 767px) {
+  .region-main-menu-second-level .block-simpleads > div > div > div > div > div
+  {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 958px) {
+
+  /* three rules to make ads same width as content */
+  .region-main-menu-second-level .block-simpleads, .region-main-menu .block-simpleads {
+    width: 747px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .region-main-menu-second-level .block-simpleads img, .region-main-menu .block-simpleads img {
+    width: 100%;
+  }
+  .region-main-menu-second-level .block-simpleads > div > div > div > div > div,
+  .region-main-menu .block-simpleads > div > div > div > div > div {
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width: 479px) {
+  .region-main-menu-second-level .block-simpleads, .region-main-menu .block-simpleads {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .region-main-menu-second-level .block-simpleads, .region-main-menu .block-simpleads {
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Sponsor ads on article nodes */
+.node-article .field-ad-image-wrapper {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9em;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 18px;
 }

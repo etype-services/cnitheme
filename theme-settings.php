@@ -78,10 +78,18 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
   $form['advanced_settings']['misc_settings']['youtube'] = array(
     '#type' => 'textfield',
     '#title' => t('YouTube'),
+<<<<<<< HEAD
+=======
+    '#description' => t('Enter full YouTube URL.'),
+>>>>>>> debe2361cf0a3eb4ccfe628c5f3c88b0ed17c663
     '#size' => 10,
     '#default_value' => theme_get_setting('youtube'),
   );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> debe2361cf0a3eb4ccfe628c5f3c88b0ed17c663
   $form['advanced_settings']['misc_settings']['rssfeed'] = array(
     '#type' => 'textfield',
     '#title' => t('RSS Feed'),
@@ -143,6 +151,24 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
     '#description' => t('Optional maximum allowed width for logo'),
     '#size' => 10,
     '#default_value' => theme_get_setting('logo_width'),
+  );
+
+  /* Default Menu Break Point */
+  $tmp = theme_get_setting('menu_break_point');
+  $menu_break_point = empty($tmp)? '767': $tmp;
+  $form['advanced_settings']['misc_settings']['menu_break_point'] = array(
+    '#type' => 'select',
+    '#title' => t('Menu Break Point'),
+    '#description' => t('Width at which menu changes to Mobile View.'),
+    '#options' => array('767' => '767', '958' => '958'),
+    '#default_value' => $menu_break_point,
+  );
+
+  $form['advanced_settings']['misc_settings']['adscript'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Ad Script'),
+    '#description' => t('Enter any advertising script to go in the footer.'),
+    '#default_value' => theme_get_setting('adscript'),
   );
 
   // Grid Settings
