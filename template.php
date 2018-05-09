@@ -397,7 +397,7 @@ function cni_preprocess_views_view_row_rss(&$vars) {
  */
 function cni_preprocess_field(&$vars)
 {
-  $markup = '';
+
   if($vars['element']['#field_name'] == 'field_sponsor_ad_image')
   {
     $node = node_load($vars['element']['#object']->nid);
