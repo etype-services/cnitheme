@@ -318,7 +318,7 @@ function cni_preprocess_html(&$variables) {
   /* any advertising script */
   $adscript = theme_get_setting('adscript');
   $variables['adscript'] = $adscript;
-  dpm($variables);
+  //dpm($variables);
 
   /* Menu break variable -- this segment loads different css files depending
   on the setting, and passes a variable that script.js uses to move menus
