@@ -315,9 +315,11 @@ function cni_preprocess_html(&$variables) {
     drupal_add_html_head($appletouchicon, 'apple-touch-icon');
   }
 
-  /* any advertising script */
-  $adscript = theme_get_setting('adscript');
-  $variables['adscript'] = $adscript;
+  /* extra scripts */
+  $head_script = variable_get('etype_head_script');
+  $variables['head_script'] = $head_script;
+  $body_script = empty(variable_get('etype_body_script'))? theme_get_setting('adscript'): variable_get('etype_body_script');
+  $variables['body_script'] = $body_script;
 
   /* Menu break variable -- this segment loads different css files depending
   on the setting, and passes a variable that script.js uses to move menus
