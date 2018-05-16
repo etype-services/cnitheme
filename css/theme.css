@@ -256,6 +256,10 @@ h3.site-slogan {
     font-style: italic;
 }
 
+.preface-wrapper .view-footer {
+    margin: 0 15px;
+}
+
 /* MAIN CONTENT
 --------------------------------------------------------------------------*/
 
