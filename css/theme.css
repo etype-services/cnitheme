@@ -201,7 +201,8 @@ h3.site-slogan {
 }
 
 .preface-wrapper .views-row .views-field-field-image img,
-.preface-wrapper .views-row .views-field-field-mugshot img {
+.preface-wrapper .views-row .views-field-field-mugshot img,
+.preface-wrapper .views-row .views-field-field-video {
     display: block;
     float: left;
     margin-right: 10px;
