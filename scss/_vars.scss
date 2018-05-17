@@ -1,0 +1,161 @@
+
+//colors
+$white: #fff;
+$black: #000;
+$mercury: #e5e5e5;
+$blue: #00f;
+$color_alto_approx: #ddd;
+$color_celeste_approx: #ccc;
+$color_concrete_approx: #f3f1f1;
+$color_gray_nurse_approx: #eaeaea;
+$color_mine_shaft_approx: #333;
+$color_mountain_mist_approx: #999;
+$color_alabaster_approx: #f9f9f9;
+$color_woodsmoke_approx: #111;
+$color_fuscous_gray_approx: #555;
+$color_log_cabin_approx: #222;
+$color_turquoise_approx: #22d7cc;
+$color_pink_swan_approx: #bbb;
+$color_storm_dust_approx: #666;
+$color_silver_chalice_approx: #aaa;
+
+//urls
+$url_0: url(../images/trans.png);
+$url_1: url(../images/postscript-bg.png);
+$url_2: url(../images/image-background.png);
+$url_3: url(../images/facebook.png);
+$url_4: url(../images/feed-icon.png);
+$url_5: url(../images/twitter.png);
+$url_6: url(../images/pinterest.png);
+$url_7: url(../images/instagram.png);
+$url_8: url(../images/googleplus.png);
+$url_9: url(../images/youtube.png);
+$url_10: url(/sites/all/themes/cni/images/classified_icons/announcements.png);
+$url_11: url(/sites/all/themes/cni/images/classified_icons/employment.png);
+$url_12: url(/sites/all/themes/cni/images/classified_icons/pets.png);
+$url_13: url(/sites/all/themes/cni/images/classified_icons/real_estate_rent.png);
+$url_14: url(/sites/all/themes/cni/images/classified_icons/real_estate_sale.png);
+$url_15: url(/sites/all/themes/cni/images/classified_icons/services.png);
+$url_16: url(/sites/all/themes/cni/images/classified_icons/shop.png);
+$url_17: url(/sites/all/themes/cni/images/classified_icons/transport.png);
+
+//fonts
+$font_0: Lato;
+$font_1: sans-serif;
+
+//@extend-elements
+//original selectors
+//h1, h2, h3, h4, h5
+%extend_1 {
+  font-family: $font_0, $font_1;
+  line-height: 1.0em;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 0.6em;
+}
+
+//original selectors
+//h1.site-name, h2.site-name
+%extend_2 {
+  line-height: 48px;
+  font-size: 48px;
+  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: 1px 1px $white;
+  text-transform: none;
+}
+
+//original selectors
+//.view-slideshow .views-slideshow-controls-bottom .views-field-field-image img, .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img
+%extend_3 {
+  display: block;
+  margin: 0;
+  float: left;
+  opacity: 0.5;
+  border: 1px solid $color_mine_shaft_approx;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 1px 3px $color_mountain_mist_approx;
+}
+
+//original selectors
+//.preface-wrapper .views-row .views-field-field-image img, .preface-wrapper .views-row .views-field-field-mugshot img, .preface-wrapper .views-row .views-field-field-video
+%extend_4 {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  border: 5px solid $white;
+}
+
+//original selectors
+//#main-content .block-inner, #preface .block-inner, h1#page-title
+%extend_5 {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid $color_alto_approx;
+  border-bottom: 3px solid $color_woodsmoke_approx;
+  background: $white;
+}
+
+//original selectors
+//#user-menu ul.menu li li a, #user-menu ul.menu li li a.active
+%extend_6 {
+  width: 160px;
+  padding: 0 20px;
+  margin: 0;
+  font-size: 0.9em;
+  border: 0;
+}
+
+//original selectors
+//#main-menu-second-level ul.menu li li a, #main-menu-second-level ul.menu li li a.active
+%extend_7 {
+  width: 160px;
+  padding: 0 20px;
+  margin: 0;
+  font-size: 0.9em;
+  border: 0;
+  color: $color_mine_shaft_approx;
+  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: 1px 1px $white;
+}
+
+//original selectors
+//.node .field-name-field-image img, .flexslider .slides img
+%extend_8 {
+  display: block;
+  height: auto;
+  width: initial;
+  max-width: 100%;
+  margin: auto;
+}
+
+//original selectors
+//.node-teaser .field-image .field-name-field-image .field-items .field-item:first-child img, .node-teaser .field-name-field-mugshot .field-items .field-item:first-child img
+%extend_9 {
+  display: block;
+  padding: 10px;
+  float: left;
+  margin: 0 7px 7px 0;
+  background: $url_2;
+  width: auto;
+}
+
+//original selectors
+//#search-block-form .form-text, #search-block-form .form-submit
+%extend_10 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: 0;
+  vertical-align: middle;
+}
+
+//original selectors
+//.block-dfp .block-inner, #main-content .block-dfp .block-inner
+%extend_11 {
+  padding: 0;
+  margin: 0;
+  border-style: none;
+  border-width: 0;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+}

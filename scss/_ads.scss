@@ -1,0 +1,254 @@
+.page-classifieds {
+  ul.views-fluid-grid-items-width-200 li.views-fluid-grid-item {
+    line-height: 1em;
+  }
+  div.views-fluid-grid h3 {
+    line-height: 60px;
+    margin-bottom: 0.3em;
+    span {
+      display: flex;
+    }
+  }
+  .view-id-classifieds img.classified-icon {
+    height: 60px;
+    margin-right: 1em;
+  }
+}
+.block-dfp {
+  margin-bottom: 20px;
+  .block-inner {
+    @extend %extend_11;
+  }
+}
+#main-content {
+  .block-dfp .block-inner {
+    @extend %extend_11;
+  }
+  .block-simpleads .block-inner {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .region-sidebar-first .block-simpleads .block-inner {
+    margin: 0 0 20px;
+  }
+  .region-sidebar-second .block-simpleads .block-inner {
+    margin: 0 0 20px;
+  }
+}
+.region-main-menu-second-level {
+  .block-dfp {
+    width: 728px;
+    margin: 20px auto 0;
+  }
+  .block-simpleads {
+    margin-top: 20px;
+  }
+}
+.region-content-bottom {
+  .block-dfp {
+    width: 728px;
+    margin: 0 auto 20px;
+  }
+  .block-simpleads {
+    margin-bottom: 20px;
+  }
+}
+.region-preface-1 {
+  .block-dfp {
+    width: 468px;
+    margin: 0 auto 20px;
+  }
+  .block-simpleads > div > div > div > div > div {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.preface-wrapper {
+  .block-dfp .content {
+    padding: 0;
+  }
+  .region-preface-1 .block-simpleads .content {
+    padding: 1em;
+  }
+}
+#div-gpt-ad-1487352373268-1 {
+  margin: -20px;
+}
+#div-gpt-ad-1487352373268-0 {
+  margin: 0 auto 20px;
+  width: 728px;
+}
+#CrowdynewsAd {
+  margin: -20px;
+}
+.divEmbed {
+  max-width: none !important;
+  min-width: inherit !important;
+  margin: 0 !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none !important;
+}
+.node-type-article {
+  .field-ad-image-wrapper {
+    font-family: $font_0, $font_1;
+    font-size: 0.9em;
+    border-top: 1px solid $color_alto_approx;
+  }
+  .field-ad-image {
+    padding-top: 0.6em;
+  }
+}
+@media only screen and(max-width: 767px) {
+  .region-main-menu-second-level .block-simpleads > div > div > div > div > div {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and(max-width: 958px) {
+  .region-main-menu-second-level .block-simpleads {
+    width: 747px;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      width: 100%;
+    }
+    > div > div > div > div > div {
+      display: block;
+    }
+  }
+  .region-main-menu .block-simpleads {
+    width: 747px;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      width: 100%;
+    }
+    > div > div > div > div > div {
+      display: block;
+    }
+  }
+}
+@media only screen and(max-width: 479px) {
+  .region-main-menu-second-level .block-simpleads {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .region-main-menu .block-simpleads {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and(min-width: 480px) and(max-width: 767px) {
+  .region-main-menu-second-level .block-simpleads {
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .region-main-menu .block-simpleads {
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+div.views-fluid-grid {
+  margin-bottom: 1em;
+}
+li.views-fluid-grid-item {
+  color: inherit;
+  background: none;
+  border: none;
+}
+.page-classifieds-announcements h1#page-title {
+  background: $url_10 no-repeat 6px 6px;
+  background-size: 60px 60px;
+  padding-left: 71px;
+}
+.page-classifieds-employment h1#page-title {
+  background: $url_11 no-repeat 6px 6px;
+  background-size: 60px 60px;
+  padding-left: 71px;
+}
+.page-classifieds-pets h1#page-title {
+  background: $url_12 no-repeat 6px 6px;
+  background-size: 60px 60px;
+  padding-left: 71px;
+}
+.page-classifieds-real-estate-rent h1#page-title {
+  background: $url_13 no-repeat 6px 6px;
+  background-size: 60px 60px;
+}
+.page-classifieds-real-estate-sale h1#page-title {
+  background: $url_14 no-repeat 6px 6px;
+  background-size: 60px 60px;
+  padding-left: 71px;
+}
+.page-classifieds-services h1#page-title {
+  background: $url_15 no-repeat 6px 6px;
+  background-size: 60px 60px;
+}
+.page-classifieds-shop h1#page-title {
+  background: $url_16 no-repeat 6px 6px;
+  background-size: 60px 60px;
+  padding-left: 71px;
+}
+.page-classifieds-transport h1#page-title {
+  background: $url_17 no-repeat 6px 6px;
+  background-size: 60px 60px;
+  padding-left: 71px;
+}
+.not-front .region-main-menu-second-level .block-dfp {
+  margin: 20px auto 20px;
+}
+.region-slideshow .block-dfp {
+  width: 468px;
+  margin: 0 auto 20px;
+}
+.sidebar .block-dfp .content {
+  padding: 0;
+}
+.region-main-menu .block-simpleads {
+  margin-bottom: 15px;
+}
+.slideshow-wrapper-inner .block-simpleads {
+  margin-bottom: 20px;
+}
+.block-simpleads > div > div > div > div > div {
+  display: flex;
+  justify-content: space-around;
+}
+.region-sidebar-first .block-simpleads > div > div > div > div > div {
+  flex-wrap: wrap;
+}
+.region-sidebar-second .block-simpleads > div > div > div > div > div {
+  flex-wrap: wrap;
+}
+#block-etype-own-local .block-inner {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  .content {
+    padding: 0;
+  }
+}
+.node-article .field-ad-image-wrapper {
+  font-family: $font_0, $font_1;
+  font-size: 0.9em;
+  border-top: 1px solid $color_alto_approx;
+  border-bottom: 1px solid $color_alto_approx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+/* DFP BANNERS */
+#postscript_banner {
+  .grid_12 {
+
+  }
+}

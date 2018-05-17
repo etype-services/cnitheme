@@ -1,0 +1,454 @@
+@media only screen and(min-width: 959px) {
+  #main-menu {
+    .content {
+      width: 100%;
+    }
+    #block-superfish-1 ul {
+      &.menu {
+        max-width: 960px;
+        white-space: nowrap;
+      }
+      #menu-1797-1 {
+        display: none;
+      }
+    }
+    ul.menu li {
+      float: none;
+      ul {
+        top: 33px;
+        background: $color_celeste_approx none repeat scroll 0 0;
+        width: inherit;
+        li {
+          background-color: $color_celeste_approx;
+          width: 100%;
+          a {
+            &:hover {
+              background-color: $color_concrete_approx;
+            }
+            &.active:hover {
+              background-color: $color_concrete_approx;
+            }
+          }
+        }
+      }
+      a {
+        padding: 0 8px;
+      }
+      li a {
+        padding: 0 8px;
+        padding: 0 8px;
+        color: $white;
+        &.active {
+          padding: 0 8px;
+          color: $black;
+        }
+        &:hover {
+          background-color: $color_concrete_approx;
+        }
+      }
+    }
+    #block-system-user-menu ul.menu {
+      margin: 0 auto;
+      white-space: nowrap;
+    }
+  }
+  .postscript-wrapper {
+    margin-right: 10px;
+  }
+  .sf-menu.sf-style-space {
+    float: none;
+    &.sf-navbar li ul {
+      background-color: transparent;
+    }
+  }
+  .page-node.not-logged-in .content .node-content-wrapper {
+    margin-top: -13px;
+  }
+  .container_12 #postscript .grid_4 {
+    width: inherit;
+  }
+}
+@media only screen and(max-width: 958px) and(min-width: 768px) {
+  #main-menu {
+    .content {
+      width: 100%;
+    }
+    ul.menu li {
+      float: none;
+      a {
+        padding: 0 7px;
+        font-size: 13px;
+      }
+      ul {
+        top: 33px;
+        background: $color_celeste_approx none repeat scroll 0 0;
+        width: inherit;
+        li {
+          background-color: $color_celeste_approx;
+          width: 100%;
+          a {
+            &:hover {
+              background-color: $color_gray_nurse_approx;
+            }
+            &.active:hover {
+              background-color: $color_gray_nurse_approx;
+            }
+          }
+        }
+      }
+      li a {
+        padding: 0 7px;
+        font-size: 13px;
+        padding: 0 10px;
+        color: $white;
+        &.active {
+          padding: 0 7px;
+          font-size: 13px;
+          color: $black;
+        }
+        &:hover {
+          background-color: $color_gray_nurse_approx;
+        }
+      }
+    }
+  }
+  .page-node {
+    &.not-logged-in {
+      .field-name-field-image img {
+        width: auto;
+        height: auto;
+      }
+      .content .node-content-wrapper {
+        margin-top: -13px;
+      }
+    }
+    .field-name-field-video iframe {
+      width: 490px;
+      height: 300px;
+    }
+  }
+  .view-slideshow {
+    .views_slideshow_main {
+      height: 292px;
+      .views-field-title {
+        width: 451px;
+      }
+      .views-field-body {
+        width: 451px;
+        top: 130px;
+        font-size: 11px;
+      }
+      .views-field-field-image img {
+        width: 491px;
+        height: auto;
+      }
+      .views-field-field-video img {
+        width: 491px;
+        height: auto;
+      }
+    }
+    .views-slideshow-controls-bottom {
+      .views-field-field-image img {
+        width: 54px;
+        height: 35px;
+      }
+      .views-field-field-video img {
+        width: 54px;
+        height: 35px;
+      }
+    }
+  }
+  #views_slideshow_cycle_main_slideshow-block {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .views-slideshow-controls-bottom {
+    margin-top: 44px;
+  }
+  .postscript-wrapper {
+    margin-right: 10px;
+  }
+  #block-superfish-1 ul {
+    #menu-1797-1 {
+      display: none;
+    }
+    &.menu {
+      margin: 0 auto;
+      white-space: nowrap;
+    }
+  }
+  .sf-menu.sf-style-space {
+    float: none;
+    &.sf-navbar li ul {
+      background-color: transparent;
+    }
+  }
+  .view-featured-view iframe {
+    width: 195px;
+    height: 120px;
+  }
+}
+@media only screen and(max-width: 767px) and(min-width: 480px) {
+  .node-teaser {
+    .node-content-wrapper {
+      margin-left: 0;
+    }
+    .field-name-field-image img {
+      float: none;
+      margin: 0 0 20px 0;
+    }
+    .field-name-field-video iframe {
+      float: none;
+      width: 240px;
+      height: 160px;
+      margin: 0 0 20px 0;
+    }
+  }
+  .view-slideshow {
+    .views_slideshow_main {
+      height: 257px;
+      .views-field-title {
+        width: 378px;
+      }
+      .views-field-body {
+        display: none;
+      }
+      .views-field-field-image img {
+        width: 418px;
+        height: auto;
+      }
+      .views-field-field-video img {
+        width: 418px;
+        height: auto;
+      }
+    }
+    .views-slideshow-controls-bottom {
+      .views-field-field-image img {
+        width: 53px;
+        height: 33px;
+        margin-right: 4px;
+        margin-left: 4px;
+      }
+      .views-field-field-video img {
+        width: 53px;
+        height: 33px;
+        margin-right: 4px;
+        margin-left: 4px;
+      }
+    }
+  }
+  #views_slideshow_cycle_main_slideshow-block {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .views-slideshow-controls-bottom {
+    margin-top: 34px;
+  }
+  .postscript-wrapper {
+    padding: 1em;
+    margin: 0;
+    border-top: 0;
+    h3 {
+      margin-left: 0;
+      margin-bottom: 10px;
+      background: none;
+    }
+  }
+  .page-node .field-name-field-video iframe {
+    width: 300px;
+    height: 200px;
+  }
+  #block-block-1 .block-inner {
+    border: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+  }
+  .region-content-bottom .block-dfp {
+    display: none;
+    visibility: hidden;
+  }
+  .region-main-menu-second-level .block-dfp {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media only screen and(max-width: 479px) and(min-width: 421px) {
+  .region-headerad {
+    float: left;
+    margin: 0.2em 0 1em 5em;
+  }
+  .node-teaser {
+    .field-name-field-image img {
+      float: left;
+      margin: 0 20px 0 0;
+    }
+    .field-name-field-video iframe {
+      float: none;
+      width: 360px;
+      height: 220px;
+      margin: 0 0 20px 0;
+    }
+  }
+  .view-slideshow {
+    .views_slideshow_main {
+      height: 210px;
+      .views-field-title {
+        width: 258px;
+      }
+      .views-field-body {
+        display: none;
+      }
+      .views-field-field-image img {
+        width: 298px;
+        height: auto;
+      }
+      .views-field-field-video img {
+        width: 298px;
+        height: auto;
+      }
+    }
+    .views-slideshow-controls-bottom {
+      .views-field-field-image img {
+        width: 22px;
+        height: 15px;
+        margin-left: 9px;
+      }
+      .views-field-field-video img {
+        width: 22px;
+        height: 15px;
+        margin-left: 9px;
+      }
+    }
+  }
+  .postscript-wrapper {
+    padding: 1em;
+    margin: 0;
+    border-top: 0;
+    h3 {
+      margin-left: 0;
+      background: none;
+    }
+  }
+  .submitted {
+    clear: both;
+    margin-left: 0;
+  }
+  .video .node-teaser .node-content-wrapper {
+    margin-left: 0;
+  }
+  .page-node .field-name-field-video iframe {
+    width: 418px;
+    height: 300px;
+  }
+  #postscript .grid_4 {
+    margin-left: 1em;
+  }
+  #block-block-35 .block-inner {
+    border: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+  }
+  .region-content-bottom .block-dfp {
+    display: none;
+    visibility: hidden;
+  }
+  .region-main-menu-second-level .block-dfp {
+    display: none;
+    visibility: hidden;
+  }
+  .node .taxonomy .field-type-taxonomy-term-reference .field-items {
+    display: block;
+  }
+}
+@media only screen and(max-width: 420px) {
+  .region-headerad {
+    float: left;
+    margin: 0.2em 0 1em 1em;
+  }
+  .node-teaser {
+    .field-name-field-image img {
+      float: left;
+      margin: 0 20px 0 0;
+    }
+    .field-name-field-video iframe {
+      float: none;
+      width: 360px;
+      height: 220px;
+      margin: 0 0 20px 0;
+    }
+  }
+  .view-slideshow {
+    .views_slideshow_main {
+      height: 210px;
+      .views-field-title {
+        width: 259px;
+      }
+      .views-field-body {
+        display: none;
+      }
+      .views-field-field-image img {
+        width: 298px;
+        height: auto;
+      }
+      .views-field-field-video img {
+        width: 298px;
+        height: auto;
+      }
+    }
+    .views-slideshow-controls-bottom {
+      .views-field-field-image img {
+        width: 26px;
+        height: 17px;
+        margin-left: 6px;
+      }
+      .views-field-field-video img {
+        width: 26px;
+        height: 17px;
+        margin-left: 6px;
+      }
+    }
+  }
+  .postscript-wrapper {
+    padding: 1em;
+    margin: 0;
+    border-top: 0;
+    h3 {
+      margin-left: 0;
+      background: none;
+    }
+  }
+  .submitted {
+    clear: both;
+    margin-left: 0;
+  }
+  #edit-search-block-form--2 {
+    width: 80px;
+  }
+  .video .node-teaser .node-content-wrapper {
+    margin-left: 0;
+  }
+  .page-node .field-name-field-video iframe {
+    width: 418px;
+    height: 300px;
+  }
+  #block-block-1 .block-inner {
+    border: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+  }
+  .region-content-bottom .block-dfp {
+    display: none;
+    visibility: hidden;
+  }
+  .region-main-menu-second-level .block-dfp {
+    display: none;
+    visibility: hidden;
+  }
+  .region-slideshow .block-dfp {
+    display: none;
+    visibility: hidden;
+  }
+  .node .taxonomy .field-type-taxonomy-term-reference .field-items {
+    display: block;
+  }
+}

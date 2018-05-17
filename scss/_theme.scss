@@ -1,0 +1,1350 @@
+h1 {
+  @extend %extend_1;
+  font-size: 2em;
+  &.title {
+    margin-bottom: 0.6em;
+  }
+  &.site-name {
+    @extend %extend_2;
+  }
+  &#page-title {
+    @extend %extend_5;
+  }
+}
+h2 {
+  @extend %extend_1;
+  font-size: 24px;
+  &.site-name {
+    @extend %extend_2;
+  }
+}
+h3 {
+  @extend %extend_1;
+  &.site-slogan {
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 1px 1px $white;
+  }
+}
+h4 {
+  @extend %extend_1;
+}
+h5 {
+  @extend %extend_1;
+}
+.container_12 {
+  padding: 0 10px;
+  .postscript-wrapper .grid_4 {
+    width: inherit;
+  }
+}
+#page {
+  margin-top: 1em;
+}
+.page-inner {
+  background: $white;
+}
+p {
+  padding-bottom: 10px;
+}
+td {
+  padding: 5px;
+  vertical-align: middle;
+}
+img {
+  max-width: 100%;
+}
+.header-wrapper-inner {
+  padding: 15px 0 20px;
+}
+header {
+  width: 100%;
+}
+.site-logo {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 100%;
+    max-width: 700px;
+  }
+}
+#main-content {
+  .block-inner {
+    @extend %extend_5;
+  }
+  #block-views-slideshow-block .block-inner {
+    padding: 0 0 20px 0;
+  }
+  #block-system-main .block-inner {
+    padding: 0 20px 20px;
+  }
+}
+.view-slideshow {
+  .views_slideshow_main {
+    position: relative;
+    height: 420px;
+    .views-field-field-image {
+      position: absolute;
+      img {
+        display: block;
+        max-width: none;
+      }
+    }
+    .views-field-field-video {
+      position: absolute;
+    }
+    .views-field-title {
+      position: absolute;
+      padding: 20px;
+      width: 578px;
+      background: $url_0;
+      color: $white;
+      font-family: $font_0, $font_1;
+      a {
+        color: $white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+    .views-field-body {
+      position: absolute;
+      height: 50px;
+      width: 578px;
+      padding: 20px;
+      top: 290px;
+      background: $url_0;
+      color: $white;
+      a {
+        color: $white;
+      }
+    }
+  }
+  .views-slideshow-controls-bottom {
+    .active {
+      .views-field-field-image img {
+        opacity: 1;
+      }
+      .views-field-field-video img {
+        opacity: 1;
+      }
+    }
+    #views_slideshow_pager_field_item_bottom_slideshow-block_5 {
+      .views-field-field-image img {
+        margin-right: 0;
+      }
+      .views-field-field-video img {
+        margin-right: 0;
+      }
+    }
+    .views-field-field-image img {
+      @extend %extend_3;
+      &:hover {
+        opacity: 1;
+        border: 1px solid $black;
+      }
+    }
+    .views-field-field-video img {
+      @extend %extend_3;
+      &:hover {
+        opacity: 1;
+        border: 1px solid $black;
+      }
+    }
+  }
+}
+.view {
+  .pager {
+    font-family: $font_0, $font_1;
+    font-size: 0.7em;
+  }
+  blockquote.image-field-caption {
+    display: none;
+    visibility: hidden;
+  }
+}
+#widget_pager_bottom_slideshow-block_1 {
+  display: flex;
+  margin: 0;
+  justify-content: space-around;
+}
+.node-teaser {
+  margin-bottom: 20px;
+  .links {
+    display: inline;
+  }
+  .content {
+    display: inline;
+  }
+  p {
+    display: inline;
+  }
+  .field {
+    display: inline;
+  }
+  .field-items {
+    display: inline;
+  }
+  .field-item {
+    display: inline;
+  }
+  .addthis_sharing_toolbox {
+    display: none;
+    visibility: hidden;
+  }
+  blockquote.image-field-caption {
+    display: none;
+    visibility: hidden;
+  }
+  h2.title {
+    font-size: 18px;
+    line-height: 1.2em;
+    margin-bottom: 0.2em;
+  }
+  .field-image .field-name-field-image .field-items .field-item {
+    display: none;
+    &:first-child {
+      display: block;
+      img {
+        @extend %extend_9;
+      }
+    }
+  }
+  .field-name-field-mugshot .field-items .field-item:first-child img {
+    @extend %extend_9;
+  }
+  .field-name-field-video iframe {
+    display: block;
+    padding: 10px;
+    float: left;
+    margin: 0 20px 0 0;
+    background: $url_2;
+  }
+}
+.preface-wrapper {
+  .views-row {
+    padding: 10px 10px 0 10px;
+    overflow: hidden;
+    .views-field-field-video {
+      @extend %extend_4;
+    }
+    .views-field-field-image img {
+      @extend %extend_4;
+    }
+    .views-field-field-mugshot img {
+      @extend %extend_4;
+    }
+  }
+  .attachment {
+    padding: 10px 10px 0 10px;
+    background: $color_alabaster_approx;
+    .views-row {
+      padding: 5px 0;
+      background: 0;
+      border-bottom: 1px dotted $color_mountain_mist_approx;
+      a {
+        font-weight: normal;
+        font-size: 1em;
+      }
+    }
+    .views-row-last {
+      border-bottom: 0 dotted $color_mountain_mist_approx;
+    }
+  }
+  .content {
+    padding: 5px 0 10px;
+    color: $color_mountain_mist_approx;
+  }
+  .block-inner {
+    .views-field-field-dateline {
+      font-family: $font_0;
+      font-size: 0.8em;
+      font-style: italic;
+    }
+    h3.title {
+      font-size: 1.6em;
+    }
+    .views-field-title h3 {
+      line-height: 1.3em;
+      margin-bottom: 3pt;
+    }
+    .views-field-body p {
+      padding-bottom: 0;
+    }
+  }
+  .view-footer {
+    margin: 0 15px;
+  }
+  .block .content {
+    background: $color_concrete_approx;
+  }
+  #block-views-ticker-block .content {
+    margin-top: 0;
+    padding: 0;
+  }
+}
+article {
+  .field-image {
+    margin-bottom: 1em;
+  }
+  &.node-webform .node-content-wrapper {
+    .submitted span {
+      display: none;
+      visibility: hidden;
+    }
+    h1.title {
+      margin-bottom: 0;
+    }
+  }
+}
+.sidebar {
+  .content {
+    padding: 0;
+    color: $color_mountain_mist_approx;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .block-inner h3.title {
+    font-size: 1em;
+  }
+}
+#postscript {
+  color: $color_alto_approx;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  a {
+    color: $color_alto_approx;
+    font-weight: normal;
+    font-family: $font_0, $font_1;
+    font-size: 0.8em;
+  }
+  p {
+    font-family: $font_0, $font_1;
+    font-size: 0.8em;
+    a {
+      font-size: 1em;
+    }
+  }
+  .block-menu-block ul.menu li {
+    float: left;
+    padding-top: 0;
+    padding-right: 10px;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    list-style-type: circle;
+    list-style-image: none;
+    list-style-position: inside;
+  }
+  .item-list ul li {
+    padding: 3px 0;
+    margin-left: 10px;
+    list-style-position: outside;
+    list-style-type: square;
+    color: $color_mountain_mist_approx;
+    border-bottom: 1px dotted $color_fuscous_gray_approx;
+    text-transform: uppercase;
+    &.last {
+      border-bottom: 0 dotted $color_fuscous_gray_approx;
+    }
+  }
+}
+.postscript-wrapper {
+  padding: 1em;
+  margin: 0;
+  background: $url_1;
+  .block-inner {
+    padding: 0;
+  }
+  .content {
+    padding: 0;
+  }
+  h3 {
+    display: block;
+    margin-bottom: 0.3em;
+    line-height: 1.4em;
+    span {
+      padding-right: 5px;
+      color: $color_mountain_mist_approx;
+    }
+  }
+}
+.region-postscript-banner {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+.region-footer {
+  margin-top: 1em;
+  font-family: $font_0, $font_1;
+  font-size: 0.8em;
+}
+.content {
+  .node-page ul {
+    margin: 0 0 1em 1em;
+    list-style: disc outside;
+    &.flex-direction-nav {
+      list-style: none;
+    }
+    &.slides {
+      margin: 0;
+    }
+  }
+  .node-article ul {
+    margin: 0 0 1em 1em;
+    list-style: disc outside;
+    &.flex-direction-nav {
+      list-style: none;
+    }
+    &.slides {
+      margin: 0;
+    }
+  }
+}
+.region-user-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 0.6em;
+  background-color: $color_concrete_approx;
+}
+#user-menu {
+  margin: 0;
+  font-family: $font_0, $font_1;
+  ul.menu {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      float: none;
+      a {
+        display: block;
+        line-height: 36px;
+        font-size: 11px;
+        padding: 0 12px;
+        text-transform: uppercase;
+        border-right: 1px solid $color_alto_approx;
+        color: $color_woodsmoke_approx;
+        &:hover {
+          background: $color_concrete_approx;
+          text-decoration: none;
+        }
+      }
+      ul {
+        position: absolute;
+        padding: 0;
+        margin: 1px 0 0;
+        width: 200px;
+        left: -999em;
+        z-index: 100;
+        background: $color_alabaster_approx;
+        border: 1px solid $color_alto_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 1px 3px $color_alto_approx;
+      }
+      li {
+        border-bottom: 1px solid $color_alto_approx;
+        &.last {
+          border-bottom: 0 solid $color_alto_approx;
+        }
+        a {
+          @extend %extend_6;
+          &.active {
+            @extend %extend_6;
+            &:hover {
+              background: $color_concrete_approx;
+            }
+          }
+          &:hover {
+            background: $color_concrete_approx;
+          }
+        }
+        li {
+          li {
+            &:hover ul {
+              left: auto;
+            }
+            &.sfHover ul {
+              left: auto;
+            }
+          }
+          &.expanded {
+            background: 0;
+          }
+          &:hover ul {
+            left: auto;
+          }
+          &.sfHover ul {
+            left: auto;
+          }
+        }
+        &.expanded {
+          background: 0;
+        }
+        &:hover ul {
+          left: auto;
+        }
+        &.sfHover ul {
+          left: auto;
+        }
+      }
+      &.last a {
+        border-right: none;
+      }
+      &:hover ul {
+        left: auto;
+        ul {
+          left: -999em;
+          ul {
+            left: -999em;
+            ul {
+              left: -999em;
+            }
+          }
+        }
+      }
+      &.sfHover ul {
+        left: auto;
+        ul {
+          left: -999em;
+          ul {
+            left: -999em;
+            ul {
+              left: -999em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#main-menu {
+  position: relative;
+  #block-system-user-menu {
+    background-color: $white;
+    width: 100%;
+    height: 27px;
+    border-bottom: 1px solid $black;
+    .content {
+      margin: 0 auto;
+    }
+    ul.menu li {
+      height: 27px;
+      a {
+        font-size: 0.8em;
+        color: $color_mine_shaft_approx;
+        height: 27px;
+        line-height: 27px;
+      }
+    }
+  }
+  h3 {
+    display: none;
+  }
+  ul.menu {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    min-height: 33px;
+    max-height: 85px;
+    margin: 0 auto;
+    font-family: $font_0, $font_1;
+    li {
+      ul {
+        ul {
+          margin: -25px 0 0 200px;
+        }
+        li a {
+          font-size: 13px;
+        }
+      }
+      a {
+        display: block;
+        color: $white;
+        padding: 0 12px;
+        text-transform: uppercase;
+        height: 33px;
+        line-height: 33px;
+        font-size: 13px;
+        &:hover {
+          color: $color_mine_shaft_approx;
+          background: $color_concrete_approx;
+          text-decoration: none;
+        }
+        &.active {
+          color: $color_log_cabin_approx;
+          background-color: $color_concrete_approx;
+        }
+      }
+    }
+  }
+}
+#block-superfish-1 {
+  background: $black;
+  font-size: inherit;
+  .block-inner {
+    width: 100%;
+  }
+  .content {
+    margin: 0 auto;
+  }
+}
+#main-menu-second-level {
+  h3 {
+    display: none;
+  }
+  ul.menu {
+    display: block;
+    height: 25px;
+    margin: 0;
+    background: $color_mine_shaft_approx;
+    li {
+      a {
+        display: block;
+        height: 25px;
+        line-height: 25px;
+        color: $white;
+        padding: 0 20px;
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: -1px -1px $color_woodsmoke_approx;
+        &:hover {
+          background: $color_log_cabin_approx;
+          text-decoration: none;
+        }
+      }
+      ul {
+        position: absolute;
+        padding: 0;
+        margin: 1px 0 0;
+        width: 200px;
+        left: -999em;
+        z-index: 100;
+        background: $color_alabaster_approx;
+        border: 1px solid $color_alto_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 1px 3px $color_alto_approx;
+        ul {
+          margin: -25px 0 0 200px;
+        }
+      }
+      li {
+        border-bottom: 1px solid $color_alto_approx;
+        &.last {
+          border-bottom: 0 solid $color_alto_approx;
+        }
+        a {
+          @extend %extend_7;
+          &.active {
+            @extend %extend_7;
+            &:hover {
+              background: $color_concrete_approx;
+              font-size: 0.9em;
+            }
+          }
+          &:hover {
+            background: $color_concrete_approx;
+            font-size: 0.9em;
+          }
+        }
+        li {
+          li {
+            &:hover ul {
+              left: auto;
+            }
+            &.sfHover ul {
+              left: auto;
+            }
+          }
+          &.expanded {
+            background: 0;
+          }
+          &:hover ul {
+            left: auto;
+          }
+          &.sfHover ul {
+            left: auto;
+          }
+        }
+        &.expanded {
+          background: 0;
+        }
+        &:hover ul {
+          left: auto;
+        }
+        &.sfHover ul {
+          left: auto;
+        }
+      }
+      &:hover ul {
+        left: auto;
+        ul {
+          left: -999em;
+          ul {
+            left: -999em;
+            ul {
+              left: -999em;
+            }
+          }
+        }
+      }
+      &.sfHover ul {
+        left: auto;
+        ul {
+          left: -999em;
+          ul {
+            left: -999em;
+            ul {
+              left: -999em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#mm0 {
+  display: none;
+  visibility: hidden;
+}
+.node {
+  ul {
+    &.inline li {
+      display: inline;
+      list-style-type: none;
+      padding: 0 5px 0 0;
+    }
+    &.links li {
+      a {
+        font-weight: bold;
+        padding: 0 5px;
+        font-size: 0.9em;
+        background: $color_concrete_approx;
+      }
+      &.node-readmore a {
+        font-size: 0.8em;
+        font-family: $font_0, $font_1;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .taxonomy {
+    .field-type-taxonomy-term-reference {
+      margin: 5px 0;
+      line-height: 1em;
+      .field-items {
+        display: flex;
+        .field-item {
+          margin-right: 1em;
+        }
+      }
+    }
+    a {
+      color: $black;
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+  }
+  .field-name-field-image img {
+    @extend %extend_8;
+  }
+  .field-name-field-video iframe {
+    display: block;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-bottom: 10px;
+  }
+  .content a {
+    color: $color_mine_shaft_approx;
+  }
+}
+.flexslider {
+  font: 0.8em/1.4 lato;
+  margin: 0 0 6em 0;
+  border: none;
+  .slides img {
+    @extend %extend_8;
+  }
+}
+.node-article {
+  .submitted {
+    margin-left: 0;
+  }
+  .field-name-field-mugshot.field-type-image {
+    float: left;
+    margin-right: 0.6em;
+  }
+}
+.field-name-field-tags {
+  .field-label {
+    display: inline;
+  }
+  .field-item {
+    margin-right: 0.3em;
+    display: inline;
+  }
+}
+#comments {
+  h2 {
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .comment {
+    padding: 10px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid $color_alto_approx;
+  }
+  .submitted {
+    display: block;
+    margin-left: 60px;
+    a {
+      font-weight: bold;
+    }
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+  }
+  .links {
+    display: block;
+    float: right;
+    margin-left: 60px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+  .indented {
+    margin-left: 0;
+    margin-bottom: 20px;
+    background: $color_alabaster_approx;
+    .comment {
+      padding: 10px;
+      margin-left: 0;
+      margin-bottom: 0;
+      background: $color_alabaster_approx;
+      border-bottom: 0;
+    }
+  }
+  .user-picture img {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+  }
+}
+#block-search-form {
+  padding: 0 8px;
+  flex-grow: 2;
+}
+#search-block-form {
+  margin-top: 0;
+  background: 0;
+  line-height: 25px;
+  float: right;
+  h2 {
+    display: none;
+  }
+  label {
+    display: none;
+  }
+  .form-item {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .form-actions {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .form-text {
+    @extend %extend_10;
+    padding: 0;
+    color: $color_mountain_mist_approx;
+    font-style: italic;
+    background-color: $white;
+    position: relative;
+    top: 1px;
+  }
+  .form-submit {
+    @extend %extend_10;
+    display: inline-block;
+    width: auto;
+    height: 36px;
+    font-size: 11px;
+    padding: 0 5px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    text-transform: uppercase;
+    background: 0;
+    font-weight: normal;
+    line-height: 18px;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+  }
+  input:focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 0 $color_turquoise_approx;
+  }
+}
+#search-control {
+  display: none;
+}
+ul {
+  &.social-links {
+    padding: 0;
+    margin: 0;
+    height: 36px;
+  }
+  &.primary {
+    border-bottom: 0 solid $color_alto_approx;
+    border-collapse: collapse;
+    height: auto;
+    line-height: 1em;
+    list-style: none outside none;
+    margin: 5px 0;
+    padding: 0 0 20px 3px;
+    white-space: nowrap;
+    li a {
+      background-color: $color_alto_approx;
+      border-color: $color_pink_swan_approx;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 3px 3px 3px 3px;
+      border-style: solid;
+      border-width: 1px;
+      color: $color_storm_dust_approx;
+      height: auto;
+      margin-right: 3px;
+      padding: 5px 1em;
+      text-decoration: none;
+    }
+  }
+  &.flex-direction-nav {
+    list-style: none;
+  }
+  &.slides {
+    margin: 0;
+  }
+  &.quicktabs-tabs.quicktabs-style-nostyle {
+    border-bottom: 1px solid $color_silver_chalice_approx;
+    padding: 0 5px 0 0;
+    font: bold 12px/19px Verdana !important;
+    font-weight: bold;
+    height: 19px;
+    margin: 0;
+    a {
+      font-size: 9px;
+      font-weight: bold;
+      text-decoration: none;
+      color: $color_silver_chalice_approx;
+      &:hover {
+        color: $color_fuscous_gray_approx;
+      }
+    }
+    li {
+      border: 1px solid $mercury;
+      border-bottom: none;
+      padding: 2px 3px;
+      margin: 0;
+      position: relative;
+      &:hover {
+        border: 1px solid $color_celeste_approx;
+        border-bottom: none;
+      }
+      &.active {
+        border: 1px solid $color_celeste_approx;
+        border-bottom: 1px solid $white;
+        background-color: $white;
+        margin-bottom: -1px;
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+.facebook {
+  background: $url_3 no-repeat;
+}
+.rss {
+  background: $url_4 no-repeat;
+}
+.twitter {
+  background: $url_5 no-repeat;
+}
+.pinterest {
+  background: $url_6 no-repeat;
+}
+.instagram {
+  background: $url_7 no-repeat;
+}
+.googleplus {
+  background: $url_8 no-repeat;
+}
+.youtube {
+  background: $url_9 no-repeat;
+}
+.breadcrumb {
+  margin-bottom: 20px;
+  margin-left: 2px;
+  font-size: 1.0em;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  a {
+    font-weight: bold;
+  }
+}
+.more-link {
+  margin-top: 5px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+.profile {
+  clear: both;
+  margin: 0;
+  .user-picture {
+    float: none;
+    margin: 0 0 1em 0;
+  }
+}
+.field-name-field-mug {
+  float: right;
+}
+.field-name-field-subhead {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.field-name-field-kicker {
+  border-top: 1px solid $color_celeste_approx;
+  font-style: italic;
+}
+.field-name-field-dateline {
+  display: inline;
+  font-weight: bold;
+  text-transform: uppercase;
+  float: left;
+  margin-right: 8px;
+}
+.field-name-field-pulled-quote {
+  width: 300px;
+  min-height: 100px;
+  font-size: 18px;
+  float: right;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+blockquote {
+  margin: 0;
+  padding: 0;
+  p {
+    padding-right: 1em;
+    background: none;
+  }
+}
+#leader {
+  margin-top: 30px;
+  margin-bottom: -90px;
+  padding: 0;
+  text-align: center;
+  margin-left: 100px;
+}
+.premium-message {
+  margin-top: 1em;
+  font-family: $font_0, $font_1;
+  line-height: 1.5em;
+  a {
+    text-decoration: underline;
+  }
+}
+textarea {
+  font-family: $font_0, $font_1;
+}
+select {
+  font-family: $font_0, $font_1;
+}
+input[type="date"] {
+  font-family: $font_0, $font_1;
+}
+input[type="datetime"] {
+  font-family: $font_0, $font_1;
+}
+input[type="datetime-local"] {
+  font-family: $font_0, $font_1;
+}
+input[type="email"] {
+  font-family: $font_0, $font_1;
+}
+input[type="month"] {
+  font-family: $font_0, $font_1;
+}
+input[type="number"] {
+  font-family: $font_0, $font_1;
+}
+input[type="password"] {
+  font-family: $font_0, $font_1;
+}
+input[type="search"] {
+  font-family: $font_0, $font_1;
+}
+input[type="tel"] {
+  font-family: $font_0, $font_1;
+}
+input[type="text"] {
+  font-family: $font_0, $font_1;
+  max-width: 100%;
+}
+input[type="time"] {
+  font-family: $font_0, $font_1;
+}
+input[type="url"] {
+  font-family: $font_0, $font_1;
+}
+input[type="week"] {
+  font-family: $font_0, $font_1;
+}
+.submitted {
+  padding: 5px 0;
+  margin-bottom: 10px;
+  color: $color_mountain_mist_approx;
+  border-bottom: 1px solid $color_alto_approx;
+  font: 0.6em $font_0, $font_1;
+  margin-left: 168px;
+}
+#block-advpoll-advpoll-recent {
+  .submitted {
+    display: none;
+    visibility: hidden;
+  }
+  .poll-message {
+    font: 0.9em/1em $font_0;
+    color: $black;
+    margin: 1em 0;
+  }
+  h2.title {
+    font-size: 1em;
+    line-height: 1.3em;
+    text-transform: none;
+    margin-top: 1em;
+  }
+  .content .content {
+    padding: 0;
+  }
+}
+#block-views-ticker-block {
+  .content {
+    background: none;
+  }
+  .liScroll-container {
+    width: 100%;
+    .mask {
+      top: 0;
+    }
+  }
+}
+.flex-control-nav {
+  bottom: -30px;
+}
+.free-message {
+  font-family: $font_0, $font_1;
+  font-size: 0.9em;
+  border-top: 1px solid $color_alto_approx;
+  padding: 5px 0;
+  a {
+    color: $blue;
+  }
+}
+a:hover {
+  text-decoration: underline;
+}
+.region-headerad .block {
+  float: left;
+}
+.views-slideshow-pager-fields > div {
+  padding-left: 0;
+}
+.front .main-content-wrapper {
+}
+#preface .block-inner {
+  @extend %extend_5;
+}
+#block-block-1 .block-inner {
+  padding: 0;
+  border-style: none;
+  border-width: 0;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+}
+#block-etype-follow .content div {
+  background-size: 16px;
+  > a {
+    margin-left: 1.7em;
+  }
+}
+.region-postscript-1 h3.title {
+  margin-left: 0;
+}
+.region-postscript-2 #block-menu-block-2 .menu li.first {
+  display: none;
+  visibility: hidden;
+}
+.item-list ul {
+  margin-left: 20px;
+  li {
+    padding: 5px 0;
+    margin-bottom: 1em;
+    list-style-position: outside;
+    list-style-type: square;
+    color: $black;
+    span {
+      display: inline;
+      font-size: 1.0em;
+      padding: 0;
+    }
+    &.last {
+      border-bottom: 0 dotted $color_mountain_mist_approx;
+    }
+    a {
+      padding: 0 5px;
+      font-weight: bold;
+    }
+  }
+}
+.view-popular .item-list ul li {
+  list-style-type: decimal;
+}
+.sf-menu.sf-style-space {
+  li {
+    background: $black;
+    font-size: inherit;
+    li {
+      background: $black;
+      font-size: inherit;
+      li {
+        background: $black;
+        font-size: inherit;
+      }
+    }
+  }
+  &.sf-navbar {
+    background: $black;
+    font-size: inherit;
+  }
+}
+#search-form .archive_message {
+  padding-top: 21px;
+  font-style: italic;
+}
+.social-links li {
+  display: block;
+  float: left;
+  list-style: none;
+  a {
+    display: block;
+    width: 40px;
+    height: 36px;
+    background-size: 35px;
+    position: relative;
+    top: 2px;
+  }
+}
+body #main-content .quicktabs-wrapper .block-inner {
+  padding: 0;
+  margin-bottom: 0;
+  border: 0 solid $color_alto_approx;
+  border-bottom: 0 solid $black;
+  background: 0;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 0 $color_pink_swan_approx;
+}
+.quicktabs_main.quicktabs-style-nostyle {
+  background-color: $white;
+  border: 1px solid $color_celeste_approx;
+  border-top: none;
+  padding: 10px;
+  clear: both;
+  .content {
+    color: $color_mountain_mist_approx;
+    padding: 0;
+  }
+  .item-list li span {
+    display: inline;
+    font-size: 0.8em;
+    padding: 0 10px;
+  }
+}
+.views-slideshow-controls-bottom img {
+  float: left;
+  margin-right: 10px;
+}
+.not-logged-in.node-type-article {
+  .view-more-digital {
+    display: none;
+    visibility: hidden;
+  }
+  .links {
+    display: none;
+    visibility: hidden;
+  }
+}
+.webform-client-form .webform-component-fieldset {
+  .fieldset-legend {
+    font-family: $font_0, $font_1;
+    line-height: 1.0em;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 0.6em;
+    font-size: 1.2em;
+  }
+  .fieldset-wrapper {
+    margin-left: 0.5em;
+  }
+}
+.not-front.page-node #block-system-main .content {
+  .node {
+    margin-top: 1em;
+  }
+  .node-teaser {
+    margin-top: 0;
+  }
+}
+.page-taxonomy-term #block-system-main .content {
+  margin-top: 1em;
+}
+.page-classifieds #block-system-main .content {
+  margin-top: 1em;
+}
+.page-node .node-article {
+  .field-name-field-dateline {
+    float: none;
+    display: block;
+  }
+  .addthis_sharing_toolbox {
+    float: right;
+  }
+  .field-name-body {
+    margin-top: 1em;
+  }
+}
+.view-id-legals .view-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+div.views-fluid-grid {
+  margin-bottom: 1em;
+}
+li.views-fluid-grid-item {
+  color: inherit;
+  background: none;
+  border: none;
+}
+.node-type-article.calendar {
+  width: inherit;
+}
