@@ -249,6 +249,15 @@ li.views-fluid-grid-item {
 /* DFP BANNERS */
 #postscript_banner {
   .grid_12 {
+    width: 728px;
+    margin: auto;
+    float: none;
+  }
+}
 
+@media only screen and(max-width: 767px) {
+  #postscript_banner {
+    display: none;
+    visibility: hidden;
   }
 }
