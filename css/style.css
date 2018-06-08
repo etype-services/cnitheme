@@ -1136,7 +1136,7 @@ li.views-fluid-grid-item {
       background-color: transparent; }
 
   .page-node.not-logged-in .content .node-content-wrapper {
-    margin-top: -13px; }
+    margin-top: 20px; }
 
   .container_12 #postscript .grid_4 {
     width: inherit; } }
@@ -1175,7 +1175,7 @@ li.views-fluid-grid-item {
     width: auto;
     height: auto; }
   .page-node.not-logged-in .content .node-content-wrapper {
-    margin-top: -13px; }
+    margin-top: 20px; }
   .page-node .field-name-field-video iframe {
     width: 490px;
     height: 300px; }
