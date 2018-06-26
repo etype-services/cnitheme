@@ -5,7 +5,7 @@
       function mobile_menu(w, searchForm) {
         var breakpoint;
         // console.log(Drupal.settings.cni.menu_break_point);
-        if (typeof Drupal.settings.cni.menu_break_point !== 'undefined') {
+        if (typeof Drupal.settings.cni !== 'undefined') {
           breakpoint = Drupal.settings.cni.menu_break_point;
         } else {
           breakpoint = 767;
