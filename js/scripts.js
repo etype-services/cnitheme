@@ -5,6 +5,8 @@
       function mobile_menu(w, searchForm) {
         var breakpoint;
         // console.log(Drupal.settings.cni.menu_break_point);
+        // because some sites (San Marcos) are on their own theme, so cni breaks
+        // needs fixing at some point to find
         if (typeof Drupal.settings.cni !== 'undefined') {
           breakpoint = Drupal.settings.cni.menu_break_point;
         } else {
