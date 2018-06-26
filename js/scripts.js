@@ -4,7 +4,11 @@
 
       function mobile_menu(w, searchForm) {
         // console.log(Drupal.settings.cni.menu_break_point);
-        var breakpoint = (Drupal.settings.cni.menu_break_point);
+        if (typeof Drupal.settings.cni.menu_break_point === 'undefined') {
+          var breakpoint = 767;
+        } else {
+          var breakpoint = Drupal.settings.cni.menu_break_point;
+        }
         var wrapper = $('#mobile-menu-wrapper');
 
         if (w > breakpoint) {
