@@ -3,11 +3,12 @@
     attach: function (context) {
 
       function mobile_menu(w, searchForm) {
+        var breakpoint;
         // console.log(Drupal.settings.cni.menu_break_point);
-        if (typeof Drupal.settings.cni.menu_break_point === 'undefined') {
-          var breakpoint = 767;
+        if (typeof Drupal.settings.cni.menu_break_point !== 'undefined') {
+          breakpoint = Drupal.settings.cni.menu_break_point;
         } else {
-          var breakpoint = Drupal.settings.cni.menu_break_point;
+          breakpoint = 767;
         }
         var wrapper = $('#mobile-menu-wrapper');
 
