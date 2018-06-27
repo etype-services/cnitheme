@@ -40,7 +40,7 @@
       var search = $('#search-control');
       if (search.length === 0) {
         $('#block-search-form .content').append('<div id="search-control"></div>');
-        var search = $('#search-control');
+        search = $('#search-control');
       }
 
       $(search).click(function () {
