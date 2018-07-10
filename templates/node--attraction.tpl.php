@@ -14,7 +14,6 @@
       <?php if ($display_submitted): ?>
           <div class="submitted">
               <span class="date"><?php print $date; ?></span>
-            <?php print $name; ?>
           </div>
       <?php endif; ?>
 
