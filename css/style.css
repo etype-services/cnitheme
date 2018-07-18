@@ -1576,7 +1576,8 @@ li.views-fluid-grid-item {
 
 .page-classifieds-real-estate-rent h1#page-title {
   background: url(/sites/all/themes/cni/images/classified_icons/real_estate_rent.png) no-repeat 6px 6px;
-  background-size: 60px 60px; }
+  background-size: 60px 60px;
+  padding-left: 71px; }
 
 .page-classifieds-real-estate-sale h1#page-title {
   background: url(/sites/all/themes/cni/images/classified_icons/real_estate_sale.png) no-repeat 6px 6px;
@@ -1585,7 +1586,8 @@ li.views-fluid-grid-item {
 
 .page-classifieds-services h1#page-title {
   background: url(/sites/all/themes/cni/images/classified_icons/services.png) no-repeat 6px 6px;
-  background-size: 60px 60px; }
+  background-size: 60px 60px;
+  padding-left: 71px; }
 
 .page-classifieds-shop h1#page-title {
   background: url(/sites/all/themes/cni/images/classified_icons/shop.png) no-repeat 6px 6px;
