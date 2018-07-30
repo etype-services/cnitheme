@@ -1339,11 +1339,16 @@ body #main-content .quicktabs-wrapper .block-inner {
 }
 div.views-fluid-grid {
   margin-bottom: 1em;
-}
-li.views-fluid-grid-item {
-  color: inherit;
-  background: none;
-  border: none;
+  ul.views-fluid-grid-list {
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    li.views-fluid-grid-item {
+      color: inherit;
+      background: none;
+      border: none;
+    }
+  }
 }
 .node-type-article.calendar {
   width: inherit;

@@ -1082,11 +1082,14 @@ body #main-content .quicktabs-wrapper .block-inner {
 
 div.views-fluid-grid {
   margin-bottom: 1em; }
-
-li.views-fluid-grid-item {
-  color: inherit;
-  background: none;
-  border: none; }
+  div.views-fluid-grid ul.views-fluid-grid-list {
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap; }
+    div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item {
+      color: inherit;
+      background: none;
+      border: none; }
 
 .node-type-article.calendar {
   width: inherit; }
