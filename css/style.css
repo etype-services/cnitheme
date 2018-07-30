@@ -1088,7 +1088,7 @@ div.views-fluid-grid {
     justify-content: space-between; }
     div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item {
       margin-bottom: 0.6em;
-      flex-basis: 49%;
+      flex-basis: 48%;
       color: inherit;
       background: none;
       border: none; }
@@ -1236,6 +1236,9 @@ div.views-fluid-grid {
   .view-featured-view iframe {
     width: 195px;
     height: 120px; } }
+@media only screen and (max-width: 767px) {
+  div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item {
+    flex-basis: 100%; } }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .node-teaser .node-content-wrapper {
     margin-left: 0; }
