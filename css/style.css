@@ -1087,13 +1087,14 @@ div.views-fluid-grid {
     flex-wrap: wrap;
     justify-content: space-between; }
     div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item {
-      margin-bottom: 0.6em;
+      margin-bottom: 0.3em;
       flex-basis: 48%;
       color: inherit;
       background: none;
       border: none; }
       div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-field-section h4 {
-        margin-bottom: 0.1em; }
+        margin-bottom: 0.3em;
+        font-size: 0.6em; }
       div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title {
         font-size: 14px;
         line-height: 114%; }

@@ -1344,14 +1344,15 @@ div.views-fluid-grid {
     flex-wrap: wrap;
     justify-content: space-between;
     li.views-fluid-grid-item {
-      margin-bottom: 0.6em;
+      margin-bottom: 0.3em;
       flex-basis: 48%;
       color: inherit;
       background: none;
       border: none;
       .views-field-field-section {
         h4 {
-          margin-bottom: 0.1em;
+          margin-bottom: 0.3em;
+          font-size: 0.6em;
         }
       }
       .views-field-title {
