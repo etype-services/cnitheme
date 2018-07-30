@@ -1351,11 +1351,12 @@ div.views-fluid-grid {
       border: none;
       .views-field-field-section {
         h4 {
-          margin-bottom: 0;
+          margin-bottom: 0.1em;
         }
       }
       .views-field-title {
         font-size: 14px;
+        line-height: 114%;
       }
       .views-field-field-image {
         a {
