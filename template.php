@@ -82,8 +82,8 @@ function cni_preprocess_node(&$variables) {
           if (substr($site_name, 0) !== 'The') {
             $site_name = 'the ' . $site_name;
           }
-          $e_edition = theme_get_setting('e_edition');;
-          $variables['free_message'] = "<a href=\"https://etypeservices.com/$e_edition\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
+          $e_editions = etype_e_editions();
+          $variables['free_message'] = "<a href=\"" . $e_editions[0]['path'] . "\">Subscribe and see the e-Edition of $site_name for the complete story.</a>";
         }
       }
     }
