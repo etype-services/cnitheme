@@ -26,11 +26,6 @@
 
       <?php print render($title_suffix); ?>
 
-      <?php if ($page) { ?>
-          <!-- Go to www.addthis.com/dashboard to customize your tools -->
-          <div class="addthis_sharing_toolbox"></div>
-      <?php } ?>
-
       <?php if ($display_submitted): ?>
           <div class="submitted<?php if ($page) {
             echo ' clearfix';
@@ -48,6 +43,14 @@
           hide($content['links']);
           hide($content['field_tags']);
           hide($content['field_section']);
+          hide($content['field_subhead']);
+          if (isset($content['field_subhead'])):
+            print render($content['field_subhead']);
+          endif;
+          if ($page) { ?>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_sharing_toolbox"></div>
+          <?php }
           print render($content);
           ?>
         </div>
