@@ -1240,7 +1240,10 @@ div.views-fluid-grid {
     height: 120px; } }
 @media only screen and (max-width: 767px) {
   div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item {
-    flex-basis: 100%; } }
+    flex-basis: 100%; }
+
+  .page-node .node-article .addthis_sharing_toolbox {
+    float: none; } }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .node-teaser .node-content-wrapper {
     margin-left: 0; }

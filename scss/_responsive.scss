@@ -196,6 +196,13 @@
       }
     }
   }
+  .page-node {
+    .node-article {
+      .addthis_sharing_toolbox {
+        float: none;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .node-teaser {
