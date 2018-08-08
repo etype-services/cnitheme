@@ -3,8 +3,15 @@
     attach: function (context) {
 
       function mobile_menu(w, searchForm) {
+        var breakpoint;
         // console.log(Drupal.settings.cni.menu_break_point);
-        var breakpoint = (Drupal.settings.cni.menu_break_point);
+        // because some sites (San Marcos) are on their own theme, so cni breaks
+        // needs fixing at some point to find
+        if (typeof Drupal.settings.cni !== 'undefined') {
+          breakpoint = Drupal.settings.cni.menu_break_point;
+        } else {
+          breakpoint = 767;
+        }
         var wrapper = $('#mobile-menu-wrapper');
 
         if (w > breakpoint) {
@@ -33,7 +40,7 @@
       var search = $('#search-control');
       if (search.length === 0) {
         $('#block-search-form .content').append('<div id="search-control"></div>');
-        var search = $('#search-control');
+        search = $('#search-control');
       }
 
       $(search).click(function () {

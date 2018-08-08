@@ -50,6 +50,7 @@
     position: absolute;
     z-index: 9999;
     top: 38px;
+    width: 100%;
   }
 
   #user-menu ul.menu li a {

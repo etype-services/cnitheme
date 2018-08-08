@@ -1339,11 +1339,37 @@ body #main-content .quicktabs-wrapper .block-inner {
 }
 div.views-fluid-grid {
   margin-bottom: 1em;
-}
-li.views-fluid-grid-item {
-  color: inherit;
-  background: none;
-  border: none;
+  ul.views-fluid-grid-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li.views-fluid-grid-item {
+      margin-bottom: 0.3em;
+      flex-basis: 48%;
+      color: inherit;
+      background: none;
+      border: none;
+      .views-field-field-section {
+        h4 {
+          margin-bottom: 0.6em;
+          font-size: 0.6em;
+        }
+      }
+      .views-field-title {
+        font-size: 14px;
+        line-height: 114%;
+      }
+      .views-field-field-image {
+        a {
+          span {
+            img {
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .node-type-article.calendar {
   width: inherit;
