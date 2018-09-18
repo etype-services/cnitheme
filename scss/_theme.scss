@@ -316,7 +316,7 @@ article {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  white-space: nowrap;
+  /* white-space: nowrap; removed for dcregister  09/18 */
   a {
     color: $color_alto_approx;
     font-weight: normal;
