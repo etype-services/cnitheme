@@ -85,7 +85,8 @@
     margin-left: 4px;
   }
 
-  .region-main-menu .block-simpleads {
+  .region-main-menu .block-simpleads,
+  .region-above-main-menu .block-simpleads {
     margin-bottom: 0;
   }
 }
