@@ -1,5 +1,9 @@
 <div id="page-top">
 
+  <?php if ($page['top_frame']): ?>
+    <?php print render($page['top_frame']) ?>
+  <?php endif; ?>
+
   <?php if ($page['user_menu']): ?>
       <nav id="user-menu" class="clearfix">
         <?php print render($page['user_menu']); ?>
@@ -27,6 +31,12 @@
 
     </div>
 </div>
+
+<?php if ($page['above_main_menu']): ?>
+    <div class="page-inner <?php echo $grid_size ?>">
+      <?php print render($page['above_main_menu']); ?>
+    </div>
+<?php endif; ?>
 
 <?php if ($page['main_menu']): ?>
     <div class="main-menu-wrapper clearfix">
@@ -156,3 +166,9 @@
 
     </div>
 </div><!-- page -->
+
+<div id="page-bottom">
+  <?php if ($page['bottom_frame']): ?>
+    <?php print render($page['bottom_frame']) ?>
+  <?php endif; ?>
+</div>

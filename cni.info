@@ -25,8 +25,10 @@ features[] = favicon
 features[] = main_menu
 features[] = secondary_menu
 
+regions[top_frame] = Top Frame
 regions[header] = Header
 regions[user_menu] = User Menu
+regions[above_main_menu] = Above Main Menu
 regions[main_menu] = Main Menu
 regions[main_menu_second_level] = Main Menu Second Level (via Menublock)
 regions[highlighted] = Highlighted
@@ -45,6 +47,7 @@ regions[postscript_2] = Postscript Second
 regions[postscript_3] = Postscript Third
 regions[postscript_banner] = Postscript Banner
 regions[footer] = Footer
+regions[bottom_frame] = Bottom Frame
 
 settings[style] = 1
 settings[sidebar_layout] = 'sidebars-split'

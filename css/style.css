@@ -94,10 +94,11 @@ h3.site-slogan {
     width: inherit; }
 
 #page {
-  margin-top: 1em; }
+  margin-top: 0; }
 
 .page-inner {
-  background: #fff; }
+  background: #fff;
+  padding-top: 1em; }
 
 p {
   padding-bottom: 10px; }
@@ -282,7 +283,7 @@ article.node-webform .node-content-wrapper h1.title {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  white-space: nowrap; }
+  /* white-space: nowrap; removed for dcregister  09/18 */ }
   #postscript a {
     color: #ddd;
     font-weight: normal;
