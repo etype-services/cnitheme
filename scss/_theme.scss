@@ -74,99 +74,103 @@ header {
   .block-inner {
     @extend %extend_5;
   }
-  #block-views-slideshow-block .block-inner {
-    padding: 0 0 20px 0;
-
-    .view-slideshow {
-      .views_slideshow_main {
-        position: relative;
-        height: 420px;
-        .views-field-field-image {
-          position: absolute;
-          img {
-            display: block;
-            max-width: none;
+  #block-system-main .block-inner {
+    padding: 0 20px 20px;
+  }
+  #block-views-slideshow-block {
+    .block-inner {
+      padding: 0 0 20px 0;
+      .view-slideshow {
+        .views_slideshow_main {
+          position: relative;
+          height: 420px;
+          .views-field-field-image {
+            position: absolute;
+            img {
+              display: block;
+              max-width: none;
+            }
           }
-        }
-        .views-field-field-video {
-          position: absolute;
-        }
-        .views-field-title {
-          position: absolute;
-          padding: 20px;
-          width: 578px;
-          background: $url_0;
-          color: $white;
-          font-family: $font_0, $font_1;
-          a {
+          .views-field-field-video {
+            position: absolute;
+          }
+          .views-field-title {
+            position: absolute;
+            padding: 20px;
+            width: 578px;
+            background: $url_0;
             color: $white;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 18px;
+            font-family: $font_0, $font_1;
+            a {
+              color: $white;
+              text-transform: uppercase;
+              text-decoration: none;
+              font-size: 18px;
+            }
           }
-        }
-        .views-field-body {
-          position: absolute;
-          height: 50px;
-          width: 578px;
-          padding: 20px;
-          top: 290px;
-          background: $url_0;
-          color: $white;
-          a {
+          .views-field-body {
+            position: absolute;
+            height: 50px;
+            width: 578px;
+            padding: 20px;
+            top: 290px;
+            background: $url_0;
             color: $white;
+            a {
+              color: $white;
+            }
           }
         }
-      }
-      .views-slideshow-controls-bottom {
-        .active {
+        .views-slideshow-controls-bottom {
+          .active {
+            .views-field-field-image img {
+              opacity: 1;
+            }
+            .views-field-field-video img {
+              opacity: 1;
+            }
+          }
+          #views_slideshow_pager_field_item_bottom_slideshow-block_5 {
+            .views-field-field-image img {
+              margin-right: 0;
+            }
+            .views-field-field-video img {
+              margin-right: 0;
+            }
+          }
           .views-field-field-image img {
-            opacity: 1;
+            @extend %extend_3;
+            &:hover {
+              opacity: 1;
+              border: 1px solid $black;
+            }
           }
           .views-field-field-video img {
-            opacity: 1;
-          }
-        }
-        #views_slideshow_pager_field_item_bottom_slideshow-block_5 {
-          .views-field-field-image img {
-            margin-right: 0;
-          }
-          .views-field-field-video img {
-            margin-right: 0;
-          }
-        }
-        .views-field-field-image img {
-          @extend %extend_3;
-          &:hover {
-            opacity: 1;
-            border: 1px solid $black;
-          }
-        }
-        .views-field-field-video img {
-          @extend %extend_3;
-          &:hover {
-            opacity: 1;
-            border: 1px solid $black;
+            @extend %extend_3;
+            &:hover {
+              opacity: 1;
+              border: 1px solid $black;
+            }
           }
         }
       }
     }
   }
-  #block-system-main .block-inner {
-    padding: 0 20px 20px;
-  }
-  /* flexslider slideshow -- assumes it is second block in view */
+  /* alternative flexslider slideshow -- assumes it is second block in view */
   #block-views-slideshow-block-1 {
-    .view-slideshow {
-      .flexslider {
-        margin: 0 0 2em 0;
-        font: 0.8em/1.4 "Roboto", sans-serif;
-        .views-field-title {
-          margin: 0.5em 0.5em 0;
-        }
-        .views-field-title h3 {
-          text-transform: capitalize;
-          font-size: 1.4em;
+    .block-inner {
+      padding: 0 0 20px 0;
+      .view-slideshow {
+        .flexslider {
+          margin: 0 0 2em 0;
+          font: 0.8em/1.4 "Roboto", sans-serif;
+          .views-field-title, .views-field-body {
+            margin: 0.5em 0.5em 0;
+          }
+          .views-field-title h3 {
+            text-transform: capitalize;
+            font-size: 1.4em;
+          }
         }
       }
     }
