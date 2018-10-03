@@ -80,6 +80,20 @@ header {
   #block-system-main .block-inner {
     padding: 0 20px 20px;
   }
+  /* flexslider slideshow -- assumes it is second block in view */
+  #block-views-slideshow-block-1 {
+    .flexslider {
+      margin: 0 0 2em 0;
+      font: 0.8em/1.4 "Roboto", sans-serif;
+      .view-slideshow .views-field-title {
+        margin: 0.5em 0.5em 0;
+      }
+      .view-slideshow .views-field-title h3 {
+        text-transform: capitalize;
+        font-size: 1.4em;
+      }
+    }
+  }
 }
 .view-slideshow {
   .views_slideshow_main {

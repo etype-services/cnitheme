@@ -125,10 +125,20 @@ header {
     width: 100%;
     max-width: 700px; }
 
-#main-content #block-views-slideshow-block .block-inner {
-  padding: 0 0 20px 0; }
-#main-content #block-system-main .block-inner {
-  padding: 0 20px 20px; }
+#main-content {
+  /* flexslider slideshow -- assumes it is second block in view */ }
+  #main-content #block-views-slideshow-block .block-inner {
+    padding: 0 0 20px 0; }
+  #main-content #block-system-main .block-inner {
+    padding: 0 20px 20px; }
+  #main-content #block-views-slideshow-block-1 .flexslider {
+    margin: 0 0 2em 0;
+    font: 0.8em/1.4 "Roboto", sans-serif; }
+    #main-content #block-views-slideshow-block-1 .flexslider .view-slideshow .views-field-title {
+      margin: 0.5em 0.5em 0; }
+    #main-content #block-views-slideshow-block-1 .flexslider .view-slideshow .views-field-title h3 {
+      text-transform: capitalize;
+      font-size: 1.4em; }
 
 .view-slideshow .views_slideshow_main {
   position: relative;
