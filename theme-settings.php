@@ -122,6 +122,14 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('nav_color'),
   );
 
+  $form['advanced_settings']['misc_settings']['body_background_color'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Body Background Color'),
+    '#description' => t('Optional, include initial #'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('body_background_color'),
+  );
+
   $form['advanced_settings']['misc_settings']['max_nav_width'] = array(
     '#type' => 'textfield',
     '#title' => t('Max Main Menu Width'),

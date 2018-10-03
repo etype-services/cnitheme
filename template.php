@@ -207,10 +207,10 @@ function cni_preprocess_html(&$variables) {
     );
   }
 
-  $body_background = theme_get_setting('body_background');
-  if (!empty($body_background)) {
+  $body_background_color = theme_get_setting('body_background_color');
+  if (!empty($body_background_color)) {
     drupal_add_css(
-      'body {background: ' . $body_background . ' !important;}',
+      'body {background-color: ' . $body_background_color . ' !important;}',
       array(
         'group' => CSS_THEME,
         'type' => 'inline',
