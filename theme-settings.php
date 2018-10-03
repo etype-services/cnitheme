@@ -91,16 +91,19 @@ function cni_form_system_theme_settings_alter(&$form, $form_state) {
     '#default_value' => theme_get_setting('rssfeed'),
   );
 
+  /* TODO: remove */
   $form['advanced_settings']['misc_settings']['e_edition'] = array(
     '#type' => 'hidden',
     '#default_value' => theme_get_setting('e_edition'),
   );
 
+  /* TODO: remove */
   $form['advanced_settings']['misc_settings']['pub'] = array(
     '#type' => 'hidden',
     '#default_value' => theme_get_setting('pub'),
   );
 
+  /* TODO: remove */
   $form['advanced_settings']['misc_settings']['ptype'] = array(
     '#type' => 'hidden',
     '#default_value' => theme_get_setting('ptype'),
