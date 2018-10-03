@@ -11,7 +11,7 @@ h1.site-name, h2.site-name {
   text-shadow: 1px 1px #fff;
   text-transform: none; }
 
-.view-slideshow .views-slideshow-controls-bottom .views-field-field-image img, .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img {
+#main-content #block-views-slideshow-block .block-inner .view-slideshow .views-slideshow-controls-bottom .views-field-field-image img, #main-content #block-views-slideshow-block .block-inner .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img {
   display: block;
   margin: 0;
   float: left;
@@ -129,63 +129,62 @@ header {
   /* flexslider slideshow -- assumes it is second block in view */ }
   #main-content #block-views-slideshow-block .block-inner {
     padding: 0 0 20px 0; }
+    #main-content #block-views-slideshow-block .block-inner .view-slideshow .views_slideshow_main {
+      position: relative;
+      height: 420px; }
+      #main-content #block-views-slideshow-block .block-inner .view-slideshow .views_slideshow_main .views-field-field-image {
+        position: absolute; }
+        #main-content #block-views-slideshow-block .block-inner .view-slideshow .views_slideshow_main .views-field-field-image img {
+          display: block;
+          max-width: none; }
+      #main-content #block-views-slideshow-block .block-inner .view-slideshow .views_slideshow_main .views-field-field-video {
+        position: absolute; }
+      #main-content #block-views-slideshow-block .block-inner .view-slideshow .views_slideshow_main .views-field-title {
+        position: absolute;
+        padding: 20px;
+        width: 578px;
+        background: url(../images/trans.png);
+        color: #fff;
+        font-family: Lato, sans-serif; }
+        #main-content #block-views-slideshow-block .block-inner .view-slideshow .views_slideshow_main .views-field-title a {
+          color: #fff;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 18px; }
+      #main-content #block-views-slideshow-block .block-inner .view-slideshow .views_slideshow_main .views-field-body {
+        position: absolute;
+        height: 50px;
+        width: 578px;
+        padding: 20px;
+        top: 290px;
+        background: url(../images/trans.png);
+        color: #fff; }
+        #main-content #block-views-slideshow-block .block-inner .view-slideshow .views_slideshow_main .views-field-body a {
+          color: #fff; }
+    #main-content #block-views-slideshow-block .block-inner .view-slideshow .views-slideshow-controls-bottom .active .views-field-field-image img {
+      opacity: 1; }
+    #main-content #block-views-slideshow-block .block-inner .view-slideshow .views-slideshow-controls-bottom .active .views-field-field-video img {
+      opacity: 1; }
+    #main-content #block-views-slideshow-block .block-inner .view-slideshow .views-slideshow-controls-bottom #views_slideshow_pager_field_item_bottom_slideshow-block_5 .views-field-field-image img {
+      margin-right: 0; }
+    #main-content #block-views-slideshow-block .block-inner .view-slideshow .views-slideshow-controls-bottom #views_slideshow_pager_field_item_bottom_slideshow-block_5 .views-field-field-video img {
+      margin-right: 0; }
+    #main-content #block-views-slideshow-block .block-inner .view-slideshow .views-slideshow-controls-bottom .views-field-field-image img:hover {
+      opacity: 1;
+      border: 1px solid #000; }
+    #main-content #block-views-slideshow-block .block-inner .view-slideshow .views-slideshow-controls-bottom .views-field-field-video img:hover {
+      opacity: 1;
+      border: 1px solid #000; }
   #main-content #block-system-main .block-inner {
     padding: 0 20px 20px; }
-  #main-content #block-views-slideshow-block-1 .flexslider {
+  #main-content #block-views-slideshow-block-1 .view-slideshow .flexslider {
     margin: 0 0 2em 0;
     font: 0.8em/1.4 "Roboto", sans-serif; }
-    #main-content #block-views-slideshow-block-1 .flexslider .view-slideshow .views-field-title {
+    #main-content #block-views-slideshow-block-1 .view-slideshow .flexslider .views-field-title {
       margin: 0.5em 0.5em 0; }
-    #main-content #block-views-slideshow-block-1 .flexslider .view-slideshow .views-field-title h3 {
+    #main-content #block-views-slideshow-block-1 .view-slideshow .flexslider .views-field-title h3 {
       text-transform: capitalize;
       font-size: 1.4em; }
-
-.view-slideshow .views_slideshow_main {
-  position: relative;
-  height: 420px; }
-  .view-slideshow .views_slideshow_main .views-field-field-image {
-    position: absolute; }
-    .view-slideshow .views_slideshow_main .views-field-field-image img {
-      display: block;
-      max-width: none; }
-  .view-slideshow .views_slideshow_main .views-field-field-video {
-    position: absolute; }
-  .view-slideshow .views_slideshow_main .views-field-title {
-    position: absolute;
-    padding: 20px;
-    width: 578px;
-    background: url(../images/trans.png);
-    color: #fff;
-    font-family: Lato, sans-serif; }
-    .view-slideshow .views_slideshow_main .views-field-title a {
-      color: #fff;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-size: 18px; }
-  .view-slideshow .views_slideshow_main .views-field-body {
-    position: absolute;
-    height: 50px;
-    width: 578px;
-    padding: 20px;
-    top: 290px;
-    background: url(../images/trans.png);
-    color: #fff; }
-    .view-slideshow .views_slideshow_main .views-field-body a {
-      color: #fff; }
-.view-slideshow .views-slideshow-controls-bottom .active .views-field-field-image img {
-  opacity: 1; }
-.view-slideshow .views-slideshow-controls-bottom .active .views-field-field-video img {
-  opacity: 1; }
-.view-slideshow .views-slideshow-controls-bottom #views_slideshow_pager_field_item_bottom_slideshow-block_5 .views-field-field-image img {
-  margin-right: 0; }
-.view-slideshow .views-slideshow-controls-bottom #views_slideshow_pager_field_item_bottom_slideshow-block_5 .views-field-field-video img {
-  margin-right: 0; }
-.view-slideshow .views-slideshow-controls-bottom .views-field-field-image img:hover {
-  opacity: 1;
-  border: 1px solid #000; }
-.view-slideshow .views-slideshow-controls-bottom .views-field-field-video img:hover {
-  opacity: 1;
-  border: 1px solid #000; }
 
 .view .pager {
   font-family: Lato, sans-serif;
