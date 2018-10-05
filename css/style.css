@@ -1465,17 +1465,7 @@ body.calendar, .node-type-article.calendar {
     visibility: hidden; }
 
   .node .taxonomy .field-type-taxonomy-term-reference .field-items {
-    display: block; }
-
-  .field-name-field-pulled-quote {
-    width: 50%;
-    font-size: 18px;
-    float: right;
-    background-repeat: no-repeat;
-    margin-top: 2em;
-    border: 1px solid #ccc;
-    padding: 10px;
-    font-family: "Roboto Condensed"; } }
+    display: block; } }
 .page-classifieds ul.views-fluid-grid-items-width-200 li.views-fluid-grid-item {
   line-height: 1em; }
 .page-classifieds div.views-fluid-grid h3 {
