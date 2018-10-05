@@ -462,11 +462,13 @@
   }
 
   .field-name-field-pulled-quote {
-    width: auto;
-    min-height: auto;
+    width: 50%;
     font-size: 18px;
-    float: none;
+    float: right;
     background-repeat: no-repeat;
-    padding-left: 0;
+    margin-top: 2em;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: "Roboto Condensed";
   }
 }
