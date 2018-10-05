@@ -1475,7 +1475,8 @@ body.calendar, .node-type-article.calendar {
   .field-name-field-pulled-quote {
     width: auto;
     float: none;
-    margin-top: 1em; } }
+    margin-top: 1em;
+    margin-left: 0; } }
 .page-classifieds ul.views-fluid-grid-items-width-200 li.views-fluid-grid-item {
   line-height: 1em; }
 .page-classifieds div.views-fluid-grid h3 {
