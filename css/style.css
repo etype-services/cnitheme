@@ -833,12 +833,16 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
   margin-right: 8px; }
 
 .field-name-field-pulled-quote {
-  width: 300px;
-  min-height: 100px;
+  width: 50%;
   font-size: 18px;
   float: right;
   background-repeat: no-repeat;
-  padding-left: 50px; }
+  margin-top: 2em;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: "Roboto Condensed"; }
+  .field-name-field-pulled-quote p {
+    padding-bottom: 0; }
 
 blockquote {
   margin: 0;
