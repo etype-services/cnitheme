@@ -838,6 +838,7 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
   float: right;
   background-repeat: no-repeat;
   margin-top: 2em;
+  margin-left: 10px;
   border: 1px solid #ccc;
   padding: 10px;
   font-family: "Roboto Condensed"; }
@@ -1469,7 +1470,12 @@ body.calendar, .node-type-article.calendar {
     visibility: hidden; }
 
   .node .taxonomy .field-type-taxonomy-term-reference .field-items {
-    display: block; } }
+    display: block; }
+
+  .field-name-field-pulled-quote {
+    width: auto;
+    float: none;
+    margin-top: 1em; } }
 .page-classifieds ul.views-fluid-grid-items-width-200 li.views-fluid-grid-item {
   line-height: 1em; }
 .page-classifieds div.views-fluid-grid h3 {
