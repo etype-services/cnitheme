@@ -841,7 +841,9 @@ ul.quicktabs-tabs.quicktabs-style-nostyle {
   margin-left: 10px;
   border: 1px solid #ccc;
   padding: 10px;
-  font-family: "Roboto Condensed"; }
+  font-family: "Roboto Condensed";
+  color: dimgray;
+  font-weight: bold; }
   .field-name-field-pulled-quote p {
     padding-bottom: 0; }
 
