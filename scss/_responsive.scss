@@ -127,43 +127,50 @@
       height: 300px;
     }
   }
-  .view-slideshow {
-    .views_slideshow_main {
-      height: 292px;
-      .views-field-title {
-        width: 451px;
-      }
-      .views-field-body {
-        width: 451px;
-        top: 130px;
-        font-size: 11px;
-      }
-      .views-field-field-image img {
-        width: 491px;
-        height: auto;
-      }
-      .views-field-field-video img {
-        width: 491px;
-        height: auto;
+
+  #main-content {
+    #block-views-slideshow-block {
+      .block-inner {
+        .view-slideshow {
+          .views_slideshow_main {
+            height: 292px;
+            .views-field-title {
+              width: 451px;
+            }
+            .views-field-body {
+              width: 451px;
+              top: 130px;
+              font-size: 11px;
+            }
+            .views-field-field-image img {
+              width: 491px;
+              height: auto;
+            }
+            .views-field-field-video img {
+              width: 491px;
+              height: auto;
+            }
+          }
+          .views-slideshow-controls-bottom {
+            .views-field-field-image img {
+              width: 54px;
+              height: 35px;
+            }
+            .views-field-field-video img {
+              width: 54px;
+              height: 35px;
+            }
+          }
+        }
+        #views_slideshow_cycle_main_slideshow-block {
+          margin-left: 20px;
+          margin-top: 20px;
+        }
+        .views-slideshow-controls-bottom {
+          margin-top: 44px;
+        }
       }
     }
-    .views-slideshow-controls-bottom {
-      .views-field-field-image img {
-        width: 54px;
-        height: 35px;
-      }
-      .views-field-field-video img {
-        width: 54px;
-        height: 35px;
-      }
-    }
-  }
-  #views_slideshow_cycle_main_slideshow-block {
-    margin-left: 20px;
-    margin-top: 20px;
-  }
-  .views-slideshow-controls-bottom {
-    margin-top: 44px;
   }
   .postscript-wrapper {
     margin-right: 10px;
