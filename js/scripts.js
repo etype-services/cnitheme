@@ -62,13 +62,16 @@
 
     Drupal.behaviors.cni = {
         attach: function (context) {
-            $("li.views-fluid-grid-item").mouseover(
-                function() {
-                    $(this).children('.overlay').css('display', 'none');
-                }, function() {
-                    $(this).children('.overlay').css('display', 'block');
-                }
-            );
+            $("li.views-fluid-grid-item")
+                .mouseenter(
+                    function () {
+                        $(this).find('.overlay').css('display', 'none');
+                    })
+                .mouseleave(
+                    function () {
+                        $(this).find('.overlay').css('display', 'block');
+                    });
         }
     };
+
 })(jQuery);
