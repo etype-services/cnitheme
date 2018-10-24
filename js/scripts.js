@@ -59,4 +59,17 @@
       });
     }
   };
+
+    Drupal.behaviors.cni = {
+        attach: function (context) {
+            var overlay = $('.overlay');
+            overlay.hover(
+                function() {
+                    $(this).css('display', 'none');
+                }, function() {
+                    $(this).css('display', 'block');
+                }
+            );
+        }
+    };
 })(jQuery);
