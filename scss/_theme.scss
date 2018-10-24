@@ -1420,6 +1420,10 @@ body.calendar, .node-type-article.calendar {
           left: 1em;
           a {
             color: $white;
+            font-weight: bold;
+            &:hover {
+              text-decoration: none;
+            }
           }
         }
         .overlay {
