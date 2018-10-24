@@ -1125,18 +1125,18 @@ body.calendar, .node-type-article.calendar {
   width: inherit; }
 
 /* things to do page */
-.page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item {
+.page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item, #block-views-things-to-do-block div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item {
   position: relative; }
-  .page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title {
+  .page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title, #block-views-things-to-do-block div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title {
     position: absolute;
     bottom: 3em;
     left: 1em; }
-    .page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title a {
+    .page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title a, #block-views-things-to-do-block div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title a {
       color: #fff;
       font-weight: bold; }
-      .page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title a:hover {
+      .page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title a:hover, #block-views-things-to-do-block div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title a:hover {
         text-decoration: none; }
-  .page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .overlay {
+  .page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .overlay, #block-views-things-to-do-block div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .overlay {
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.5));
     bottom: 0;
     left: 0;
@@ -1144,16 +1144,6 @@ body.calendar, .node-type-article.calendar {
     position: absolute;
     right: 0;
     top: 0; }
-
-/* things to do block */
-#block-views-things-to-do-block div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item {
-  position: relative; }
-  #block-views-things-to-do-block div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title {
-    position: absolute;
-    bottom: 3em;
-    left: 1em; }
-    #block-views-things-to-do-block div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item .views-field-title a {
-      color: #fff; }
 
 @media only screen and (min-width: 959px) {
   #main-menu .content {

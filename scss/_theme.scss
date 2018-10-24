@@ -1409,7 +1409,7 @@ body.calendar, .node-type-article.calendar {
 }
 
 /* things to do page */
-.page-things-to-do {
+.page-things-to-do, #block-views-things-to-do-block {
   div.views-fluid-grid {
     ul.views-fluid-grid-list {
       li.views-fluid-grid-item {
@@ -1434,25 +1434,6 @@ body.calendar, .node-type-article.calendar {
           position: absolute;
           right:0;
           top:0;
-        }
-      }
-    }
-  }
-}
-
-/* things to do block */
-#block-views-things-to-do-block {
-  div.views-fluid-grid {
-    ul.views-fluid-grid-list {
-      li.views-fluid-grid-item {
-        position: relative;
-        .views-field-title {
-          position: absolute;
-          bottom: 3em;
-          left: 1em;
-          a {
-            color: $white;
-          }
         }
       }
     }
