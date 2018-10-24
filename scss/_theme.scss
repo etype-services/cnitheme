@@ -1421,9 +1421,6 @@ body.calendar, .node-type-article.calendar {
           a {
             color: $white;
             font-weight: bold;
-            &:hover {
-              text-decoration: none;
-            }
           }
         }
         .overlay {
