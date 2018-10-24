@@ -62,7 +62,7 @@
 
     Drupal.behaviors.cni = {
         attach: function (context) {
-            $("li.views-fluid-grid-item").hover(
+            $("li.views-fluid-grid-item").mouseover(
                 function() {
                     $(this).children('.overlay').css('display', 'none');
                 }, function() {
