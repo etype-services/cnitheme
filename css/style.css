@@ -126,7 +126,7 @@ header {
     max-width: 700px; }
 
 #main-content {
-  /* alternative flexslider slideshow -- assumes it is second block in view */ }
+  /* alternative flexslider slideshow on home page -- assumes it is second block in view */ }
   #main-content #block-system-main .block-inner {
     padding: 0 20px 20px; }
   #main-content #block-views-slideshow-block .block-inner {
@@ -616,6 +616,8 @@ article.node-webform .node-content-wrapper h1.title {
   font: 0.8em/1.4 lato;
   margin: 0;
   border: none; }
+  .flexslider .slides {
+    margin-bottom: 4em; }
 
 .node-article .submitted {
   margin-left: 0; }

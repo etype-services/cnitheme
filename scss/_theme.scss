@@ -156,7 +156,7 @@ header {
       }
     }
   }
-  /* alternative flexslider slideshow -- assumes it is second block in view */
+  /* alternative flexslider slideshow on home page -- assumes it is second block in view */
   #block-views-slideshow-block-1 {
     .block-inner {
       padding: 0 0 20px 0;
@@ -792,8 +792,11 @@ article {
   font: 0.8em/1.4 lato;
   margin: 0;
   border: none;
-  .slides img {
-    @extend %extend_8;
+  .slides {
+    margin-bottom: 4em;
+    img {
+      @extend %extend_8;
+    }
   }
 }
 .node-article {
