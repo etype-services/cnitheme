@@ -116,7 +116,7 @@ function cni_form_system_theme_settings_alter(&$form, $form_state)
         '#title' => t('Navigation Background Color'),
         '#description' => t('Optional, include initial #'),
         '#size' => 10,
-        '#default_value' => 1,
+        '#default_value' => theme_get_setting('nav_color'),
     ];
 
     $form['advanced_settings']['misc_settings']['body_background_color'] = [
@@ -172,7 +172,7 @@ function cni_form_system_theme_settings_alter(&$form, $form_state)
     $form['advanced_settings']['misc_settings']['remove_addthis'] = [
         '#type' => 'checkbox',
         '#title' => t('Remove AddThis script'),
-        '#default_value' => theme_get_setting('remove_addthis', 0),
+        '#default_value' => 1,
     ];
 
     // Grid Settings
