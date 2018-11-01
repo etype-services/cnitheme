@@ -1090,7 +1090,7 @@ body #main-content .quicktabs-wrapper .block-inner {
   float: none;
   display: block; }
 .page-node .node-article .addthis_sharing_toolbox {
-  float: right; }
+  /*float: right;*/ }
 .page-node .node-article .field-name-body {
   margin-top: 1em; }
 
