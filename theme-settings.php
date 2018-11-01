@@ -171,7 +171,7 @@ function cni_form_system_theme_settings_alter(&$form, $form_state)
 
     $form['advanced_settings']['misc_settings']['remove_addthis'] = [
         '#type' => 'checkbox',
-        '#title' => t('Remove AddThis script'),
+        '#title' => t('Remove AddThis script'.theme_get_setting('remove_addthis),
         '#default_value' => theme_get_setting('remove_addthis', 0),
     ];
 
