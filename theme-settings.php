@@ -172,8 +172,8 @@ function cni_form_system_theme_settings_alter(&$form, $form_state)
     $value = theme_get_setting('remove_addthis', 0);
     $form['advanced_settings']['misc_settings']['remove_addthis'] = [
         '#type' => 'checkbox',
-        '#title' => t('Remove AddThis script'),
-        '#default_value' => $value,
+        '#title' => t('Remove AddThis script' . $value),
+        '#default_value' => "$value",
     ];
 
     // Grid Settings
