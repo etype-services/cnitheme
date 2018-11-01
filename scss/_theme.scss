@@ -309,7 +309,7 @@ header {
 }
 article {
   .field-image {
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; why? */
   }
   &.node-webform .node-content-wrapper {
     .submitted span {
@@ -790,7 +790,7 @@ article {
 }
 .flexslider {
   font: 0.8em/1.4 lato;
-  margin: 0 0 6em 0;
+  margin: 0;
   border: none;
   .slides img {
     @extend %extend_8;
