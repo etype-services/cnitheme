@@ -418,17 +418,30 @@ article {
       list-style: none;
     }
     &.slides {
-      margin: 0 0 4em;
+      margin: 0;
     }
   }
-  .node-article ul {
-    margin: 0 0 1em 1em;
-    list-style: disc outside;
-    &.flex-direction-nav {
-      list-style: none;
+  .node-article {
+    ul {
+      margin: 0 0 1em 1em;
+      list-style: disc outside;
+      &.flex-direction-nav {
+        list-style: none;
+      }
+      &.slides {
+        margin: 0;
+      }
     }
-    &.slides {
+    .flexslider {
+      font: 0.8em/1.4 lato;
       margin: 0;
+      border: none;
+      ul.slides {
+        margin: 0 0 4em;
+        img {
+          @extend %extend_8;
+        }
+      }
     }
   }
 }
@@ -786,16 +799,6 @@ article {
   }
   .content a {
     color: $color_mine_shaft_approx;
-  }
-}
-.flexslider {
-  font: 0.8em/1.4 lato;
-  margin: 0;
-  border: none;
-  .slides {
-    img {
-      @extend %extend_8;
-    }
   }
 }
 .node-article {

@@ -48,7 +48,7 @@ h1#page-title, #main-content .block-inner, #preface .block-inner {
   color: #333;
   text-shadow: 1px 1px #fff; }
 
-.node .field-name-field-image img, .flexslider .slides img {
+.content .node-article .flexslider ul.slides img, .node .field-name-field-image img {
   display: block;
   height: auto;
   width: initial;
@@ -361,7 +361,7 @@ article.node-webform .node-content-wrapper h1.title {
   .content .node-page ul.flex-direction-nav {
     list-style: none; }
   .content .node-page ul.slides {
-    margin: 0 0 4em; }
+    margin: 0; }
 .content .node-article ul {
   margin: 0 0 1em 1em;
   list-style: disc outside; }
@@ -369,6 +369,12 @@ article.node-webform .node-content-wrapper h1.title {
     list-style: none; }
   .content .node-article ul.slides {
     margin: 0; }
+.content .node-article .flexslider {
+  font: 0.8em/1.4 lato;
+  margin: 0;
+  border: none; }
+  .content .node-article .flexslider ul.slides {
+    margin: 0 0 4em !important; }
 
 .region-user-menu {
   display: flex;
@@ -611,11 +617,6 @@ article.node-webform .node-content-wrapper h1.title {
   margin-bottom: 10px; }
 .node .content a {
   color: #333; }
-
-.flexslider {
-  font: 0.8em/1.4 lato;
-  margin: 0;
-  border: none; }
 
 .node-article .submitted {
   margin-left: 0; }
