@@ -27,8 +27,10 @@
       <?php print render($title_suffix); ?>
 
       <?php if ($page) { ?>
+          <?php  if (theme_get_setting('remove_addthis') != 1) : ?>
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
           <div class="addthis_sharing_toolbox"></div>
+          <?php endif; ?>
       <?php } ?>
 
       <?php if ($display_submitted): ?>
