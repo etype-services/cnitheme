@@ -437,10 +437,14 @@ article {
       margin: 0;
       border: none;
       ul.slides {
-        margin: 0 0 4em;
         img {
           @extend %extend_8;
         }
+      }
+      .flex-control-nav {
+        bottom: 0;
+        position: relative;
+        margin-top: 1em;
       }
     }
   }
@@ -1183,9 +1187,6 @@ input[type="week"] {
       top: 0;
     }
   }
-}
-.flex-control-nav {
-  bottom: -30px;
 }
 .free-message {
   font-family: $font_0, $font_1;

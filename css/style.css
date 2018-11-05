@@ -373,8 +373,10 @@ article.node-webform .node-content-wrapper h1.title {
   font: 0.8em/1.4 lato;
   margin: 0;
   border: none; }
-  .content .node-article .flexslider ul.slides {
-    margin: 0 0 4em; }
+  .content .node-article .flexslider .flex-control-nav {
+    bottom: 0;
+    position: relative;
+    margin-top: 1em; }
 
 .region-user-menu {
   display: flex;
@@ -944,9 +946,6 @@ input[type="week"] {
   width: 100%; }
   #block-views-ticker-block .liScroll-container .mask {
     top: 0; }
-
-.flex-control-nav {
-  bottom: -30px; }
 
 .free-message {
   font-family: Lato, sans-serif;
