@@ -355,23 +355,14 @@ article {
   }
   .block-menu-block ul.menu li {
     float: left;
-    padding-top: 0;
-    padding-right: 10px;
-    padding-bottom: 0;
-    padding-left: 0;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    list-style-type: circle;
-    list-style-image: none;
-    list-style-position: inside;
+    padding: 0 10px 0 0;
+    margin: 0;
+    list-style: square inside none;
   }
   .item-list ul li {
     padding: 3px 0;
     margin-left: 10px;
-    list-style-position: outside;
-    list-style-type: square;
+    list-style: square outside;
     color: $color_mountain_mist_approx;
     border-bottom: 1px dotted $color_fuscous_gray_approx;
     text-transform: uppercase;
