@@ -427,6 +427,7 @@ article {
       font: 0.8em/1.4 lato;
       margin: 0;
       border: none;
+      position: relative;
       ul.slides {
         img {
           @extend %extend_8;
@@ -436,6 +437,12 @@ article {
         bottom: 0;
         position: relative;
         margin-top: 1em;
+      }
+      .flex-direction-nav {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        margin: 0;
       }
     }
   }
@@ -1405,6 +1412,7 @@ body.calendar, .node-type-article.calendar {
 /* override flexslider to show whole of direction arrow */
 .flex-direction-nav a {
   height: 50px;
+  width: 26px;
 }
 
 /* things to do page */

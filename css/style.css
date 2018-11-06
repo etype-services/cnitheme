@@ -363,11 +363,17 @@ article.node-webform .node-content-wrapper h1.title {
 .content .node-article .flexslider {
   font: 0.8em/1.4 lato;
   margin: 0;
-  border: none; }
+  border: none;
+  position: relative; }
   .content .node-article .flexslider .flex-control-nav {
     bottom: 0;
     position: relative;
     margin-top: 1em; }
+  .content .node-article .flexslider .flex-direction-nav {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    margin: 0; }
 
 .region-user-menu {
   display: flex;
@@ -1115,7 +1121,8 @@ body.calendar, .node-type-article.calendar {
 
 /* override flexslider to show whole of direction arrow */
 .flex-direction-nav a {
-  height: 50px; }
+  height: 50px;
+  width: 26px; }
 
 /* things to do page */
 .page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item, #block-views-things-to-do-block div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item {
