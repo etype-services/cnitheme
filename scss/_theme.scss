@@ -1402,6 +1402,11 @@ body.calendar, .node-type-article.calendar {
   width: inherit;
 }
 
+/* override flexslider to show whole of direction arrow */
+.flex-direction-nav a {
+  height: 50px;
+}
+
 /* things to do page */
 .page-things-to-do, #block-views-things-to-do-block {
   div.views-fluid-grid {
