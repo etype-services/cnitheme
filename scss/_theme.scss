@@ -1423,6 +1423,11 @@ body.calendar, .node-type-article.calendar {
   width: 26px;
   background-color: $mercury;
   padding: 0 5px;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin: 0;
 }
 
 /* things to do page */

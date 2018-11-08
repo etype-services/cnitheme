@@ -190,6 +190,7 @@ header {
       #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav {
         position: absolute;
         top: 20px;
+        right: 0;
         margin: 0;
         display: flex; }
 
@@ -377,6 +378,7 @@ article.node-webform .node-content-wrapper h1.title {
   .content .node-article .flexslider .flex-direction-nav {
     position: absolute;
     top: 20px;
+    right: 0;
     margin: 0;
     display: flex; }
 
@@ -1129,7 +1131,12 @@ body.calendar, .node-type-article.calendar {
   height: 50px;
   width: 26px;
   background-color: #e5e5e5;
-  padding: 0 5px; }
+  padding: 0 5px;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin: 0; }
 
 /* things to do page */
 .page-things-to-do div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item, #block-views-things-to-do-block div.views-fluid-grid ul.views-fluid-grid-list li.views-fluid-grid-item {
