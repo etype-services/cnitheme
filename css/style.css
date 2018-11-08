@@ -1132,7 +1132,7 @@ div.views-fluid-grid {
 body.calendar, .node-type-article.calendar {
   width: inherit; }
 
-/* override flexslider for direction arrow */
+/* override flexslider for direction arrows */
 .flex-direction-nav a {
   height: 50px;
   width: 26px;
