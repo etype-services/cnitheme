@@ -171,6 +171,12 @@ header {
             text-transform: capitalize;
             font-size: 1.4em;
           }
+          .flex-direction-nav {
+            position: absolute;
+            top: 20px;
+            margin: 0;
+            display: flex;
+          }
         }
       }
     }
