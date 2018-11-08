@@ -173,10 +173,14 @@ header {
           }
           .flex-direction-nav {
             position: absolute;
-            top: 20px;
+            top: 0;
             right: 0;
             margin: 0;
             display: flex;
+            .flex-next, .flex-prev {
+              left: auto;
+              right: auto;
+            }
           }
         }
       }
@@ -447,10 +451,14 @@ article {
       }
       .flex-direction-nav {
         position: absolute;
-        top: 20px;
+        top: 0;
         right: 0;
         margin: 0;
         display: flex;
+        .flex-next, .flex-prev {
+          left: auto;
+          right: auto;
+        }
       }
     }
   }
@@ -1424,9 +1432,6 @@ body.calendar, .node-type-article.calendar {
   background-color: $mercury;
   padding: 0 5px;
   position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
   margin: 0;
 }
 

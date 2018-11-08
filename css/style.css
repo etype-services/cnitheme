@@ -189,10 +189,13 @@ header {
         font-size: 1.4em; }
       #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav {
         position: absolute;
-        top: 20px;
+        top: 0;
         right: 0;
         margin: 0;
         display: flex; }
+        #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-next, #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-prev {
+          left: auto;
+          right: auto; }
 
 .view .pager {
   font-family: Lato, sans-serif;
@@ -377,10 +380,13 @@ article.node-webform .node-content-wrapper h1.title {
     margin: 1em 0; }
   .content .node-article .flexslider .flex-direction-nav {
     position: absolute;
-    top: 20px;
+    top: 0;
     right: 0;
     margin: 0;
     display: flex; }
+    .content .node-article .flexslider .flex-direction-nav .flex-next, .content .node-article .flexslider .flex-direction-nav .flex-prev {
+      left: auto;
+      right: auto; }
 
 .region-user-menu {
   display: flex;
@@ -1133,9 +1139,6 @@ body.calendar, .node-type-article.calendar {
   background-color: #e5e5e5;
   padding: 0 5px;
   position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
   margin: 0; }
 
 /* things to do page */
