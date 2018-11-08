@@ -371,9 +371,9 @@ article.node-webform .node-content-wrapper h1.title {
     margin: 1em 0; }
   .content .node-article .flexslider .flex-direction-nav {
     position: absolute;
-    top: 100px;
-    width: 100%;
-    margin: 0; }
+    top: 20px;
+    margin: 0;
+    display: flex; }
 
 .region-user-menu {
   display: flex;
