@@ -176,6 +176,14 @@ function cni_form_system_theme_settings_alter(&$form, $form_state)
         '#default_value' => theme_get_setting('free_message'),
     ];
 
+    $form['advanced_settings']['misc_settings']['free_message_link'] = [
+        '#type' => 'textarea',
+        '#title' => t('"Free" Message Link'),
+        '#description' => t('Override default link to eTypeservices for free message link.'),
+        '#default_value' => theme_get_setting('free_message_link'),
+    ];
+
+
     $form['advanced_settings']['misc_settings']['remove_addthis'] = [
         '#type' => 'checkbox',
         '#title' => t('Remove AddThis script'),

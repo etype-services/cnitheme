@@ -83,8 +83,9 @@ function cni_preprocess_node(&$variables)
                         $site_name = 'the ' . $site_name;
                     }
                     $e_editions = etype_e_editions();
-                    $free_message = empty(theme_get_setting('free_message'))? "Subscribe and see the e-Edition of $site_name for the complete story.": theme_get_setting('free_message');
-                    $variables['free_message'] = '<a href="' . $e_editions[0]['path'] . '">' . $free_message . '</a>';
+                    $free_message = empty(theme_get_setting('free_message'))? "Subscribe and see the e-Edition of $site_name for the complete story." : theme_get_setting('free_message');
+                    $free_message_link = empty(theme_get_setting('free_message_link'))? $e_editions[0]['path'] : theme_get_setting('free_message_link');
+                    $variables['free_message'] = '<a href="' . $free_message_link . '">' . $free_message . '</a>';
                 }
             }
         }
