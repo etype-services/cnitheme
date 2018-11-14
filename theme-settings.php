@@ -179,7 +179,7 @@ function cni_form_system_theme_settings_alter(&$form, $form_state)
     $form['advanced_settings']['misc_settings']['remove_addthis'] = [
         '#type' => 'checkbox',
         '#title' => t('Remove AddThis script'),
-        '#description' => t('Remove the AddThis loader script from the template. If the AddThis module is not enabled this needs to be checked.'),
+        '#description' => t('Remove the AddThis loader script from the template.'),
         '#default_value' => theme_get_setting('remove_addthis'),
     ];
 
