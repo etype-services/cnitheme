@@ -169,6 +169,13 @@ function cni_form_system_theme_settings_alter(&$form, $form_state)
         '#default_value' => theme_get_setting('adscript'),
     ];
 
+    $form['advanced_settings']['misc_settings']['free_message'] = [
+        '#type' => 'textarea',
+        '#title' => t('"Free" Message'),
+        '#description' => t('Customize "Free" message shown to non-subscribers.'),
+        '#default_value' => theme_get_setting('free_message'),
+    ];
+
     $form['advanced_settings']['misc_settings']['remove_addthis'] = [
         '#type' => 'checkbox',
         '#title' => t('Remove AddThis script'),
