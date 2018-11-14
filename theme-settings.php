@@ -177,7 +177,7 @@ function cni_form_system_theme_settings_alter(&$form, $form_state)
     ];
 
     $form['advanced_settings']['misc_settings']['free_message_link'] = [
-        '#type' => 'textarea',
+        '#type' => 'textfield',
         '#title' => t('"Free" Message Link'),
         '#description' => t('Override default link to eTypeservices for free message link.'),
         '#default_value' => theme_get_setting('free_message_link'),
