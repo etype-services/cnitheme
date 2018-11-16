@@ -950,12 +950,14 @@ input[type="week"] {
 #block-advpoll-advpoll-recent .content .content {
   padding: 0; }
 
-#block-views-ticker-block .content {
+#block-views-ticker-block .content, #block-views-breaking-news-block .content {
   background: none; }
-#block-views-ticker-block .liScroll-container {
-  width: 100%; }
-  #block-views-ticker-block .liScroll-container .mask {
-    top: 0; }
+#block-views-ticker-block .liScroll-container, #block-views-breaking-news-block .liScroll-container {
+  width: auto;
+  height: 28px; }
+  #block-views-ticker-block .liScroll-container .mask, #block-views-breaking-news-block .liScroll-container .mask {
+    top: 0;
+    width: auto; }
 
 .free-message {
   font-family: Lato, sans-serif;

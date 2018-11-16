@@ -1191,14 +1191,16 @@ input[type="week"] {
     padding: 0;
   }
 }
-#block-views-ticker-block {
+#block-views-ticker-block, #block-views-breaking-news-block {
   .content {
     background: none;
   }
   .liScroll-container {
-    width: 100%;
+    width: auto;
+    height: 28px;
     .mask {
       top: 0;
+      width: auto;
     }
   }
 }
