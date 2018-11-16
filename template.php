@@ -149,25 +149,6 @@ function cni_preprocess_html(&$variables)
         $variables['classes_array'][] = drupal_clean_css_identifier($alias);
     }
 
-    /* add site-specific css */
-    $base_path = base_path();
-    $conf_path = conf_path();
-    $site_css = $base_path . $conf_path . '/local.css';
-
-    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
-        drupal_add_css(
-            $site_css,
-            array(
-                'type' => 'file',
-                'media' => 'all',
-                'preprocess' => FALSE,
-                'every_page' => TRUE,
-                'weight' => 999,
-                'group' => CSS_THEME
-            )
-        );
-    }
-
     /* add site setting css */
     $nav_color = theme_get_setting('nav_color');
     if (!empty($nav_color)) {
@@ -358,6 +339,25 @@ function cni_preprocess_html(&$variables)
                     'group' => CSS_THEME
                 )
             );
+    }
+
+    /* add site-specific css */
+    $base_path = base_path();
+    $conf_path = conf_path();
+    $site_css = $base_path . $conf_path . '/local.css';
+
+    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
+        drupal_add_css(
+            $site_css,
+            array(
+                'type' => 'file',
+                'media' => 'all',
+                'preprocess' => FALSE,
+                'every_page' => TRUE,
+                'weight' => 999,
+                'group' => CSS_THEME
+            )
+        );
     }
 
 }
