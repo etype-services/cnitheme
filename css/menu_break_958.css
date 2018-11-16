@@ -73,6 +73,7 @@
 
   #search-block-form .form-text {
     top: 4px;
+    width: 200px;
   }
 
   #search-control {
