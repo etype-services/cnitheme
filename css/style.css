@@ -182,11 +182,13 @@ header {
     #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider {
       margin: 0 0 2em 0;
       font: 0.8em/1.4 "Roboto", sans-serif; }
-      #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .slides img {
-        height: auto;
-        max-width: unset;
-        width: fit-content;
-        margin: auto; }
+      #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .slides {
+        overflow: hidden; }
+        #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .slides img {
+          height: auto;
+          max-width: unset;
+          width: fit-content;
+          margin: auto; }
       #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .views-field-title, #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .views-field-body {
         margin: 0.5em 0.5em 0; }
       #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .views-field-title h3 {
