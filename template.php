@@ -139,6 +139,9 @@ function cni_form_alter(&$form, &$form_state, $form_id)
 function cni_preprocess_html(&$variables)
 {
 
+    $base_path = base_path();
+    $conf_path = conf_path();
+
     // Add body class for sidebar layout
     $variables['classes_array'][] = theme_get_setting('sidebar_layout');
 
@@ -342,8 +345,6 @@ function cni_preprocess_html(&$variables)
     }
 
     /* add site-specific css */
-    $base_path = base_path();
-    $conf_path = conf_path();
     $site_css = $base_path . $conf_path . '/local.css';
 
     if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
