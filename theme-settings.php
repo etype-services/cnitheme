@@ -33,13 +33,22 @@ function cni_form_system_theme_settings_alter(&$form, $form_state)
         '#prefix' => t('<h3> Advanced Settings </h3>')
     ];
 
-    // Misc Settings
-    $form['advanced_settings']['misc_settings'] = [
-        '#type' => 'fieldset',
-        '#title' => t('Misc Settings'),
-        '#collapsible' => TRUE,
-        '#collapsed' => FALSE,
-        '#weight' => -10,
+    /* TODO: remove */
+    $form['advanced_settings']['misc_settings']['e_edition'] = [
+        '#type' => 'hidden',
+        '#default_value' => theme_get_setting('e_edition'),
+    ];
+
+    /* TODO: remove */
+    $form['advanced_settings']['misc_settings']['pub'] = [
+        '#type' => 'hidden',
+        '#default_value' => theme_get_setting('pub'),
+    ];
+
+    /* TODO: remove */
+    $form['advanced_settings']['misc_settings']['ptype'] = [
+        '#type' => 'hidden',
+        '#default_value' => theme_get_setting('ptype'),
     ];
 
     $form['advanced_settings']['misc_settings']['nav_color'] = [
