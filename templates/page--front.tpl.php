@@ -11,11 +11,12 @@
         </nav>
     <?php endif; ?>
 
-    <?php if ($page['above_logo']): ?>
-        <?php print render($page['above_logo']) ?>
-    <?php endif; ?>
-
     <div class="page-inner <?php echo $grid_size ?>">
+
+        <?php if ($page['above_logo']): ?>
+            <?php print render($page['above_logo']) ?>
+        <?php endif; ?>
+
         <div class="header-wrapper clearfix">
             <div class="header-wrapper-inner <?php echo $grid_full_width ?>">
                 <header>
