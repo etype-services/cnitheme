@@ -1173,6 +1173,12 @@ body.calendar, .node-type-article.calendar {
     right: 0;
     top: 0; }
 
+/* Business Directory - Special Sections (for Iola Register) */
+#block-views-business-directory-block-1 td {
+  vertical-align: top; }
+  #block-views-business-directory-block-1 td .views-field-field-image img {
+    height: auto; }
+
 @media only screen and (min-width: 959px) {
   #main-menu .content {
     width: 100%; }

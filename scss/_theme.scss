@@ -1482,3 +1482,15 @@ body.calendar, .node-type-article.calendar {
     }
   }
 }
+
+/* Business Directory - Special Sections (for Iola Register) */
+#block-views-business-directory-block-1 {
+  td {
+    vertical-align: top;
+    .views-field-field-image {
+      img {
+        height: auto;
+      }
+    }
+  }
+}
