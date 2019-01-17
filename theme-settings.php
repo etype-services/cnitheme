@@ -33,83 +33,21 @@ function cni_form_system_theme_settings_alter(&$form, $form_state)
         '#prefix' => t('<h3> Advanced Settings </h3>')
     ];
 
-    // Misc Settings (Facebook, Twitter, etc.)
-    $form['advanced_settings']['misc_settings'] = [
-        '#type' => 'fieldset',
-        '#title' => t('Misc Settings'),
-        '#collapsible' => TRUE,
-        '#collapsed' => FALSE,
-        '#weight' => -10,
-    ];
-
-    $form['advanced_settings']['misc_settings']['twitter'] = [
-        '#type' => 'textfield',
-        '#title' => t('Twitter'),
-        '#size' => 10,
-        '#default_value' => theme_get_setting('twitter'),
-    ];
-
-    $form['advanced_settings']['misc_settings']['facebook'] = [
-        '#type' => 'textfield',
-        '#title' => t('Facebook'),
-        '#size' => 10,
-        '#default_value' => theme_get_setting('facebook'),
-    ];
-
-    $form['advanced_settings']['misc_settings']['pinterest'] = [
-        '#type' => 'textfield',
-        '#title' => t('Pinterest'),
-        '#size' => 10,
-        '#default_value' => theme_get_setting('pinterest'),
-    ];
-
-    $form['advanced_settings']['misc_settings']['instagram'] = [
-        '#type' => 'textfield',
-        '#title' => t('Instagram'),
-        '#size' => 10,
-        '#default_value' => theme_get_setting('instagram'),
-    ];
-
-    $form['advanced_settings']['misc_settings']['googleplus'] = [
-        '#type' => 'textfield',
-        '#title' => t('Google Plus'),
-        '#size' => 10,
-        '#default_value' => theme_get_setting('googleplus'),
-    ];
-
-    $form['advanced_settings']['misc_settings']['youtube'] = [
-        '#type' => 'textfield',
-        '#title' => t('YouTube'),
-        '#description' => t('Enter full YouTube URL.'),
-        '#size' => 10,
-        '#default_value' => theme_get_setting('youtube'),
-    ];
-
-    $form['advanced_settings']['misc_settings']['rssfeed'] = [
-        '#type' => 'textfield',
-        '#title' => t('RSS Feed'),
-        '#description' => t('Enter Yes to activate'),
-        '#size' => 10,
-        '#default_value' => theme_get_setting('rssfeed'),
-    ];
-
-    /* TODO: remove */
+    /* TODO: remove
     $form['advanced_settings']['misc_settings']['e_edition'] = [
         '#type' => 'hidden',
         '#default_value' => theme_get_setting('e_edition'),
     ];
 
-    /* TODO: remove */
     $form['advanced_settings']['misc_settings']['pub'] = [
         '#type' => 'hidden',
         '#default_value' => theme_get_setting('pub'),
     ];
 
-    /* TODO: remove */
     $form['advanced_settings']['misc_settings']['ptype'] = [
         '#type' => 'hidden',
         '#default_value' => theme_get_setting('ptype'),
-    ];
+    ]; */
 
     $form['advanced_settings']['misc_settings']['nav_color'] = [
         '#type' => 'textfield',

@@ -26,8 +26,9 @@ features[] = main_menu
 features[] = secondary_menu
 
 regions[top_frame] = Top Frame
-regions[header] = Header
 regions[user_menu] = User Menu
+regions[above_logo] = Above Logo
+regions[header] = Header
 regions[above_main_menu] = Above Main Menu
 regions[main_menu] = Main Menu
 regions[main_menu_second_level] = Main Menu Second Level (via Menublock)
