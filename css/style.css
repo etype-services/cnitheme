@@ -185,8 +185,8 @@ header {
       #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .slides {
         overflow: hidden; }
         #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .slides img {
-          height: auto;
-          max-width: unset;
+          /*height: auto;
+          max-width: unset;*/
           width: fit-content;
           margin: auto; }
       #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .views-field-title, #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .views-field-body {
@@ -1103,7 +1103,7 @@ body #main-content .quicktabs-wrapper .block-inner {
 .not-front.page-node #block-system-main .content .node-teaser {
   margin-top: 0; }
 
-.page-taxonomy-term #block-system-main .content
+.page-taxonomy-term #block-system-main .content,
 .page-classifieds #block-system-main .content,
 .page-webforms #main-content #block-system-main .content {
   margin-top: 1em; }

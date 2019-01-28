@@ -168,8 +168,8 @@ header {
           .slides {
             overflow: hidden;
             img {
-              height: auto;
-              max-width: unset;
+              /*height: auto;
+              max-width: unset;*/
               width: fit-content;
               margin: auto;
             }
