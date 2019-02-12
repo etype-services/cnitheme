@@ -493,25 +493,27 @@
     margin-left: 0;
   }
   /* Flexslider slideshow on home page */
-  #block-views-slideshow-block-1 {
-    .block-inner {
-      .view-slideshow {
-        .flexslider {
-          .flex-control-nav {
-            display: none;
-            visibility: hidden;
-          }
-          .flex-direction-nav {
-            position: relative;
-            margin: 0;
-            a {
-              display: block;
-              background-color: inherit;
-              padding: 0;
-              height: 115px;
-              width: 73px;
-              :before {
-                font-size: 100px;
+  #main-content {
+    #block-views-slideshow-block-1 {
+      .block-inner {
+        .view-slideshow {
+          .flexslider {
+            .flex-control-nav {
+              display: none;
+              visibility: hidden;
+            }
+            .flex-direction-nav {
+              position: relative;
+              margin: 0;
+              a {
+                display: block;
+                background-color: inherit;
+                padding: 0;
+                height: 115px;
+                width: 73px;
+                :before {
+                  font-size: 100px;
+                }
               }
             }
           }
