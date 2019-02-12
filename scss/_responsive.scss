@@ -498,10 +498,14 @@
       .block-inner {
         .view-slideshow {
           .flexslider {
+            margin: 0;
+            .flex-control-nav {
+              bottom: 43px;
+            }
             .flex-direction-nav {
               position: relative;
               margin: 0;
-              justify-content: space-evenly;
+              justify-content: space-between;
               a {
                 display: block;
                 background-color: inherit;

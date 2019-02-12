@@ -1532,18 +1532,20 @@ body.calendar, .node-type-article.calendar {
     margin-left: 0; }
 
   /* Flexslider slideshow on home page */
-  #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav {
-    position: relative;
-    margin: 0;
-    justify-content: space-evenly; }
-    #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav a {
-      display: block;
-      background-color: inherit;
-      padding: 0;
-      height: 115px;
-      width: 73px; }
-      #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav a :before {
-        font-size: 100px; }
+  #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider {
+    margin: 0; }
+    #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-control-nav {
+      bottom: 43px; }
+    #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav {
+      position: relative;
+      margin: 0;
+      justify-content: space-between; }
+      #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav a {
+        display: block;
+        background-color: inherit;
+        padding: 0;
+        height: 115px;
+        width: 73px; }
 
   .flex-direction-nav a:before {
     font-size: 90px; } }
