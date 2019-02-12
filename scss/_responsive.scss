@@ -505,6 +505,7 @@
             .flex-direction-nav {
               position: relative;
               margin: 0;
+              justify-content: space-evenly;
               a {
                 display: block;
                 background-color: inherit;
@@ -520,5 +521,8 @@
         }
       }
     }
+  }
+  .flex-direction-nav a:before {
+    font-size: 100px;
   }
 }

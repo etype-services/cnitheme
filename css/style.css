@@ -1537,7 +1537,8 @@ body.calendar, .node-type-article.calendar {
     visibility: hidden; }
   #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav {
     position: relative;
-    margin: 0; }
+    margin: 0;
+    justify-content: space-evenly; }
     #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav a {
       display: block;
       background-color: inherit;
@@ -1545,7 +1546,10 @@ body.calendar, .node-type-article.calendar {
       height: 115px;
       width: 73px; }
       #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav a :before {
-        font-size: 100px; } }
+        font-size: 100px; }
+
+  .flex-direction-nav a:before {
+    font-size: 100px; } }
 .page-classifieds ul.views-fluid-grid-items-width-200 li.views-fluid-grid-item {
   line-height: 1em; }
 .page-classifieds div.views-fluid-grid h3 {
