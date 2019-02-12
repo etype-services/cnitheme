@@ -257,6 +257,12 @@ li.views-fluid-grid-item {
   }
 }
 
+.region-above-main-menu {
+  .block-simpleads {
+    margin-bottom: 12px;
+  }
+}
+
 @media only screen and(max-width: 767px) {
   #postscript_banner {
     display: none;

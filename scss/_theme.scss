@@ -38,10 +38,11 @@ h5 {
   }
 }
 #page {
-  margin-top: 1em;
+  margin-top: 0;
 }
 .page-inner {
   background: $white;
+  padding-top: 1em;
 }
 p {
   padding-bottom: 10px;
@@ -73,87 +74,136 @@ header {
   .block-inner {
     @extend %extend_5;
   }
-  #block-views-slideshow-block .block-inner {
-    padding: 0 0 20px 0;
-  }
   #block-system-main .block-inner {
     padding: 0 20px 20px;
   }
-}
-.view-slideshow {
-  .views_slideshow_main {
-    position: relative;
-    height: 420px;
-    .views-field-field-image {
-      position: absolute;
-      img {
-        display: block;
-        max-width: none;
-      }
-    }
-    .views-field-field-video {
-      position: absolute;
-    }
-    .views-field-title {
-      position: absolute;
-      padding: 20px;
-      width: 578px;
-      background: $url_0;
-      color: $white;
-      font-family: $font_0, $font_1;
-      a {
-        color: $white;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 18px;
-      }
-    }
-    .views-field-body {
-      position: absolute;
-      height: 50px;
-      width: 578px;
-      padding: 20px;
-      top: 290px;
-      background: $url_0;
-      color: $white;
-      a {
-        color: $white;
+  #block-views-slideshow-block {
+    .block-inner {
+      padding: 0 0 20px 0;
+      .view-slideshow {
+        .views_slideshow_main {
+          position: relative;
+          height: 420px;
+          .views-field-field-image {
+            position: absolute;
+            img {
+              display: block;
+              max-width: none;
+            }
+          }
+          .views-field-field-video {
+            position: absolute;
+          }
+          .views-field-title {
+            position: absolute;
+            padding: 20px;
+            width: 578px;
+            background: $url_0;
+            color: $white;
+            font-family: $font_0, $font_1;
+            a {
+              color: $white;
+              text-transform: uppercase;
+              text-decoration: none;
+              font-size: 18px;
+            }
+          }
+          .views-field-body {
+            position: absolute;
+            height: 50px;
+            width: 578px;
+            padding: 20px;
+            top: 290px;
+            background: $url_0;
+            color: $white;
+            a {
+              color: $white;
+            }
+          }
+        }
+        .views-slideshow-controls-bottom {
+          .active {
+            .views-field-field-image img {
+              opacity: 1;
+            }
+            .views-field-field-video img {
+              opacity: 1;
+            }
+          }
+          #views_slideshow_pager_field_item_bottom_slideshow-block_5 {
+            .views-field-field-image img {
+              margin-right: 0;
+            }
+            .views-field-field-video img {
+              margin-right: 0;
+            }
+          }
+          .views-field-field-image img {
+            @extend %extend_3;
+            &:hover {
+              opacity: 1;
+              border: 1px solid $black;
+            }
+          }
+          .views-field-field-video img {
+            @extend %extend_3;
+            &:hover {
+              opacity: 1;
+              border: 1px solid $black;
+            }
+          }
+        }
       }
     }
   }
-  .views-slideshow-controls-bottom {
-    .active {
-      .views-field-field-image img {
-        opacity: 1;
-      }
-      .views-field-field-video img {
-        opacity: 1;
-      }
-    }
-    #views_slideshow_pager_field_item_bottom_slideshow-block_5 {
-      .views-field-field-image img {
-        margin-right: 0;
-      }
-      .views-field-field-video img {
-        margin-right: 0;
-      }
-    }
-    .views-field-field-image img {
-      @extend %extend_3;
-      &:hover {
-        opacity: 1;
-        border: 1px solid $black;
-      }
-    }
-    .views-field-field-video img {
-      @extend %extend_3;
-      &:hover {
-        opacity: 1;
-        border: 1px solid $black;
+
+  /* alternative flexslider slideshow on home page -- assumes it is second block in view */
+  #block-views-slideshow-block-1 {
+    .block-inner {
+      padding: 0 0 20px 0;
+      .view-slideshow {
+        .flexslider {
+          margin: 0 0 2em 0;
+          font: 0.8em/1.4 "Roboto", sans-serif;
+          .slides {
+            overflow: hidden;
+            img {
+              /*height: auto;
+              max-width: unset;*/
+              width: fit-content;
+              margin: auto;
+            }
+          }
+          .views-field-title, .views-field-body {
+            margin: 0.5em 0.5em 0;
+          }
+          .views-field-title h3 {
+            text-transform: capitalize;
+            font-size: 1.4em;
+          }
+          .views-field-field-image {
+            .field-content {
+              display: flex;
+              justify-content: space-around;
+            }
+          }
+          .flex-direction-nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            display: flex;
+            .flex-next, .flex-prev {
+              left: auto;
+              right: auto;
+            }
+          }
+        }
       }
     }
   }
 }
+
 .view {
   .pager {
     font-family: $font_0, $font_1;
@@ -286,7 +336,7 @@ header {
 }
 article {
   .field-image {
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; why? */
   }
   &.node-webform .node-content-wrapper {
     .submitted span {
@@ -332,23 +382,14 @@ article {
   }
   .block-menu-block ul.menu li {
     float: left;
-    padding-top: 0;
-    padding-right: 10px;
-    padding-bottom: 0;
-    padding-left: 0;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    list-style-type: circle;
-    list-style-image: none;
-    list-style-position: inside;
+    padding: 0 10px 0 0;
+    margin: 0;
+    list-style: square inside none;
   }
   .item-list ul li {
     padding: 3px 0;
     margin-left: 10px;
-    list-style-position: outside;
-    list-style-type: square;
+    list-style: square outside;
     color: $color_mountain_mist_approx;
     border-bottom: 1px dotted $color_fuscous_gray_approx;
     text-transform: uppercase;
@@ -398,14 +439,43 @@ article {
       margin: 0;
     }
   }
-  .node-article ul {
-    margin: 0 0 1em 1em;
-    list-style: disc outside;
-    &.flex-direction-nav {
-      list-style: none;
+  .node-article {
+    ul {
+      margin: 0 0 1em 1em;
+      list-style: disc outside;
+      &.flex-direction-nav {
+        list-style: none;
+      }
+      &.slides {
+        margin: 0;
+      }
     }
-    &.slides {
+    .flexslider {
+      font: 0.8em/1.4 lato;
       margin: 0;
+      border: none;
+      position: relative;
+      ul.slides {
+        img {
+          @extend %extend_8;
+        }
+      }
+      .flex-control-nav {
+        bottom: 0;
+        position: relative;
+        margin: 1em 0;
+      }
+      .flex-direction-nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        display: flex;
+        .flex-next, .flex-prev {
+          left: auto;
+          right: auto;
+        }
+      }
     }
   }
 }
@@ -543,6 +613,7 @@ article {
         color: $color_mine_shaft_approx;
         height: 27px;
         line-height: 27px;
+        white-space: nowrap;
       }
     }
   }
@@ -763,14 +834,6 @@ article {
   }
   .content a {
     color: $color_mine_shaft_approx;
-  }
-}
-.flexslider {
-  font: 0.8em/1.4 lato;
-  margin: 0 0 6em 0;
-  border: none;
-  .slides img {
-    @extend %extend_8;
   }
 }
 .node-article {
@@ -1033,12 +1096,20 @@ ul {
   margin-right: 8px;
 }
 .field-name-field-pulled-quote {
-  width: 300px;
-  min-height: 100px;
+  width: 50%;
   font-size: 18px;
   float: right;
   background-repeat: no-repeat;
-  padding-left: 50px;
+  margin-top: 14px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: "Roboto Condensed";
+  color: dimgray;
+  font-weight: bold;
+  p {
+    padding-bottom: 0;
+  }
 }
 blockquote {
   margin: 0;
@@ -1137,19 +1208,18 @@ input[type="week"] {
     padding: 0;
   }
 }
-#block-views-ticker-block {
+#block-views-ticker-block, #block-views-breaking-news-block {
   .content {
     background: none;
   }
   .liScroll-container {
-    width: 100%;
+    width: auto;
+    height: 28px;
     .mask {
       top: 0;
+      width: auto;
     }
   }
-}
-.flex-control-nav {
-  bottom: -30px;
 }
 .free-message {
   font-family: $font_0, $font_1;
@@ -1314,19 +1384,15 @@ body #main-content .quicktabs-wrapper .block-inner {
     margin-top: 0;
   }
 }
-.page-taxonomy-term #block-system-main .content {
-  margin-top: 1em;
-}
-.page-classifieds #block-system-main .content {
+.page-taxonomy-term #block-system-main .content,
+.page-classifieds #block-system-main .content,
+.page-webforms #main-content #block-system-main .content {
   margin-top: 1em;
 }
 .page-node .node-article {
   .field-name-field-dateline {
     float: none;
     display: block;
-  }
-  .addthis_sharing_toolbox {
-    float: right;
   }
   .field-name-body {
     margin-top: 1em;
@@ -1371,6 +1437,60 @@ div.views-fluid-grid {
     }
   }
 }
-.node-type-article.calendar {
+
+/* override calendar module defaults */
+body.calendar, .node-type-article.calendar {
   width: inherit;
+}
+
+/* override flexslider for direction arrows */
+.flex-direction-nav a {
+  height: 50px;
+  width: 26px;
+  background-color: $mercury;
+  padding: 0 5px;
+  position: relative;
+  top : 0;
+  margin: 0;
+}
+
+/* things to do page */
+.page-things-to-do, #block-views-things-to-do-block {
+  div.views-fluid-grid {
+    ul.views-fluid-grid-list {
+      li.views-fluid-grid-item {
+        position: relative;
+        .views-field-title {
+          position: absolute;
+          bottom: 3em;
+          left: 1em;
+          a {
+            color: $white;
+            font-weight: bold;
+          }
+        }
+        .overlay {
+          display: block;
+          background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,1));
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          right:0;
+          top:0;
+        }
+      }
+    }
+  }
+}
+
+/* Business Directory - Special Sections (for Iola Register) */
+#block-views-business-directory-block-1 {
+  td {
+    vertical-align: top;
+    .views-field-field-image {
+      img {
+        height: auto;
+      }
+    }
+  }
 }
