@@ -203,13 +203,6 @@
       }
     }
   }
-  .page-node {
-    .node-article {
-      .addthis_sharing_toolbox {
-        float: none;
-      }
-    }
-  }
 }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .node-teaser {
@@ -498,5 +491,32 @@
     float: none;
     margin-top: 1em;
     margin-left: 0;
+  }
+  /* Flexslider slideshow on home page */
+  #block-views-slideshow-block-1 {
+    .block-inner {
+      .view-slideshow {
+        .flexslider {
+          .flex-control-nav {
+            display: none;
+            visibility: hidden;
+          }
+          .flex-direction-nav {
+            position: relative;
+            margin: 0;
+            a {
+              display: block;
+              background-color: inherit;
+              padding: 0;
+              height: 115px;
+              width: 73px;
+              :before {
+                font-size: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
