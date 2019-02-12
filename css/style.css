@@ -1532,9 +1532,6 @@ body.calendar, .node-type-article.calendar {
     margin-left: 0; }
 
   /* Flexslider slideshow on home page */
-  #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-control-nav {
-    display: none;
-    visibility: hidden; }
   #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav {
     position: relative;
     margin: 0;
@@ -1549,7 +1546,7 @@ body.calendar, .node-type-article.calendar {
         font-size: 100px; }
 
   .flex-direction-nav a:before {
-    font-size: 100px; } }
+    font-size: 90px; } }
 .page-classifieds ul.views-fluid-grid-items-width-200 li.views-fluid-grid-item {
   line-height: 1em; }
 .page-classifieds div.views-fluid-grid h3 {

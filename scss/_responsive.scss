@@ -498,10 +498,6 @@
       .block-inner {
         .view-slideshow {
           .flexslider {
-            .flex-control-nav {
-              display: none;
-              visibility: hidden;
-            }
             .flex-direction-nav {
               position: relative;
               margin: 0;
@@ -523,6 +519,6 @@
     }
   }
   .flex-direction-nav a:before {
-    font-size: 100px;
+    font-size: 90px;
   }
 }
