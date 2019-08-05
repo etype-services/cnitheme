@@ -1,8 +1,7 @@
 <?php
 
 /* First and Last Classes on Teasers */
-function cni_preprocess_page(&$variables)
-{
+function cni_preprocess_page(&$variables) {
 
     $grid_info = get_grid_info();
 
@@ -13,6 +12,7 @@ function cni_preprocess_page(&$variables)
     $variables['sidebar_second_grid_width'] = 'grid_' . $grid_info['sidebar_second_width'];
     $variables['twitter'] = theme_get_setting('twitter');
     $variables['facebook'] = theme_get_setting('facebook');
+    $variables['site_name'] = variable_get('site_name');
 
     for ($region_count = 1; $region_count <= 4; $region_count++) {
         $variables['preface_' . $region_count . '_grid_width'] = 'grid_' . $grid_info['preface_' . $region_count . '_grid_width'];
@@ -56,8 +56,7 @@ function cni_preprocess_page(&$variables)
 
 }
 
-function cni_preprocess_node(&$variables)
-{
+function cni_preprocess_node(&$variables) {
 
     $node = $variables['node'];
     if (!empty($node->classes_array)) {
