@@ -13,6 +13,7 @@ function cni_preprocess_page(&$variables)
     $variables['sidebar_second_grid_width'] = 'grid_' . $grid_info['sidebar_second_width'];
     $variables['twitter'] = theme_get_setting('twitter');
     $variables['facebook'] = theme_get_setting('facebook');
+    $variables['site_name'] = variable_get('site_name');
 
     for ($region_count = 1; $region_count <= 4; $region_count++) {
         $variables['preface_' . $region_count . '_grid_width'] = 'grid_' . $grid_info['preface_' . $region_count . '_grid_width'];
