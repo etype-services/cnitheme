@@ -1,4 +1,3 @@
-<?php render($page['content']['metatags']); ?>
 <div id="page-top">
 
     <?php if ($page['top_frame']): ?>
