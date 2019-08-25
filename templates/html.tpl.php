@@ -14,7 +14,6 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <?php print $head_script; ?>
-    <?php print $page['content']['metatags']; ?>
 </head>
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
 <div id="fb-root"></div>
