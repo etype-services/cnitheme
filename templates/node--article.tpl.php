@@ -1,7 +1,6 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
     <div class="node-content-wrapper">
-
       <?php if (isset($content['field_image'])): ?>
           <div class="field-image">
             <?php print render($content['field_image']); ?>
@@ -41,17 +40,19 @@
           </div>
       <?php endif; ?>
 
-        <div class="content"<?php print $content_attributes; ?>>
-          <?php
-          // We hide the comments and links now so that we can render them later.
-          hide($content['field_image']);
-          hide($content['field_video']);
-          hide($content['comments']);
-          hide($content['links']);
-          hide($content['field_tags']);
-          hide($content['field_section']);
-          print render($content);
-          ?>
+        <div id="pico">
+            <div class="content"<?php print $content_attributes; ?>>
+              <?php
+              // We hide the comments and links now so that we can render them later.
+              hide($content['field_image']);
+              hide($content['field_video']);
+              hide($content['comments']);
+              hide($content['links']);
+              hide($content['field_tags']);
+              hide($content['field_section']);
+              print render($content);
+              ?>
+            </div>
         </div>
 
       <?php if (isset($content['links'])): ?>
