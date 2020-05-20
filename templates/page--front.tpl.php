@@ -1,5 +1,8 @@
-<?php render(metatag_metatags_view('global:frontpage', array()));?>
-
+<?php
+$meta_void = [];
+$render = metatag_metatags_view('global:frontpage', $meta_void);
+render($render);
+?>
 <div id="page-top">
 
     <?php if ($page['top_frame']): ?>
