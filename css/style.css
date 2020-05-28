@@ -1461,13 +1461,7 @@ body.calendar, .node-type-article.calendar {
 
 /* override flexslider for direction arrows */
 .flex-direction-nav a {
-  height: 50px;
-  width: 26px;
-  background-color: none;
-  padding: 0 5px;
-  position: absolute;
-  top: 0;
-  margin: 0;
+  overflow: visible;
 }
 
 /* things to do page */
