@@ -1448,9 +1448,9 @@ body.calendar, .node-type-article.calendar {
 .flex-direction-nav a {
   height: 50px;
   width: 26px;
-  background-color: $mercury;
+  background-color: none;
   padding: 0 5px;
-  position: relative;
+  position: absolute;
   top : 0;
   margin: 0;
 }
