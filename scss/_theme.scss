@@ -173,6 +173,9 @@ header {
               width: fit-content;
               margin: auto;
             }
+            a {
+              color: $black;
+            }
           }
           .views-field-title, .views-field-body {
             margin: 0.5em 0.5em 0;
