@@ -80,6 +80,8 @@ render($render);
                     <div class="main clearfix">
                         <div class="main-inner grid_8">
 
+                            <?php print $messages; ?>
+
                             <?php if ($page['slideshow']): ?>
                                 <div class="slideshow-wrapper clearfix">
                                     <div class="slideshow-wrapper-inner">
