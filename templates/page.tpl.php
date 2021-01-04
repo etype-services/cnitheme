@@ -70,7 +70,6 @@
         <div class="main-content-wrapper clearfix">
             <div class="main-content-wrapper-inner">
                 <section id="main-content">
-
                     <div class="main">
                         <div class="main-inner grid_8">
 
@@ -86,6 +85,7 @@
 
                             <?php if ($page['highlighted']): ?>
                                 <div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+                                <?php print $messages; ?>
                             <?php print render($tabs); ?>
                             <?php if (!isset($node)): ?>
                                 <?php print render($title_prefix); ?>

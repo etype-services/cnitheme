@@ -1,7 +1,8 @@
 <?php 
-$f = metatag_metatags_view('global:frontpage', array());
-render($f);?>
-
+$meta_void = [];
+$render = metatag_metatags_view('global:frontpage', $meta_void);
+render($render);
+?>
 <div id="page-top">
 
     <?php if ($page['top_frame']): ?>
@@ -78,6 +79,8 @@ render($f);?>
                     <!-- Main 1 -->
                     <div class="main clearfix">
                         <div class="main-inner grid_8">
+
+                            <?php print $messages; ?>
 
                             <?php if ($page['slideshow']): ?>
                                 <div class="slideshow-wrapper clearfix">

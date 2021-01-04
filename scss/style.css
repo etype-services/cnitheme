@@ -234,9 +234,6 @@ header {
   width: fit-content;
   margin: auto;
 }
-#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .slides a {
-  color: #000;
-}
 #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .views-field-title, #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .views-field-body {
   margin: 0.5em 0.5em 0;
 }
