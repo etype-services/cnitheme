@@ -1,4 +1,6 @@
-<?php render(metatag_metatags_view('global:frontpage', array()));?>
+<?php 
+$f = metatag_metatags_view('global:frontpage', array());
+render($f);?>
 
 <div id="page-top">
 
