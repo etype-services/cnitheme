@@ -376,7 +376,7 @@ article .field-image {
   /* margin-bottom: 1em; why? */
 }
 article.node-article .node-content-wrapper .flexslider .flex-direction-nav .flex-prev {
-  right: 50px;
+  right: 40px;
 }
 article.node-article .node-content-wrapper .flexslider .flex-direction-nav .flex-next {
   right: 2px;
