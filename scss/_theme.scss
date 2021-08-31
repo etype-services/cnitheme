@@ -195,11 +195,11 @@ header {
             top: 0;
             margin: 0;
             display: flex;
-            .flex-nav-next {
-              right: auto;
+            .flex-next {
+              right: 0;
             }
-            .flex-nav-prev {
-              left: auto;
+            .flex-prev {
+              right: 25px;
             }
           }
         }

@@ -254,11 +254,11 @@ header {
   margin: 0;
   display: flex;
 }
-#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-nav-next {
-  right: auto;
+#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-next {
+  right: 0;
 }
-#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-nav-prev {
-  left: auto;
+#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-prev {
+  right: 25px;
 }
 
 .view .pager {
