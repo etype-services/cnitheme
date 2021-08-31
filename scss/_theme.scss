@@ -196,7 +196,7 @@ header {
             right: 0;
             margin: 0;
             display: flex;
-            .flex-next, .flex-prev {
+            .flex-nav-next, .flex-nav-prev {
               left: auto;
               right: auto;
             }
@@ -475,7 +475,7 @@ article {
         right: 0;
         margin: 0;
         display: flex;
-        .flex-next, .flex-prev {
+        .flex-nav-next, .flex-nav-prev {
           left: auto;
           right: auto;
         }
