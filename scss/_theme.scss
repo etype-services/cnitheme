@@ -193,12 +193,13 @@ header {
           .flex-direction-nav {
             position: absolute;
             top: 0;
-            right: 0;
             margin: 0;
             display: flex;
-            .flex-nav-next, .flex-nav-prev {
-              left: auto;
+            .flex-nav-next {
               right: auto;
+            }
+            .flex-nav-prev {
+              left: auto;
             }
           }
         }
