@@ -375,10 +375,10 @@ header {
 article .field-image {
   /* margin-bottom: 1em; why? */
 }
-article.node-article .node-content-wrapper .flexslider .flex-direction-nav .flex-nav-prev {
+article.node-article .node-content-wrapper .flexslider .flex-direction-nav .flex-prev {
   right: 75px;
 }
-article.node-article .node-content-wrapper .flexslider .flex-direction-nav .flex-nav-next {
+article.node-article .node-content-wrapper .flexslider .flex-direction-nav .flex-next {
   right: 2px;
 }
 article.node-webform .node-content-wrapper .submitted span {
@@ -511,7 +511,7 @@ article.node-webform .node-content-wrapper h1.title {
   margin: 0;
   display: flex;
 }
-.content .node-article .flexslider .flex-direction-nav .flex-nav-next, .content .node-article .flexslider .flex-direction-nav .flex-nav-prev {
+.content .node-article .flexslider .flex-direction-nav .flex-next, .content .node-article .flexslider .flex-direction-nav .flex-prev {
   left: auto;
   right: auto;
 }

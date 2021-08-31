@@ -343,10 +343,10 @@ article {
   &.node-article .node-content-wrapper {
     .flexslider {
       .flex-direction-nav {
-        .flex-nav-prev {
+        .flex-prev {
           right: 75px;
         }
-        .flex-nav-next {
+        .flex-next {
           right: 2px;
         }
       }
@@ -486,7 +486,7 @@ article {
         right: 0;
         margin: 0;
         display: flex;
-        .flex-nav-next, .flex-nav-prev {
+        .flex-next, .flex-prev {
           left: auto;
           right: auto;
         }
