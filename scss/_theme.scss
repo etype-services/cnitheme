@@ -342,7 +342,14 @@ article {
   }
   &.node-article .node-content-wrapper {
     .flexslider {
-
+      .flex-direction-nav {
+        .flex-nav-prev {
+          right: 75px;
+        }
+        .flex-nav-next {
+          right: 2px;
+        }
+      }
     }
   }
   &.node-webform .node-content-wrapper {

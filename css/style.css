@@ -375,6 +375,12 @@ header {
 article .field-image {
   /* margin-bottom: 1em; why? */
 }
+article.node-article .node-content-wrapper .flexslider .flex-direction-nav .flex-nav-prev {
+  right: 75px;
+}
+article.node-article .node-content-wrapper .flexslider .flex-direction-nav .flex-nav-next {
+  right: 2px;
+}
 article.node-webform .node-content-wrapper .submitted span {
   display: none;
   visibility: hidden;
