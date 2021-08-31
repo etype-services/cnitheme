@@ -258,7 +258,7 @@ header {
   right: 0;
 }
 #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-prev {
-  right: 25px;
+  right: -75px;
 }
 
 .view .pager {
