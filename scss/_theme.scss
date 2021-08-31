@@ -195,11 +195,9 @@ header {
             top: 0;
             margin: 0;
             display: flex;
-            .flex-next {
-              right: 0;
-            }
-            .flex-prev {
-              right: -75px;
+            .flex-next, .flex-prev {
+              left: auto;
+              right: auto;
             }
           }
         }
@@ -341,6 +339,11 @@ header {
 article {
   .field-image {
     /* margin-bottom: 1em; why? */
+  }
+  &.node-article .node-content-wrapper {
+    .flexslider {
+
+    }
   }
   &.node-webform .node-content-wrapper {
     .submitted span {
@@ -1452,7 +1455,7 @@ body.calendar, .node-type-article.calendar {
 .flex-direction-nav a {
   height: 50px;
   width: 26px;
-  background-color: none;
+  background-color: transparent;
   padding: 0 5px;
   position: absolute;
   top : 0;

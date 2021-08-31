@@ -254,11 +254,9 @@ header {
   margin: 0;
   display: flex;
 }
-#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-next {
-  right: 0;
-}
-#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-prev {
-  right: -75px;
+#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-next, #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-prev {
+  left: auto;
+  right: auto;
 }
 
 .view .pager {
@@ -1467,7 +1465,7 @@ body.calendar, .node-type-article.calendar {
 .flex-direction-nav a {
   height: 50px;
   width: 26px;
-  background-color: none;
+  background-color: transparent;
   padding: 0 5px;
   position: absolute;
   top: 0;
