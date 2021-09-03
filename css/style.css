@@ -257,6 +257,7 @@ header {
 }
 #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-prev {
   right: 40px;
+  left: unset;
 }
 #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-next {
   right: 2px;

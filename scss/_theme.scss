@@ -198,6 +198,7 @@ header {
             display: flex;
             .flex-prev {
               right: 40px;
+              left: unset; //override flexsldier.css
             }
             .flex-next {
               right: 2px;
