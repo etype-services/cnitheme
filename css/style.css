@@ -251,6 +251,7 @@ header {
 #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav {
   position: absolute;
   top: 0;
+  right: 0;
   margin: 0;
   display: flex;
 }
