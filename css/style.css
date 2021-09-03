@@ -254,11 +254,9 @@ header {
   margin: 0;
   display: flex;
 }
-#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-prev {
-  right: 40px;
-}
-#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-next {
-  right: 2px;
+#main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-next, #main-content #block-views-slideshow-block-1 .block-inner .view-slideshow .flexslider .flex-direction-nav .flex-prev {
+  left: auto;
+  right: auto;
 }
 
 .view .pager {
