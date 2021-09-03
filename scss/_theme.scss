@@ -195,9 +195,11 @@ header {
             top: 0;
             margin: 0;
             display: flex;
-            .flex-next, .flex-prev {
-              left: auto;
-              right: auto;
+            .flex-prev {
+              right: 40px;
+            }
+            .flex-next {
+              right: 2px;
             }
           }
         }
