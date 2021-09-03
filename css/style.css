@@ -381,6 +381,7 @@ article .field-image {
 }
 article.node-article .node-content-wrapper .flexslider .flex-direction-nav .flex-prev {
   right: 40px;
+  left: unset;
 }
 article.node-article .node-content-wrapper .flexslider .flex-direction-nav .flex-next {
   right: 2px;
@@ -517,6 +518,7 @@ article.node-webform .node-content-wrapper h1.title {
 }
 .content .node-article .flexslider .flex-direction-nav .flex-prev {
   right: 40px;
+  left: unset;
 }
 .content .node-article .flexslider .flex-direction-nav .flex-next {
   right: 2px;

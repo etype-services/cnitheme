@@ -198,7 +198,7 @@ header {
             display: flex;
             .flex-prev {
               right: 40px;
-              left: unset; //override flexsldier.css
+              left: unset; //override flexslider.css
             }
             .flex-next {
               right: 2px;
@@ -349,6 +349,7 @@ article {
       .flex-direction-nav {
         .flex-prev {
           right: 40px;
+          left: unset; //override flexslider.css
         }
         .flex-next {
           right: 2px;
@@ -492,6 +493,7 @@ article {
         display: flex;
         .flex-prev {
           right: 40px;
+          left: unset; //override flexslider.css
         }
         .flex-next {
           right: 2px;
